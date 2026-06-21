@@ -1,0 +1,12 @@
+{
+  "id": "TR-01",
+  "label": "Systemtemperatur Vorlauf",
+  "type": "TR",
+  "properties": {
+    "domain": "thermal",
+    "description": "Relevante Vorlauftemperatur für WP- und GEG-Bewertung.",
+    "source": "DIN EN 12831",
+    "tags": ["temperature", "heating", "system"],
+    "version": "2.0"
+  }
+}
