@@ -1,1 +1,87 @@
+[
+  {
+    "id": "PB-01",
+    "label": "GEG-65%-Regel vs. WP-JAZ",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen gesetzlicher 65%-Regel und realer WP-JAZ im MFH.",
+      "source": "GEG / DIN V 18599",
+      "tags": ["geg", "jaz", "conflict"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-02",
+    "label": "LBO-Schall vs. WP-Außenaufstellung",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen Schallanforderungen und Außenaufstellung von Wärmepumpen.",
+      "source": "LBO / TA Lärm",
+      "tags": ["schall", "aufstellfläche", "wp"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-03",
+    "label": "Mietrecht vs. Lastmanagement",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen mietrechtlichen Komfortanforderungen und LM-Sperrzeiten.",
+      "source": "BGB / Netzbetreiber",
+      "tags": ["mietrecht", "lm", "komfort"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-04",
+    "label": "DVGW-Hygiene vs. WP-Temperaturen",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen Hygieneanforderungen (60°C) und WP-Temperaturniveau.",
+      "source": "TrinkwV / DVGW W551",
+      "tags": ["hygiene", "temperatur", "wp"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-05",
+    "label": "VDE-4100 vs. DLE-Umrüstung",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen VDE-Anschlussregeln und DLE-Umrüstung im MFH.",
+      "source": "VDE-AR-N 4100 / NAV",
+      "tags": ["elektro", "dle", "anschluss"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-06",
+    "label": "Netzanschlussleistung vs. WP-Systeme",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen begrenzter Netzanschlussleistung und WP-Systemanforderungen.",
+      "source": "VDE / Netzbetreiber",
+      "tags": ["netz", "leistung", "wp"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PB-07",
+    "label": "Förderlogik vs. Wirtschaftlichkeit im MFH",
+    "type": "PB",
+    "properties": {
+      "domain": "political_blockade",
+      "description": "Blockade zwischen Förderlogik und realer Wirtschaftlichkeit im MFH.",
+      "source": "BEG / BAFA / KfW",
+      "tags": ["förderung", "wirtschaftlichkeit", "mfh"],
+      "version": "2.0"
+    }
+  }
+]
 
