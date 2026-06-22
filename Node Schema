@@ -10,3 +10,16 @@
     "version": "2.0"
   }
 }
+## Pflichtfelder
+    id → eindeutige, sprechende ID
+    label → Klartext
+    type → TR, RF, EN, E4, SB, PB
+    properties.domain → thematische Zuordnung
+    properties.description → kurze, präzise Beschreibung
+    properties.source → Norm/Gesetz/Technik
+    properties.version → immer „2.0“ für Full‑Rebuild
+
+##Optionale Felder
+    tags → semantische Suchbegriffe
+    unit → falls physikalisch
+    category → z. B. „warmwater_demand“
