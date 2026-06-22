@@ -1,0 +1,56 @@
+[
+  /* ============================================================
+     RF – Bauordnung (LBO / VVTB / MLAR)
+     ============================================================ */
+  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-BW" },
+  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-BY" },
+  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-HE" },
+
+  { "source": "RF-86-BW",  "type": "delegates_to",     "target": "RF-87-BW" },
+  { "source": "RF-86-BY",  "type": "delegates_to",     "target": "RF-87-BY" },
+  { "source": "RF-86-HE",  "type": "delegates_to",     "target": "RF-87-HE" },
+
+  { "source": "RF-87-BW",  "type": "introduces",       "target": "RF-79" },
+  { "source": "RF-87-BY",  "type": "introduces",       "target": "RF-79" },
+  { "source": "RF-87-HE",  "type": "introduces",       "target": "RF-79" },
+
+  /* ============================================================
+     RF – Elektro (VDE / NAV / DGUV)
+     ============================================================ */
+  { "source": "RF-85",     "type": "legal_framework_for", "target": "RF-78" },
+
+  { "source": "RF-78",     "type": "requires_compliance", "target": "RF-77" },
+  { "source": "RF-78",     "type": "requires_compliance", "target": "RF-80" },
+
+  { "source": "RF-83",     "type": "details",          "target": "RF-84" },
+
+  /* ============================================================
+     RF – Wasser / Hygiene (TrinkwV / DVGW)
+     ============================================================ */
+  { "source": "RF-70",     "type": "requires",         "target": "RF-71" },
+  { "source": "RF-71",     "type": "details",          "target": "RF-72" },
+
+  /* ============================================================
+     RF – GEG / Energie / Bilanzierung
+     ============================================================ */
+  { "source": "RF-60",     "type": "uses_method",      "target": "RF-63" },
+  { "source": "RF-61",     "type": "uses_method",      "target": "RF-63" },
+  { "source": "RF-62",     "type": "uses_method",      "target": "RF-63" },
+
+  /* ============================================================
+     RF – Förderung (BEG / BAFA / KfW)
+     ============================================================ */
+  { "source": "RF-90",     "type": "implements",       "target": "RF-91" },
+  { "source": "RF-90",     "type": "implements",       "target": "RF-92" },
+
+  /* ============================================================
+     RF – Mietrecht (BGB / BetrKV)
+     ============================================================ */
+  { "source": "RF-100",    "type": "related_to",       "target": "RF-101" },
+
+  { "source": "RF-102",    "type": "defines_costs",    "target": "RF-106" },
+
+  { "source": "RF-103",    "type": "interacts_with",   "target": "RF-102" },
+
+  { "source": "RF-104",    "type": "extends",          "target": "RF-105" }
+]
