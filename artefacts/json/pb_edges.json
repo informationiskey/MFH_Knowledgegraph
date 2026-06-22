@@ -1,0 +1,59 @@
+[
+  /* ============================================================
+     PB‑01 – GEG‑65%-Regel vs. WP‑JAZ
+     ============================================================ */
+  { "source": "TR-00a", "type": "feeds_blockade",     "target": "PB-01" },
+  { "source": "RF-61",  "type": "regulates_blockade", "target": "PB-01" },
+  { "source": "RF-60",  "type": "regulates_blockade", "target": "PB-01" },
+
+  /* ============================================================
+     PB‑02 – LBO‑Schall vs. WP‑Außenaufstellung
+     ============================================================ */
+  { "source": "TR-08",  "type": "feeds_blockade",     "target": "PB-02" },
+  { "source": "TR-07",  "type": "feeds_blockade",     "target": "PB-02" },
+  { "source": "RF-86",  "type": "regulates_blockade", "target": "PB-02" },
+  { "source": "RF-79",  "type": "regulates_blockade", "target": "PB-02" },
+
+  /* ============================================================
+     PB‑03 – Mietrecht vs. Lastmanagement
+     ============================================================ */
+  { "source": "TR-38",  "type": "feeds_blockade",     "target": "PB-03" },
+  { "source": "TR-23",  "type": "feeds_blockade",     "target": "PB-03" },
+  { "source": "RF-100", "type": "regulates_blockade", "target": "PB-03" },
+  { "source": "RF-101", "type": "regulates_blockade", "target": "PB-03" },
+  { "source": "RF-102", "type": "regulates_blockade", "target": "PB-03" },
+
+  /* ============================================================
+     PB‑04 – DVGW‑Hygiene vs. WP‑Temperaturen
+     ============================================================ */
+  { "source": "TR-02",  "type": "feeds_blockade",     "target": "PB-04" },
+  { "source": "TR-22",  "type": "feeds_blockade",     "target": "PB-04" },
+  { "source": "RF-70",  "type": "regulates_blockade", "target": "PB-04" },
+  { "source": "RF-71",  "type": "regulates_blockade", "target": "PB-04" },
+
+  /* ============================================================
+     PB‑05 – VDE‑4100 vs. DLE‑Umrüstung
+     ============================================================ */
+  { "source": "TR-15",  "type": "feeds_blockade",     "target": "PB-05" },
+  { "source": "TR-16",  "type": "feeds_blockade",     "target": "PB-05" },
+  { "source": "TR-17",  "type": "feeds_blockade",     "target": "PB-05" },
+  { "source": "RF-78",  "type": "regulates_blockade", "target": "PB-05" },
+  { "source": "RF-85",  "type": "regulates_blockade", "target": "PB-05" },
+
+  /* ============================================================
+     PB‑06 – Netzanschlussleistung vs. WP‑Systeme
+     ============================================================ */
+  { "source": "TR-06",  "type": "feeds_blockade",     "target": "PB-06" },
+  { "source": "TR-19",  "type": "feeds_blockade",     "target": "PB-06" },
+  { "source": "TR-20",  "type": "feeds_blockade",     "target": "PB-06" },
+  { "source": "RF-78",  "type": "regulates_blockade", "target": "PB-06" },
+  { "source": "RF-85",  "type": "regulates_blockade", "target": "PB-06" },
+
+  /* ============================================================
+     PB‑07 – Förderlogik vs. Wirtschaftlichkeit im MFH
+     ============================================================ */
+  { "source": "WPsys",  "type": "feeds_blockade",     "target": "PB-07" },
+  { "source": "RF-90",  "type": "regulates_blockade", "target": "PB-07" },
+  { "source": "RF-91",  "type": "regulates_blockade", "target": "PB-07" },
+  { "source": "RF-92",  "type": "regulates_blockade", "target": "PB-07" }
+]
