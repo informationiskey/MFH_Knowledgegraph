@@ -1,7 +1,6 @@
----
 # 📘 Projektstruktur – Übersicht & Dokumentation
 
-Dieses Repository enthält alle Artefakte, Skripte und Dokumentationen zur Modellierung, Validierung und Visualisierung eines mehrschichtigen, normbasierten Wissensgraphen (RF/TR/Norm/EN/WW/Szenarien) inklusive ETL‑Pipeline, Neo4j‑Importskripten und DOT‑Visualisierungen.
+Dieses Repository enthält alle Artefakte, Skripte und Dokumentationen zur Modellierung, Validierung und Visualisierung eines mehrschichtigen, normbasierten Wissensgraphen (RF/TR/EN/Szenarien/SB/PB) inklusive ETL‑Pipeline, Neo4j‑Importskripten und DOT‑Visualisierungen.
 
 ---
 
@@ -13,23 +12,23 @@ Unterteilt in **Nodes**, **Edges** und **Alert‑Definitionen**.
 ### `artefacts/json/nodes/`
 Enthält alle **Knotencluster** des Wissensgraphen:
 
-- rf_nodes.json — Regulatorische Anforderungen (RF)  
 - tr_nodes.json — Technische Realität (TR)  
-- norm_nodes.json — Normen & Standards  
+- rf_nodes.json — Regulatorische Anforderungen (RF)  
 - scenario_nodes.json — Szenarien & Varianten  
-- ww_nodes.json — Warmwasser‑Cluster  
 - en_nodes.json — Energienetz‑Cluster  
+- sb_nodes.json — Semantic Blocks (NEU)  
+- pb_nodes.json — Physical Blocks (NEU)  
 
 ### `artefacts/json/edges/`
 Alle **Kantencluster**, inkl. Cross‑Layer‑Beziehungen:
 
-- rf_edges.json — regulatorische Abhängigkeiten  
 - tr_edges.json — technische Abhängigkeiten  
-- norm_edges.json — normative Verweise  
+- rf_edges.json — regulatorische Abhängigkeiten  
 - scenario_edges.json — Szenario‑Beziehungen  
-- ww_edges.json — Warmwasser‑Beziehungen  
-- crosslayer_edges.json — RF↔TR↔Norm↔EN‑Verknüpfungen  
 - en_edges.json — Energienetz‑Beziehungen  
+- sb_edges.json — Semantic‑Block‑Beziehungen (NEU)  
+- pb_edges.json — Physical‑Block‑Beziehungen (NEU)  
+- crosslayer_edges.json — RF↔TR↔EN↔SB↔PB‑Verknüpfungen  
 
 ### `artefacts/alerts/`
 Alert‑System für Konfliktketten, Heatmaps und Compliance‑Checks:
@@ -46,9 +45,11 @@ Graphviz‑Dateien zur **Visualisierung der Modelllogik**:
 - overview.dot — Gesamtübersicht  
 - rf_tr_layers.dot — RF/TR‑Schichtenmodell  
 - scenarios.dot — Szenario‑Graph  
-- warmwater.dot — Warmwasser‑Cluster  
+- warmwater.dot — Warmwasser‑Cluster (Bestand)  
 - geg_cluster.dot — GEG‑Cluster  
 - konfliktketten.dot — Konfliktkettenmodell  
+- sb_cluster.dot — Semantic‑Block‑Cluster (NEU)  
+- pb_cluster.dot — Physical‑Block‑Cluster (NEU)  
 - en_cluster.dot — Energienetz‑Cluster  
 
 ---
@@ -82,10 +83,12 @@ Python‑basierte Pipeline für Artefakt‑Generierung, Validierung und Schema�
 Fachliche und technische Dokumente:
 
 - architecture.md — Systemarchitektur  
-- changelog.md — Versionierung  
 - modelling_decisions.md — Modellierungsentscheidungen  
 - conflict_analysis.md — Konfliktkettenanalyse  
 - geg_heatmap.md — GEG‑Heatmap  
+- sb_layer.md — Semantic‑Block‑Layer (NEU)  
+- pb_layer.md — Physical‑Block‑Layer (NEU)  
+- changelog.md — Versionierung  
 
 ---
 
@@ -103,8 +106,4 @@ Exportierte Daten und Snapshots:
 Projekt‑ und Neo4j‑Konfiguration:
 
 - neo4j.conf — Neo4j‑Serverkonfiguration  
-- settings.json — projektweite Settings  
-
-
-
-
+- settings.json — projektweite Settings
