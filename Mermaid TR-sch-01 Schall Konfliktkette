@@ -1,0 +1,17 @@
+flowchart LR
+
+    TRSchall["TR‑SCH‑01 Außenaufstellung – Schall<br/>(Technische Realität)"]
+        --> RF82["RF‑82 TA Lärm – Nachtgrenzwerte<br/>(Regulatorische Realität)"]
+
+    RF82 --> TRWP02["TR‑WP‑02 Flüsterbetrieb<br/>(Technische Realität)"]
+    TRWP02 --> TRWP03["TR‑WP‑03 Leistungsdrosselung<br/>(Technische Realität)"]
+
+    TRWP03 --> TR22["TR‑22 Komfort / Temperaturabfall<br/>(Technische Realität)"]
+
+    TR22 --> RF101["RF‑101 BGB §535 – Gebrauchstauglichkeit<br/>(Mietrecht)"]
+    RF101 --> RF102["RF‑102 BGB §536 – Mietminderung<br/>(Mietrecht)"]
+
+    RF82 --> NoDuld["RF‑107 TA Lärm – Keine Duldungspflicht<br/>(Regulatorische Lücke)"]
+
+    RF102 --> Risiko["F‑98 Einseitiges Haftungsrisiko Vermieter"]
+    NoDuld --> Risiko
