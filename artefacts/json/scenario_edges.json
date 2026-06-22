@@ -1,0 +1,100 @@
+{
+  "scenario_edges": [
+
+    /* ============================================================
+       WARM­WASSER­BEDARF → SPEICHER / WW-SYSTEM
+       ============================================================ */
+
+    { "source": "E4-01", "type": "defines", "target": "PS-SP-01" },
+    { "source": "E4-02", "type": "defines", "target": "PS-SP-01" },
+
+    /* Warmwasserbedarf beeinflusst Schüttleistung */
+    { "source": "E4-01", "type": "influences", "target": "TR-00b" },
+    { "source": "E4-02", "type": "influences", "target": "TR-00b" },
+
+
+    /* ============================================================
+       SPEICHERGRÖSSEN → SPEICHER
+       ============================================================ */
+
+    { "source": "E4-03", "type": "defines", "target": "PS-SP-01" },
+    { "source": "E4-04", "type": "defines", "target": "PS-SP-01" },
+    { "source": "E4-05", "type": "defines", "target": "PS-SP-01" },
+
+    /* Speichergrößen beeinflussen Speicherverhalten */
+    { "source": "E4-03", "type": "modulates", "target": "TR-04a" },
+    { "source": "E4-04", "type": "modulates", "target": "TR-04a" },
+    { "source": "E4-05", "type": "modulates", "target": "TR-04a" },
+
+
+    /* ============================================================
+       ZAPFPROFILE → FWS / ZIRKULATION / GEG
+       ============================================================ */
+
+    { "source": "E4-06", "type": "defines", "target": "PS-FWS-01" },
+    { "source": "E4-07", "type": "defines", "target": "PS-FWS-01" },
+    { "source": "E4-08", "type": "defines", "target": "PS-FWS-01" },
+
+    /* Zapfprofile beeinflussen Schüttleistung */
+    { "source": "E4-06", "type": "influences", "target": "TR-00b" },
+    { "source": "E4-07", "type": "influences", "target": "TR-00b" },
+    { "source": "E4-08", "type": "influences", "target": "TR-00b" },
+
+    /* Zapfprofile beeinflussen Zirkulation */
+    { "source": "E4-06", "type": "influences", "target": "TR-03" },
+    { "source": "E4-07", "type": "influences", "target": "TR-03" },
+    { "source": "E4-08", "type": "influences", "target": "TR-03" },
+
+    /* Zapfprofile → GEG WW-Bilanz */
+    { "source": "E4-06", "type": "input", "target": "RF-62" },
+    { "source": "E4-07", "type": "input", "target": "RF-62" },
+    { "source": "E4-08", "type": "input", "target": "RF-62" },
+
+
+    /* ============================================================
+       LASTMANAGEMENT → REGELUNG / LM
+       ============================================================ */
+
+    { "source": "E4-06", "type": "defines", "target": "PS-RG-01" },
+    { "source": "E4-07", "type": "defines", "target": "PS-RG-01" },
+    { "source": "E4-08", "type": "defines", "target": "PS-RG-01" },
+
+    /* LM beeinflusst TR-LM */
+    { "source": "E4-06", "type": "influences", "target": "TR-38" },
+    { "source": "E4-07", "type": "influences", "target": "TR-38" },
+    { "source": "E4-08", "type": "influences", "target": "TR-38" },
+
+
+    /* ============================================================
+       KOMFORT / MIETRECHT
+       ============================================================ */
+
+    { "source": "E4-01", "type": "influences", "target": "TR-22" },
+    { "source": "E4-02", "type": "influences", "target": "TR-22" },
+
+
+    /* ============================================================
+       WP-BETRIEB → WP / TR
+       ============================================================ */
+
+    { "source": "E4-30", "type": "defines", "target": "PS-WP-01" },
+    { "source": "E4-31", "type": "defines", "target": "PS-WP-01" },
+
+    /* WP-Betrieb beeinflusst Systemtemperaturen */
+    { "source": "E4-30", "type": "influences", "target": "TR-01" },
+    { "source": "E4-31", "type": "influences", "target": "TR-01" },
+
+    /* WP-Betrieb beeinflusst GEG JAZ */
+    { "source": "E4-30", "type": "influences", "target": "RF-60" },
+    { "source": "E4-31", "type": "influences", "target": "RF-60" },
+
+
+    /* ============================================================
+       KOMFORTPROFILE → TR
+       ============================================================ */
+
+    { "source": "E4-40", "type": "influences", "target": "TR-22" },
+    { "source": "E4-41", "type": "influences", "target": "TR-22" },
+    { "source": "E4-42", "type": "influences", "target": "TR-22" }
+  ]
+}
