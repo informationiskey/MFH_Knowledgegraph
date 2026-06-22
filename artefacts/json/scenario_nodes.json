@@ -1,0 +1,233 @@
+[
+  {
+    "id": "E4-01",
+    "label": "Warmwasserbedarf 230 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "warmwater_demand",
+      "description": "Warmwasserbedarf für kleine Nutzergruppen im MFH.",
+      "source": "VDI / Erfahrungswerte",
+      "tags": ["warmwater", "demand", "low"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-02",
+    "label": "Warmwasserbedarf 500 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "warmwater_demand",
+      "description": "Warmwasserbedarf für größere Nutzergruppen im MFH.",
+      "source": "VDI / Erfahrungswerte",
+      "tags": ["warmwater", "demand", "medium"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-03",
+    "label": "Warmwasserbedarf 800 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "warmwater_demand",
+      "description": "Hoher Warmwasserbedarf für große MFH oder Spitzenlastfälle.",
+      "source": "VDI / Erfahrungswerte",
+      "tags": ["warmwater", "demand", "high"],
+      "version": "2.0"
+    }
+  },
+
+  /* Zapfprofile */
+  {
+    "id": "E4-06",
+    "label": "Zapfprofil S",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "draw_off_profile",
+      "description": "Geringe Spitzenlast, geeignet für kleine Haushalte.",
+      "source": "DIN EN 16147",
+      "tags": ["profile", "S"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-07",
+    "label": "Zapfprofil M",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "draw_off_profile",
+      "description": "Mittlere Spitzenlast, Standardprofil für MFH.",
+      "source": "DIN EN 16147",
+      "tags": ["profile", "M"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-08",
+    "label": "Zapfprofil L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "draw_off_profile",
+      "description": "Hohe Spitzenlast, geeignet für große MFH.",
+      "source": "DIN EN 16147",
+      "tags": ["profile", "L"],
+      "version": "2.0"
+    }
+  },
+
+  /* Speichergrößen */
+  {
+    "id": "E4-10",
+    "label": "Speichergröße 200 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "storage_size",
+      "description": "Kleine Speichergröße für geringe WW-Lasten.",
+      "source": "Herstellerdaten",
+      "tags": ["storage", "small"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-11",
+    "label": "Speichergröße 300 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "storage_size",
+      "description": "Standard-Speichergröße für MFH.",
+      "source": "Herstellerdaten",
+      "tags": ["storage", "medium"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-12",
+    "label": "Speichergröße 500 L",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "storage_size",
+      "description": "Großer Speicher für hohe WW-Lasten.",
+      "source": "Herstellerdaten",
+      "tags": ["storage", "large"],
+      "version": "2.0"
+    }
+  },
+
+  /* Lastmanagement */
+  {
+    "id": "E4-20",
+    "label": "Lastmanagement – einfach",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "load_management",
+      "description": "Einfaches LM mit festen Sperrzeiten.",
+      "source": "Netzbetreiber",
+      "tags": ["LM", "basic"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-21",
+    "label": "Lastmanagement – dynamisch",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "load_management",
+      "description": "Dynamisches LM mit variablen Sperrzeiten und Priorisierung.",
+      "source": "Netzbetreiber",
+      "tags": ["LM", "dynamic"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-22",
+    "label": "Lastmanagement – intelligent (Smart Grid)",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "load_management",
+      "description": "Intelligentes LM mit Smart-Grid-Integration.",
+      "source": "Smart Grid / VDE",
+      "tags": ["LM", "smart"],
+      "version": "2.0"
+    }
+  },
+
+  /* WP-Betrieb */
+  {
+    "id": "E4-30",
+    "label": "WP-Betrieb NT",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "heatpump_operation",
+      "description": "Niedertemperaturbetrieb der Wärmepumpe.",
+      "source": "Herstellerdaten",
+      "tags": ["heatpump", "NT"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-31",
+    "label": "WP-Betrieb HT",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "heatpump_operation",
+      "description": "Hochtemperaturbetrieb der Wärmepumpe.",
+      "source": "Herstellerdaten",
+      "tags": ["heatpump", "HT"],
+      "version": "2.0"
+    }
+  },
+
+  /* Komfort / Nutzerprofile */
+  {
+    "id": "E4-40",
+    "label": "Komfortprofil – niedrig",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "comfort",
+      "description": "Niedrige Komfortanforderungen der Nutzer.",
+      "source": "Erfahrungswerte",
+      "tags": ["comfort", "low"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-41",
+    "label": "Komfortprofil – mittel",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "comfort",
+      "description": "Standard-Komfortanforderungen der Nutzer.",
+      "source": "Erfahrungswerte",
+      "tags": ["comfort", "medium"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "E4-42",
+    "label": "Komfortprofil – hoch",
+    "type": "SCENARIO",
+    "properties": {
+      "domain": "scenario",
+      "category": "comfort",
+      "description": "Hohe Komfortanforderungen der Nutzer.",
+      "source": "Erfahrungswerte",
+      "tags": ["comfort", "high"],
+      "version": "2.0"
+    }
+  }
+]
