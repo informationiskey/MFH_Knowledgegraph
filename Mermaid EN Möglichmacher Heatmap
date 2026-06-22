@@ -1,0 +1,57 @@
+---
+config:
+  layout: elk
+---
+flowchart LR
+
+subgraph HEATMAP["Möglichmacher‑Heatmap (EN × Konfliktzonen)"]
+direction TB
+
+EN01["EN‑01 Kompakte Zählerplatzsysteme"]
+EN02["EN‑02 Arbeitsraum‑Flexibilisierung"]
+EN03["EN‑03 MLAR‑Ausnahme"]
+EN04["EN‑04 TA Lärm‑Ausnahme"]
+EN05["EN‑05 Komfortflexibilisierung"]
+EN06["EN‑06 GEG‑Flexibilisierung"]
+EN07["EN‑07 Trinkwasser‑Flexibilisierung"]
+EN08["EN‑08 §14a Temperaturgarantie"]
+
+RF080["🟥 RF‑080 Zählerplatznorm"]
+RF081["🟥 RF‑081 Arbeitsraum"]
+RF082["🟥 RF‑082 TAB – APZ/SMGW"]
+RF083["🟥 RF‑083 MLAR"]
+RF084["🟥 RF‑084 EltBauVO"]
+RF086["🟧 RF‑086 Rettungswege"]
+RF82["🟥 RF‑82 TA Lärm"]
+RF107["🟥 RF‑107 Keine Duldungspflicht"]
+RF101["🟥 RF‑101 Gebrauchstauglichkeit"]
+RF102["🟥 RF‑102 Mietminderung"]
+RF62["🟥 RF‑62 GEG Warmwasser"]
+RF60["🟧 RF‑60 GEG Effizienz"]
+RFNETZ["🟥 RF‑NETZ‑01 §14a"]
+
+EN01 --> RF080
+EN01 --> RF082
+EN01 --> RF086
+
+EN02 --> RF081
+
+EN03 --> RF083
+EN03 --> RF084
+
+EN04 --> RF82
+EN04 --> RF107
+
+EN05 --> RF101
+EN05 --> RF102
+
+EN06 --> RF62
+EN06 --> RF60
+
+EN07 --> RF62
+
+EN08 --> RFNETZ
+EN08 --> RF101
+EN08 --> RF102
+
+end
