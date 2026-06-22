@@ -1,0 +1,364 @@
+[
+  {
+    "id": "RF-60",
+    "label": "GEG – Effizienzbewertung (Systembilanz)",
+    "type": "RF",
+    "properties": {
+      "domain": "geg",
+      "description": "Bewertet die Effizienz des Gesamtsystems auf Basis der Systembilanz.",
+      "source": "GEG §22 ff.",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-61",
+    "label": "GEG – Primärenergie",
+    "type": "RF",
+    "properties": {
+      "domain": "geg",
+      "description": "Bewertung des Primärenergiebedarfs des Gebäudes.",
+      "source": "GEG §20 ff.",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-62",
+    "label": "GEG – Warmwasserberechnung",
+    "type": "RF",
+    "properties": {
+      "domain": "geg",
+      "description": "Regelt die Berechnung des Warmwasserbedarfs und der Verluste.",
+      "source": "GEG §33 ff.",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-63",
+    "label": "DIN V 18599 – Bilanzierung",
+    "type": "RF",
+    "properties": {
+      "domain": "geg",
+      "description": "Energetische Bilanzierung nach DIN V 18599.",
+      "source": "DIN V 18599",
+      "version": "2.0"
+    }
+  },
+
+  /* Trinkwasser / Hygiene */
+  {
+    "id": "RF-70",
+    "label": "TrinkwV – Trinkwasserverordnung",
+    "type": "RF",
+    "properties": {
+      "domain": "hygiene",
+      "description": "Regelt die Qualität und Hygieneanforderungen für Trinkwasser.",
+      "source": "TrinkwV",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-71",
+    "label": "DVGW W551 – Legionellenprävention",
+    "type": "RF",
+    "properties": {
+      "domain": "hygiene",
+      "description": "Regelt Legionellenprävention und Temperaturanforderungen.",
+      "source": "DVGW W551",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-72",
+    "label": "DVGW W553 – Zirkulationssysteme",
+    "type": "RF",
+    "properties": {
+      "domain": "hygiene",
+      "description": "Regelt Anforderungen an Zirkulationssysteme.",
+      "source": "DVGW W553",
+      "version": "2.0"
+    }
+  },
+
+  /* Elektro / Netzanschluss */
+  {
+    "id": "RF-77",
+    "label": "DIN 18015-2 – Elektroinstallation",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt die elektrische Ausstattung von Wohngebäuden.",
+      "source": "DIN 18015-2",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-78",
+    "label": "VDE-AR-N 4100 – Netzanschluss",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Technische Anschlussregeln für den Netzanschluss.",
+      "source": "VDE-AR-N 4100",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-80",
+    "label": "DIN VDE 0100-729 – Sicherheit elektrischer Anlagen",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt Sicherheit elektrischer Anlagen.",
+      "source": "DIN VDE 0100-729",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-82",
+    "label": "EltBauVO – Elektrische Betriebsräume",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt Anforderungen an elektrische Betriebsräume.",
+      "source": "EltBauVO",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-83",
+    "label": "DGUV V3 – Prüfung elektrischer Anlagen",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt Prüfpflichten elektrischer Anlagen.",
+      "source": "DGUV V3",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-84",
+    "label": "DGUV 203-032 – Brandschutz Elektro",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt brandschutztechnische Anforderungen an Elektroanlagen.",
+      "source": "DGUV 203-032",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-85",
+    "label": "NAV – Niederspannungsanschlussverordnung",
+    "type": "RF",
+    "properties": {
+      "domain": "electrical",
+      "description": "Regelt den Netzanschluss im Niederspannungsbereich.",
+      "source": "NAV",
+      "version": "2.0"
+    }
+  },
+
+  /* Bauordnung / Brandschutz */
+  {
+    "id": "RF-79",
+    "label": "MLAR – Leitungsanlagenrichtlinie",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Regelt brandschutztechnische Anforderungen an Leitungsanlagen.",
+      "source": "MLAR",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-86",
+    "label": "LBO – Landesbauordnung (generisch)",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Grundlegende bauordnungsrechtliche Anforderungen.",
+      "source": "LBO",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-86-BW",
+    "label": "LBO Baden-Württemberg",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Landesspezifische Bauordnung Baden-Württemberg.",
+      "source": "LBO BW",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-86-BY",
+    "label": "LBO Bayern",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Landesspezifische Bauordnung Bayern.",
+      "source": "LBO BY",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-86-HE",
+    "label": "LBO Hessen",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Landesspezifische Bauordnung Hessen.",
+      "source": "LBO HE",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-87-BW",
+    "label": "VVTB Baden-Württemberg",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Verwaltungsvorschrift Technische Baubestimmungen BW.",
+      "source": "VVTB BW",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-87-BY",
+    "label": "VVTB Bayern",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Verwaltungsvorschrift Technische Baubestimmungen BY.",
+      "source": "VVTB BY",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-87-HE",
+    "label": "VVTB Hessen",
+    "type": "RF",
+    "properties": {
+      "domain": "building",
+      "description": "Verwaltungsvorschrift Technische Baubestimmungen HE.",
+      "source": "VVTB HE",
+      "version": "2.0"
+    }
+  },
+
+  /* Förderrecht */
+  {
+    "id": "RF-90",
+    "label": "BEG – Bundesförderung effiziente Gebäude",
+    "type": "RF",
+    "properties": {
+      "domain": "funding",
+      "description": "Regelt Förderbedingungen für effiziente Gebäude.",
+      "source": "BEG",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-91",
+    "label": "BAFA – Förderprogramme",
+    "type": "RF",
+    "properties": {
+      "domain": "funding",
+      "description": "BAFA-Förderprogramme für Heizung und Effizienz.",
+      "source": "BAFA",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-92",
+    "label": "KfW – Kredit- und Zuschussprogramme",
+    "type": "RF",
+    "properties": {
+      "domain": "funding",
+      "description": "KfW-Förderprogramme für energetische Sanierung.",
+      "source": "KfW",
+      "version": "2.0"
+    }
+  },
+
+  /* Mietrecht */
+  {
+    "id": "RF-100",
+    "label": "BGB §535 – Gebrauchstauglichkeit",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt die Gebrauchstauglichkeit der Mietsache.",
+      "source": "BGB §535",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-101",
+    "label": "BGB §536 – Mietminderung",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt Mietminderung bei Mängeln.",
+      "source": "BGB §536",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-102",
+    "label": "BGB §556 – Betriebskosten",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt umlagefähige Betriebskosten.",
+      "source": "BGB §556",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-103",
+    "label": "BGB §559 – Modernisierungsumlage",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt Umlagefähigkeit energetischer Modernisierungen.",
+      "source": "BGB §559",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-104",
+    "label": "BGB §554 – Zutrittsrechte",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt Zutrittsrechte für Modernisierungen.",
+      "source": "BGB §554",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-105",
+    "label": "BGB §555d – Duldung energetischer Maßnahmen",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt Duldungspflichten bei energetischen Maßnahmen.",
+      "source": "BGB §555d",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "RF-106",
+    "label": "BetrKV – Betriebskostenverordnung",
+    "type": "RF",
+    "properties": {
+      "domain": "legal",
+      "description": "Regelt umlagefähige Betriebskosten im Detail.",
+      "source": "BetrKV",
+      "version": "2.0"
+    }
+  }
+]
