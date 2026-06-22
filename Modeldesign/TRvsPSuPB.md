@@ -154,4 +154,3 @@ Szenarien (E4) wirken **nicht direkt** auf TR, sondern immer über Bauteile:
 **PS = System**  
 **PB = Politik**
 
-Wenn du möchtest, kann ich jetzt direkt die PS‑Nodes generieren, 
