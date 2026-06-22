@@ -8,63 +8,63 @@ Dieses Repository enthält alle Artefakte zur Modellierung, Analyse und Visualis
 ## 📁 Projektstruktur
 
 artefacts/
-json/
-nodes/
-rf_nodes.json
-tr_nodes.json
-norm_nodes.json
-scenario_nodes.json
-ww_nodes.json
-en_nodes.json
-edges/
-rf_edges.json
-tr_edges.json
-norm_edges.json
-scenario_edges.json
-ww_edges.json
-crosslayer_edges.json
-en_edges.json
-alerts/
-alert_rules.json
-alert_instances.json
+  json/
+    nodes/
+      rf_nodes.json
+      tr_nodes.json
+      norm_nodes.json
+      scenario_nodes.json
+      ww_nodes.json
+      en_nodes.json
+    edges/
+      rf_edges.json
+      tr_edges.json
+      norm_edges.json
+      scenario_edges.json
+      ww_edges.json
+      crosslayer_edges.json
+      en_edges.json
+  alerts/
+    alert_rules.json
+    alert_instances.json
 
 dot/
-overview.dot
-rf_tr_layers.dot
-scenarios.dot
-warmwater.dot
-geg_cluster.dot
-konfliktketten.dot
-en_cluster.dot
+  overview.dot
+  rf_tr_layers.dot
+  scenarios.dot
+  warmwater.dot
+  geg_cluster.dot
+  konfliktketten.dot
+  en_cluster.dot
 
 cypher/
-import_nodes.cypher
-import_edges.cypher
-import_alerts.cypher
-validation.cypher
-cleanup.cypher
-constraints.cypher
+  import_nodes.cypher
+  import_edges.cypher
+  import_alerts.cypher
+  validation.cypher
+  cleanup.cypher
+  constraints.cypher
 
 etl/
-loader.py
-validator.py
-schema.py
-config.yaml
+  loader.py
+  validator.py
+  schema.py
+  config.yaml
 
 docs/
-architecture.md
-changelog.md
-modelling_decisions.md
-conflict_analysis.md
-geg_heatmap.md
+  architecture.md
+  changelog.md
+  modelling_decisions.md
+  conflict_analysis.md
+  geg_heatmap.md
 
 exports/
-aura_export.cypher
-snapshots/
+  aura_export.cypher
+  snapshots/
 
 config/
-neo4j.conf
-settings.json
+  neo4j.conf
+  settings.json
 
 
 ---
