@@ -1,0 +1,212 @@
+[
+  /* ============================
+     SB – Physik
+     ============================ */
+  {
+    "id": "SB-01",
+    "label": "Thermodynamik",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_physical",
+      "description": "Grundlegende thermodynamische Bedeutungen wie Temperatur, Energie, Leistung.",
+      "source": "Physik",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-02",
+    "label": "Energiebedarf",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_physical",
+      "description": "Bedeutung des Energiebedarfs im Kontext von Heizung und Warmwasser.",
+      "source": "Physik / GEG",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-03",
+    "label": "Leistungsbilanz",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_physical",
+      "description": "Bilanzierung von Leistung, Energie und Verlusten.",
+      "source": "Thermodynamik",
+      "version": "2.0"
+    }
+  },
+
+  /* ============================
+     SB – Regulatorik
+     ============================ */
+  {
+    "id": "SB-10",
+    "label": "Regulatorische Grenze",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung regulatorischer Grenzwerte wie GEG, LBO, VDE.",
+      "source": "GEG / LBO / VDE",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-11",
+    "label": "Nachweispflicht",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung von Nachweis- und Dokumentationspflichten.",
+      "source": "GEG / VVTB",
+      "version": "2.0"
+    }
+  },
+
+  /* ============================
+     SB – Legal
+     ============================ */
+  {
+    "id": "SB-20",
+    "label": "Mietrechtliche Relevanz",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_legal",
+      "description": "Bedeutung mietrechtlicher Anforderungen wie Komfort, Gebrauchstauglichkeit.",
+      "source": "BGB",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-21",
+    "label": "Umlagefähigkeit",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_legal",
+      "description": "Bedeutung der Umlagefähigkeit von Betriebskosten.",
+      "source": "BetrKV / BGB",
+      "version": "2.0"
+    }
+  },
+
+  /* ============================
+     SB – Infrastructure
+     ============================ */
+  {
+    "id": "SB-30",
+    "label": "Netzrestriktion",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung von Netzrestriktionen wie Schall, Aufstellflächen, Platzbedarf.",
+      "source": "LBO / MLAR",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-31",
+    "label": "Installationsgrenze",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung technischer Installationsgrenzen wie Elektro, DLE, Netzanschluss.",
+      "source": "VDE / NAV",
+      "version": "2.0"
+    }
+  },
+
+  /* ============================
+     SB – Process
+     ============================ */
+  {
+    "id": "SB-40",
+    "label": "Genehmigungsprozess",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_process",
+      "description": "Bedeutung behördlicher Genehmigungsprozesse.",
+      "source": "LBO / VVTB",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-41",
+    "label": "Netzbetreiberprozess",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_process",
+      "description": "Bedeutung der Prozesse beim Netzbetreiber (z. B. §14a).",
+      "source": "VDE-AR-N 4100",
+      "version": "2.0"
+    }
+  },
+
+  /* ============================
+     SB – Konfliktknoten (K7–K12)
+     ============================ */
+  {
+    "id": "SB-K7",
+    "label": "Hygiene vs. Effizienz",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen Hygieneanforderungen und energetischer Effizienz.",
+      "source": "TrinkwV / GEG",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-K8",
+    "label": "DLE vs. Elektroinstallation",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen DLE-Systemen und Elektroinstallationsgrenzen.",
+      "source": "VDE / NAV",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-K9",
+    "label": "Schall vs. Aufstellfläche",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen Schallanforderungen und Aufstellflächen.",
+      "source": "LBO / TA Lärm",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-K10",
+    "label": "Komfort vs. WP-Temperatur",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen Nutzerkomfort und WP-Temperaturniveau.",
+      "source": "BGB / GEG",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-K11",
+    "label": "WP-Erzeugerzwang vs. Elektro-Bestand",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen WP-Pflicht und elektrischen Bestandsgrenzen.",
+      "source": "GEG / VDE",
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "SB-K12",
+    "label": "GEG vs. WP-JAZ",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_conflict",
+      "description": "Konflikt zwischen GEG-Anforderungen und realer WP-JAZ.",
+      "source": "GEG / DIN V 18599",
+      "version": "2.0"
+    }
+  }
+]
