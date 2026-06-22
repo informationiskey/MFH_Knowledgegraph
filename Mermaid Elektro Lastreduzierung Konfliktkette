@@ -1,0 +1,14 @@
+flowchart LR
+
+    RFNETZ["RF‑NETZ‑01 §14a EnWG – Lastreduzierung<br/>(Regulatorische Realität)"]
+        --> TRWP03["TR‑WP‑03 Leistungsdrosselung<br/>(Technische Realität)"]
+
+    TRWP03 --> TR22["TR‑22 Komfort / Temperaturabfall<br/>(Technische Realität)"]
+
+    TR22 --> RF101["RF‑101 BGB §535 – Gebrauchstauglichkeit<br/>(Mietrecht)"]
+    RF101 --> RF102["RF‑102 BGB §536 – Mietminderung<br/>(Mietrecht)"]
+
+    RFNETZ --> NoExc["RF‑103 Keine Ausnahme für Strommangellage<br/>(Regulatorische Lücke)"]
+
+    RF102 --> Risiko["F‑98 Einseitiges Haftungsrisiko Vermieter"]
+    NoExc --> Risiko
