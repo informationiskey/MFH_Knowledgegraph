@@ -1,0 +1,521 @@
+noch ohne Semantik, ohne Physik und ohne Ermöglichungsmachern und szenarien
+
+digraph Gesamtmodell {
+
+  rankdir=LR;
+  splines=true;
+  overlap=false;
+  nodesep=0.6;
+  ranksep=1.0;
+
+  node [shape=box, style=filled, fillcolor="#f7f7f7", fontname="Arial"];
+
+  // -------------------------
+  // Ebene 2 – Technische Realität
+  // -------------------------
+
+  subgraph cluster_bedarf {
+    label="Physikalische Bedarfsgrößen (Ebene 2)";
+    style=filled;
+    color="#e0e0e0";
+
+    TR00a [label="TR-00a\nHeizlast"];
+    TR00b [label="TR-00b\nSchüttleistung"];
+  }
+
+  subgraph cluster_nutzer {
+    label="Nutzerverhalten (Ebene 2)";
+    style=filled;
+    color="#e8f5e9";
+
+    TR12a [label="TR-12a\nNutzeranzahl"];
+    TR12b [label="TR-12b\nFensterlüftung"];
+    TR12c [label="TR-12c\nWarmwasserverhalten"];
+  }
+
+  subgraph cluster_lueftung {
+    label="Lüftungssysteme (Ebene 2)";
+    style=filled;
+    color="#e1f5fe";
+
+    TR13 [label="TR-13\nDezentrale Lüftung mit WRG"];
+    TR14 [label="TR-14\nZentrale Zu-/Abluft"];
+  }
+
+  subgraph cluster_speicher {
+    label="Speicherarchitektur (Ebene 2)";
+    style=filled;
+    color="#e3f2fd";
+
+    TR04a [label="TR-04a\nTrinkwasserspeicher"];
+    TR04b [label="TR-04b\nPufferspeicher + FWS"];
+  }
+
+  subgraph cluster_system {
+    label="Systembedingungen (Ebene 2)";
+    style=filled;
+    color="#fff3e0";
+
+    TR01 [label="TR-01\nSystemtemperaturen"];
+    TR02 [label="TR-02\n60°C Hygiene"];
+    TR03 [label="TR-03\nZirkulation"];
+    TR05 [label="TR-05\nVerteilverluste"];
+    TR06 [label="TR-06\nAlt-Norm Elektro"];
+    TR07 [label="TR-07\nAufstellflächen"];
+    TR08 [label="TR-08\nSchall"];
+    TR09 [label="TR-09\nBrandschutz"];
+    TR10 [label="TR-10\nBaualtersklassen"];
+    TR11 [label="TR-11\nWärmeverluste"];
+  }
+
+  subgraph cluster_dle {
+    label="Elektrische WW-Bereitung (Ebene 2)";
+    style=filled;
+    color="#ffe0b2";
+
+    TR15 [label="TR-15\nDLE Zapfstelle"];
+    TR16 [label="TR-16\nDLE Etage"];
+    TR17 [label="TR-17\nDLE Haus"];
+  }
+
+  subgraph cluster_leistung {
+    label="Elektrische Leistungsgrenzen (Ebene 2)";
+    style=filled;
+    color="#ffecb3";
+
+    TR18 [label="TR-18\n4,2 kW"];
+    TR19 [label="TR-19\n12 kW"];
+    TR20 [label="TR-20\n21 kW"];
+    TR21 [label="TR-21\n3,7 kW Einphasen"];
+  }
+
+  subgraph cluster_wp {
+    label="WP-Zielgrößen (Ebene 2)";
+    style=filled;
+    color="#fce4ec";
+
+    WPEff [label="WP-Effizienz"];
+    WPDir [label="WP-Direkterzeugung"];
+    WPTmp [label="WP-Temperaturniveau"];
+    WPNT [label="WP-NT-Betrieb"];
+    WPDim [label="WP-Dimensionierung"];
+    WPsys [label="WP-Systeme"];
+  }
+
+  subgraph cluster_bilanz {
+    label="Bilanzierung / Normlogik (Ebene 2)";
+    style=filled;
+    color="#f3e5f5";
+
+    EffBew [label="Effizienzbewertung"];
+    GEG [label="GEG-Berechnungslogik"];
+    LM [label="Lastmanagement"];
+    Reg [label="Regulatorik (Placeholder)"];
+  }
+
+  // -------------------------
+  // Ebene 2 – Mietrechtliche technische Realitäten (NEU)
+  // -------------------------
+
+  subgraph cluster_mietrecht_tr {
+    label="Mietrechtlich relevante TR-Knoten (Ebene 2)";
+    style=filled;
+    color="#fffde7";
+
+    TR22 [label="TR-22\nMietrechtliche Komfortanforderungen"];
+    TR23 [label="TR-23\nUmlagefähigkeit / Betriebskosten"];
+    TR24 [label="TR-24\nDuldungspflichten / Zugang"];
+    TR25 [label="TR-25\nMietminderung / Störfaktoren"];
+  }
+
+  // -------------------------
+  // Ebene 3 – Regulatorik
+  // -------------------------
+
+  subgraph cluster_elektro {
+    label="Elektro-Normen (Ebene 3)";
+    style=filled;
+    color="#e3f2fd";
+
+    RF77  [label="RF-77\nDIN 18015-2"];
+    RF78  [label="RF-78\nVDE-AR-N 4100"];
+    RF80  [label="RF-80\nDIN VDE 0100-729"];
+    RF81  [label="RF-81\nASR A1.2"];
+    RF82  [label="RF-82\nEltBauVO"];
+    RF83  [label="RF-83\nDGUV V3"];
+    RF84  [label="RF-84\nDGUV 203-032"];
+    RF85  [label="RF-85\nNAV"];
+  }
+
+  subgraph cluster_bau {
+    label="Bauordnung / Brandschutz (Ebene 3)";
+    style=filled;
+    color="#ffebee";
+
+    RF79    [label="RF-79\nMLAR"];
+    RF86    [label="RF-86\nLBO generisch"];
+    RF86BW  [label="RF-86-BW\nLBO BW"];
+    RF86BY  [label="RF-86-BY\nLBO BY"];
+    RF86HE  [label="RF-86-HE\nLBO HE"];
+    RF87BW  [label="RF-87-BW\nVVTB BW"];
+    RF87BY  [label="RF-87-BY\nVVTB BY"];
+    RF87HE  [label="RF-87-HE\nVVTB HE"];
+  }
+
+  subgraph cluster_geg {
+    label="GEG / Bilanzierung (Ebene 3)";
+    style=filled;
+    color="#e8f5e9";
+
+    RF60 [label="RF-60\nGEG JAZ"];
+    RF61 [label="RF-61\nGEG Primärenergie"];
+    RF62 [label="RF-62\nGEG WW-Berechnung"];
+    RF63 [label="RF-63\nDIN V 18599"];
+  }
+
+  subgraph cluster_wasser {
+    label="Wasser / Hygiene (Ebene 3)";
+    style=filled;
+    color="#e1f5fe";
+
+    RF70 [label="RF-70\nTrinkwV"];
+    RF71 [label="RF-71\nDVGW W551"];
+    RF72 [label="RF-72\nDVGW W553"];
+  }
+
+  subgraph cluster_foerder {
+    label="Förderlogik (Ebene 3)";
+    style=filled;
+    color="#fff3e0";
+
+    RF90 [label="RF-90\nBEG"];
+    RF91 [label="RF-91\nBAFA"];
+    RF92 [label="RF-92\nKfW"];
+  }
+
+  // -------------------------
+  // Ebene 3 – Mietrecht (NEU)
+  // -------------------------
+
+  subgraph cluster_mietrecht {
+    label="Mietrecht (Ebene 3)";
+    style=filled;
+    color="#fff8e1";
+
+    RF100 [label="RF-100\nBGB §535 Gebrauchstauglichkeit"];
+    RF101 [label="RF-101\nBGB §536 Mietminderung"];
+    RF102 [label="RF-102\nBGB §556 Betriebskosten"];
+    RF103 [label="RF-103\nBGB §559 Modernisierungsumlage"];
+    RF104 [label="RF-104\nBGB §554 Zutrittsrechte"];
+    RF105 [label="RF-105\nBGB §555d Duldung energetischer Maßnahmen"];
+    RF106 [label="RF-106\nBetrKV Betriebskostenverordnung"];
+  }
+subgraph cluster_EN {
+    label="Ebene 5 – Ermöglichungsmacher (EN)";
+    color="#27AE60";
+    style=filled;
+    fillcolor="#E9F7EF";
+
+    EN01 [label="EN 01\nKompakte Zählerplatzsysteme"];
+    EN02 [label="EN 02\nArbeitsraum Flexibilisierung"];
+    EN03 [label="EN 03\nMLAR Ausnahme"];
+    EN04 [label="EN 04\nTA Lärm Ausnahme"];
+    EN05 [label="EN 05\nKomfortflexibilisierung"];
+    EN06 [label="EN 06\nGEG Flexibilisierung"];
+    EN07 [label="EN 07\nTrinkwasser Flexibilisierung"];
+    EN08 [label="EN 08\n§14a Temperaturgarantie"];
+}
+
+  
+  edge [fontname="Arial", fontsize=10];
+
+  // ---------------------------------------------------------
+  // Ebene 2 – Interne Kanten (Technische Realität)
+  // ---------------------------------------------------------
+
+  // Physikalische Bedarfsgrößen
+  TR00a -> TR01 [label="prerequisite_for"];
+  TR00b -> TR04a [label="prerequisite_for"];
+  TR00b -> TR04b [label="modulates"];
+  TR00b -> TR03 [label="prerequisite_for"];
+
+  // Nutzerverhalten
+  TR12a -> TR00b [label="reinforces"];
+  TR12a -> TR04a [label="prerequisite_for"];
+  TR12a -> TR04b [label="modulates"];
+
+  TR12c -> TR04a [label="enforces"];
+  TR12c -> TR04b [label="modulates"];
+
+  TR12c -> TR00b [label="increases_peak_load"];
+  TR12b -> TR00a [label="increases_real_heating_demand"];
+  TR12b -> TR00a [label="increases_variability"];
+  TR12c -> TR03 [label="increases_runtime"];
+  TR12a -> TR00b [label="increases_peak_load"];
+  TR12a -> TR00a [label="increases_variability"];
+  TR12b -> TR01 [label="increases_required_temperature"];
+  TR00b -> TR04a [label="increases_required_temperature"];
+
+  // Lüftungssysteme
+  TR13 -> TR11 [label="reduces_losses"];
+  TR13 -> TR01 [label="reduces_temp"];
+  TR13 -> WPEff [label="enables"];
+
+  TR14 -> TR11 [label="reduces_losses"];
+  TR14 -> TR01 [label="reduces_temp"];
+  TR14 -> WPEff [label="enables"];
+
+  // Speicherarchitektur
+  TR04b -> WPEff [label="enables"];
+
+  // Systembedingungen
+  TR01 -> WPEff [label="reduces_efficiency"];
+  TR02 -> WPTmp [label="conflicts_with"];
+  TR03 -> WPsys [label="reduces_efficiency"];
+  TR00b -> WPDir [label="blocks"];
+
+  TR04a -> WPEff [label="reduces_efficiency"];
+  TR04a -> WPNT [label="conflicts_with"];
+
+  TR07 -> TR08 [label="conflicts_with"];
+  TR12b -> GEG [label="conflicts_with"];
+  TR12c -> LM [label="conflicts_with"];
+
+  TR11 -> WPEff [label="reduces_efficiency"];
+  TR06 -> Reg [label="interacts_with"];
+
+  // Bilanzkonflikte
+  TR05 -> TR11 [label="misrepresents_reality"];
+  TR05 -> EffBew [label="creates_bilanzkonflikt"];
+  TR11 -> EffBew [label="redefines"];
+
+  // DLE-Pfad
+  TR15 -> TR00b [label="modulates"];
+  TR16 -> TR00b [label="modulates"];
+  TR17 -> TR00b [label="modulates"];
+
+  TR02 -> TR15 [label="conflicts_with"];
+  TR02 -> TR16 [label="conflicts_with"];
+  TR02 -> TR17 [label="conflicts_with"];
+
+  TR15 -> TR03 [label="blocks"];
+  TR16 -> TR03 [label="blocks"];
+  TR17 -> TR03 [label="blocks"];
+
+  TR15 -> WPsys [label="conflicts_with"];
+  TR16 -> WPsys [label="conflicts_with"];
+  TR17 -> WPsys [label="conflicts_with"];
+
+  TR15 -> TR06 [label="increases_required_capacity"];
+  TR16 -> TR06 [label="increases_required_capacity"];
+  TR17 -> TR06 [label="increases_required_capacity"];
+
+  TR15 -> LM [label="increases_peak_load"];
+  TR16 -> LM [label="increases_peak_load"];
+  TR17 -> LM [label="increases_peak_load"];
+
+  // Leistungsgrenzen
+  TR15 -> TR18 [label="exceeds_threshold"];
+  TR16 -> TR18 [label="exceeds_threshold"];
+  TR17 -> TR18 [label="exceeds_threshold"];
+
+  TR15 -> TR19 [label="exceeds_threshold"];
+  TR16 -> TR19 [label="exceeds_threshold"];
+  TR17 -> TR19 [label="exceeds_threshold"];
+
+  TR15 -> TR20 [label="may_exceed_threshold"];
+  TR16 -> TR20 [label="likely_exceeds_threshold"];
+  TR17 -> TR20 [label="exceeds_threshold"];
+
+  TR18 -> TR06 [label="requires_control_capability"];
+  TR19 -> TR06 [label="requires_registration"];
+  TR20 -> TR06 [label="requires_approval"];
+
+  TR18 -> LM [label="subject_to_control"];
+  TR19 -> LM [label="increases_load"];
+  TR20 -> LM [label="critical_load"];
+
+  TR21 -> TR15 [label="prerequisite_for"];
+  TR21 -> TR16 [label="prerequisite_for"];
+  TR21 -> TR17 [label="prerequisite_for"];
+
+  TR21 -> TR06 [label="increases_complexity"];
+  TR21 -> TR07 [label="increases_installation_effort"];
+
+
+  // ---------------------------------------------------------
+  // Ebene 2 – Mietrechtliche TR-Knoten (NEU)
+  // ---------------------------------------------------------
+
+  TR22 -> TR01 [label="defines_minimum"];
+  TR22 -> TR02 [label="defines_minimum"];
+  TR22 -> TR03 [label="defines_minimum"];
+  TR22 -> TR08 [label="defines_limit"];
+
+  TR23 -> LM [label="cost_sensitive"];
+  TR23 -> WPsys [label="cost_sensitive"];
+  TR23 -> TR04a [label="cost_sensitive"];
+  TR23 -> TR04b [label="cost_sensitive"];
+
+  TR24 -> TR07 [label="requires_access"];
+  TR24 -> TR06 [label="requires_access"];
+  TR24 -> TR13 [label="requires_access"];
+  TR24 -> TR14 [label="requires_access"];
+
+  TR25 -> TR08 [label="risk_factor"];
+  TR25 -> TR01 [label="risk_factor"];
+  TR25 -> TR02 [label="risk_factor"];
+  TR25 -> TR03 [label="risk_factor"];
+
+
+  // ---------------------------------------------------------
+  // Ebene 3 – Interne Normbeziehungen
+  // ---------------------------------------------------------
+
+  // LBO → LBO-Länder
+  RF86 -> RF86BW [label="overrides"];
+  RF86 -> RF86BY [label="overrides"];
+  RF86 -> RF86HE [label="overrides"];
+
+  // LBO-Länder → VVTB
+  RF86BW -> RF87BW [label="delegates_to"];
+  RF86BY -> RF87BY [label="delegates_to"];
+  RF86HE -> RF87HE [label="delegates_to"];
+
+  // VVTB → MLAR
+  RF87BW -> RF79 [label="introduces"];
+  RF87BY -> RF79 [label="introduces"];
+  RF87HE -> RF79 [label="introduces"];
+
+  // Elektro-Normen
+  RF85 -> RF78 [label="legal_framework_for"];
+  RF78 -> RF77 [label="requires_compliance"];
+  RF78 -> RF80 [label="requires_compliance"];
+
+  RF83 -> RF84 [label="details"];
+
+  // Wasser / Hygiene
+  RF70 -> RF71 [label="requires"];
+  RF71 -> RF72 [label="details"];
+
+  // GEG / Bilanzierung
+  RF60 -> RF63 [label="uses_method"];
+  RF61 -> RF63 [label="uses_method"];
+  RF62 -> RF63 [label="uses_method"];
+
+  // Förderung
+  RF90 -> RF91 [label="implements"];
+  RF90 -> RF92 [label="implements"];
+
+
+  // ---------------------------------------------------------
+  // Ebene 3 – Mietrecht (NEU)
+  // ---------------------------------------------------------
+
+  RF100 -> RF101 [label="related_to"];
+  RF102 -> RF106 [label="defines_costs"];
+  RF103 -> RF102 [label="interacts_with"];
+  RF104 -> RF105 [label="extends"];
+
+
+  // ---------------------------------------------------------
+  // Cross-Layer – Ebene 2 → Ebene 3 (bestehend)
+  // ---------------------------------------------------------
+
+  // Elektro
+  TR06 -> RF78 [label="requires"];
+  TR06 -> RF77 [label="requires"];
+  TR06 -> RF80 [label="requires"];
+  TR06 -> RF82 [label="requires"];
+  TR06 -> RF83 [label="requires"];
+  TR06 -> RF84 [label="requires"];
+  TR06 -> RF85 [label="requires"];
+
+  TR18 -> RF78 [label="subject_to"];
+  TR19 -> RF85 [label="subject_to"];
+  TR20 -> RF85 [label="subject_to"];
+  TR21 -> RF78 [label="restricted_by"];
+
+  // Wasser / Hygiene
+  TR02 -> RF70 [label="enforced_by"];
+  TR02 -> RF71 [label="enforced_by"];
+  TR03 -> RF71 [label="regulated_by"];
+  TR03 -> RF72 [label="regulated_by"];
+  TR04a -> RF71 [label="regulated_by"];
+  TR04a -> RF72 [label="regulated_by"];
+
+  // GEG / Bilanzierung
+  TR13 -> RF60 [label="affects"];
+  TR13 -> RF61 [label="affects"];
+  TR13 -> RF63 [label="affects"];
+  TR14 -> RF60 [label="affects"];
+  TR14 -> RF61 [label="affects"];
+  TR14 -> RF63 [label="affects"];
+
+  TR00a -> RF63 [label="input"];
+  TR00b -> RF62 [label="input"];
+
+  // Bauordnung / Brandschutz
+  TR07 -> RF86BW [label="restricted_by"];
+  TR07 -> RF86BY [label="restricted_by"];
+  TR07 -> RF86HE [label="restricted_by"];
+  TR07 -> RF79 [label="restricted_by"];
+
+  TR09 -> RF79 [label="regulated_by"];
+  TR09 -> RF87BW [label="regulated_by"];
+  TR09 -> RF87BY [label="regulated_by"];
+  TR09 -> RF87HE [label="regulated_by"];
+
+  TR10 -> RF86 [label="constrained_by"];
+
+  // Förderung
+  WPEff -> RF60 [label="evaluated_by"];
+  WPNT -> RF60 [label="evaluated_by"];
+  WPTmp -> RF61 [label="evaluated_by"];
+  WPsys -> RF90 [label="eligible"];
+  WPsys -> RF91 [label="eligible"];
+  WPsys -> RF92 [label="eligible"];
+
+
+  // ---------------------------------------------------------
+  // Cross-Layer – Ebene 2 → Mietrecht (NEU)
+  // ---------------------------------------------------------
+
+  TR22 -> RF100 [label="requires_compliance"];
+  TR25 -> RF101 [label="subject_to"];
+
+  TR23 -> RF102 [label="regulated_by"];
+  TR23 -> RF106 [label="regulated_by"];
+  TR23 -> RF103 [label="eligible_under"];
+
+  TR24 -> RF104 [label="regulated_by"];
+  TR24 -> RF105 [label="regulated_by"];
+  
+  // ---------------------------------------------------------
+  // Cross-Layer – Ebene 5 → Ermöglichungmacher (EN)
+  // ---------------------------------------------------------
+EN01 -> RF80 [label="resolves"];
+EN01 -> RF82 [label="resolves"];
+EN01 -> RF86 [label="mitigates"];
+
+EN02 -> RF81 [label="resolves"];
+
+EN03 -> RF83 [label="resolves"];
+EN03 -> RF84 [label="resolves"];
+
+EN04 -> RF82  [label="resolves"];
+EN04 -> RF107 [label="resolves"];
+
+EN05 -> RF101 [label="resolves"];
+EN05 -> RF102 [label="resolves"];
+
+EN06 -> RF62 [label="resolves"];
+EN06 -> RF60 [label="mitigates"];
+
+EN07 -> RF62 [label="resolves"];
+
+EN08 -> RFNETZ01 [label="resolves"];
+EN08 -> RF101    [label="mitigates"];
+EN08 -> RF102    [label="mitigates"];
+
+}
