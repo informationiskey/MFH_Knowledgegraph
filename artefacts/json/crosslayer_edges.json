@@ -1,0 +1,75 @@
+[
+  /* ============================================================
+     ELEKTRO / VDE / NAV / TAB
+     ============================================================ */
+
+  { "source": "TR-06", "type": "requires", "target": "RF-78" },
+  { "source": "TR-06", "type": "requires", "target": "RF-77" },
+  { "source": "TR-06", "type": "requires", "target": "RF-80" },
+  { "source": "TR-06", "type": "requires", "target": "RF-82" },
+  { "source": "TR-06", "type": "requires", "target": "RF-83" },
+  { "source": "TR-06", "type": "requires", "target": "RF-84" },
+  { "source": "TR-06", "type": "requires", "target": "RF-85" },
+
+  /* TR‑18‑R (regulatorische Leistungsgrenze) */
+  { "source": "TR-18-R", "type": "requires_VDE_upgrade", "target": "RF-78" },
+  { "source": "TR-18-R", "type": "subject_to",          "target": "RF-85" },
+  { "source": "TR-18-R", "type": "activates",           "target": "RF-100" },
+
+  /* TR‑18‑T (technische Leistungsgrenze) */
+  { "source": "TR-18-T", "type": "restricted_by",       "target": "RF-78" },
+
+  /* Leistungsstufen 12/21 kW */
+  { "source": "TR-19", "type": "subject_to", "target": "RF-85" },
+  { "source": "TR-20", "type": "subject_to", "target": "RF-85" },
+  { "source": "TR-21", "type": "restricted_by", "target": "RF-78" },
+
+  /* ============================================================
+     HYGIENE / TRINKWASSER
+     ============================================================ */
+
+  { "source": "TR-02", "type": "enforced_by", "target": "RF-70" },
+  { "source": "TR-02", "type": "enforced_by", "target": "RF-71" },
+
+  { "source": "TR-03", "type": "regulated_by", "target": "RF-71" },
+  { "source": "TR-03", "type": "regulated_by", "target": "RF-72" },
+
+  { "source": "TR-22", "type": "triggers_legionellenprüfung", "target": "RF-72" },
+
+  /* ============================================================
+     GEG / BILANZIERUNG
+     ============================================================ */
+
+  { "source": "TR-04b", "type": "requires_JAZ",        "target": "RF-61" },
+  { "source": "TR-03",  "type": "affects_WW_Bilanz",   "target": "RF-62" },
+
+  { "source": "TR-13", "type": "evaluated_by", "target": "RF-60" },
+  { "source": "TR-13", "type": "evaluated_by", "target": "RF-61" },
+  { "source": "TR-13", "type": "evaluated_by", "target": "RF-63" },
+
+  { "source": "TR-14", "type": "evaluated_by", "target": "RF-60" },
+  { "source": "TR-14", "type": "evaluated_by", "target": "RF-61" },
+  { "source": "TR-14", "type": "evaluated_by", "target": "RF-63" },
+
+  { "source": "TR-05", "type": "evaluated_by", "target": "RF-63" },
+  { "source": "TR-11", "type": "evaluated_by", "target": "RF-63" },
+
+  /* ============================================================
+     BAUORDNUNG / SCHALL / AUFSTELLFLÄCHEN
+     ============================================================ */
+
+  { "source": "TR-07", "type": "requires_schallgrenze",     "target": "RF-86" },
+  { "source": "TR-08", "type": "requires_aufstellfläche",   "target": "RF-86" },
+
+  /* ============================================================
+     FÖRDERLOGIK (BEG / BAFA / KfW)
+     ============================================================ */
+
+  { "source": "TR-00a", "type": "relevant_for", "target": "RF-90" },
+  { "source": "TR-00a", "type": "relevant_for", "target": "RF-91" },
+  { "source": "TR-00a", "type": "relevant_for", "target": "RF-92" },
+
+  { "source": "TR-00b", "type": "relevant_for", "target": "RF-90" },
+  { "source": "TR-00b", "type": "relevant_for", "target": "RF-91" },
+  { "source": "TR-00b", "type": "relevant_for", "target": "RF-92" }
+]
