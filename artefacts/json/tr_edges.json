@@ -1,0 +1,122 @@
+[
+  /* Physikalische Bedarfsgrößen */
+  { "source": "TR-00a", "type": "prerequisite_for", "target": "TR-01" },
+  { "source": "TR-00b", "type": "prerequisite_for", "target": "TR-04a" },
+  { "source": "TR-00b", "type": "modulates", "target": "TR-04b" },
+  { "source": "TR-00b", "type": "prerequisite_for", "target": "TR-03" },
+
+  /* Nutzerverhalten */
+  { "source": "TR-12a", "type": "reinforces", "target": "TR-00b" },
+  { "source": "TR-12a", "type": "prerequisite_for", "target": "TR-04a" },
+  { "source": "TR-12a", "type": "modulates", "target": "TR-04b" },
+  { "source": "TR-12a", "type": "increases_peak_load", "target": "TR-00b" },
+  { "source": "TR-12a", "type": "increases_variability", "target": "TR-00a" },
+
+  { "source": "TR-12b", "type": "increases_real_heating_demand", "target": "TR-00a" },
+  { "source": "TR-12b", "type": "increases_variability", "target": "TR-00a" },
+  { "source": "TR-12b", "type": "increases_required_temperature", "target": "TR-01" },
+  { "source": "TR-12b", "type": "conflicts_with", "target": "GEG" },
+
+  { "source": "TR-12c", "type": "enforces", "target": "TR-04a" },
+  { "source": "TR-12c", "type": "modulates", "target": "TR-04b" },
+  { "source": "TR-12c", "type": "increases_peak_load", "target": "TR-00b" },
+  { "source": "TR-12c", "type": "conflicts_with", "target": "LM" },
+
+  /* Lüftungssysteme */
+  { "source": "TR-13", "type": "reduces_losses", "target": "TR-11" },
+  { "source": "TR-13", "type": "reduces_temp", "target": "TR-01" },
+  { "source": "TR-13", "type": "enables", "target": "WPEff" },
+
+  { "source": "TR-14", "type": "reduces_losses", "target": "TR-11" },
+  { "source": "TR-14", "type": "reduces_temp", "target": "TR-01" },
+  { "source": "TR-14", "type": "enables", "target": "WPEff" },
+
+  /* Verluste */
+  { "source": "TR-05", "type": "misrepresents_reality", "target": "TR-11" },
+  { "source": "TR-05", "type": "creates_bilanzkonflikt", "target": "EffBew" },
+  { "source": "TR-11", "type": "redefines", "target": "EffBew" },
+
+  /* DLE-Pfad */
+  { "source": "TR-15", "type": "modulates", "target": "TR-00b" },
+  { "source": "TR-16", "type": "modulates", "target": "TR-00b" },
+  { "source": "TR-17", "type": "modulates", "target": "TR-00b" },
+
+  { "source": "TR-02", "type": "conflicts_with", "target": "TR-15" },
+  { "source": "TR-02", "type": "conflicts_with", "target": "TR-16" },
+  { "source": "TR-02", "type": "conflicts_with", "target": "TR-17" },
+
+  { "source": "TR-15", "type": "blocks", "target": "TR-03" },
+  { "source": "TR-16", "type": "blocks", "target": "TR-03" },
+  { "source": "TR-17", "type": "blocks", "target": "TR-03" },
+
+  { "source": "TR-15", "type": "conflicts_with", "target": "WPsys" },
+  { "source": "TR-16", "type": "conflicts_with", "target": "WPsys" },
+  { "source": "TR-17", "type": "conflicts_with", "target": "WPsys" },
+
+  { "source": "TR-15", "type": "increases_required_capacity", "target": "TR-06" },
+  { "source": "TR-16", "type": "increases_required_capacity", "target": "TR-06" },
+  { "source": "TR-17", "type": "increases_required_capacity", "target": "TR-06" },
+
+  { "source": "TR-15", "type": "increases_peak_load", "target": "LM" },
+  { "source": "TR-16", "type": "increases_peak_load", "target": "LM" },
+  { "source": "TR-17", "type": "increases_peak_load", "target": "LM" },
+
+  /* Leistungsgrenzen – NEU: TR‑18‑R / TR‑18‑T */
+  { "source": "TR-15", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
+  { "source": "TR-16", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
+  { "source": "TR-17", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
+
+  { "source": "TR-15", "type": "exceeds_technical_threshold", "target": "TR-18-T" },
+  { "source": "TR-16", "type": "exceeds_technical_threshold", "target": "TR-18-T" },
+  { "source": "TR-17", "type": "exceeds_technical_threshold", "target": "TR-18-T" },
+
+  /* TR‑18‑T → technische Folgen */
+  { "source": "TR-18-T", "type": "reduces_heating_capacity", "target": "TR-01" },
+  { "source": "TR-18-T", "type": "prevents_60C_hygiene", "target": "TR-02" },
+  { "source": "TR-18-T", "type": "prevents_21C", "target": "TR-22" },
+  { "source": "TR-18-T", "type": "enables_mietminderung", "target": "TR-25" },
+
+  /* Leistungsstufen 12/21 kW */
+  { "source": "TR-15", "type": "exceeds_threshold", "target": "TR-19" },
+  { "source": "TR-16", "type": "exceeds_threshold", "target": "TR-19" },
+  { "source": "TR-17", "type": "exceeds_threshold", "target": "TR-19" },
+
+  { "source": "TR-15", "type": "may_exceed_threshold", "target": "TR-20" },
+  { "source": "TR-16", "type": "likely_exceeds_threshold", "target": "TR-20" },
+  { "source": "TR-17", "type": "exceeds_threshold", "target": "TR-20" },
+
+  { "source": "TR-19", "type": "requires_registration", "target": "TR-06" },
+  { "source": "TR-20", "type": "requires_approval", "target": "TR-06" },
+
+  { "source": "TR-19", "type": "increases_load", "target": "LM" },
+  { "source": "TR-20", "type": "critical_load", "target": "LM" },
+
+  /* Einphasenbegrenzung */
+  { "source": "TR-21", "type": "prerequisite_for", "target": "TR-15" },
+  { "source": "TR-21", "type": "prerequisite_for", "target": "TR-16" },
+  { "source": "TR-21", "type": "prerequisite_for", "target": "TR-17" },
+
+  { "source": "TR-21", "type": "increases_complexity", "target": "TR-06" },
+  { "source": "TR-21", "type": "increases_installation_effort", "target": "TR-07" },
+
+  /* Mietrechtliche TR-Knoten */
+  { "source": "TR-22", "type": "defines_minimum", "target": "TR-01" },
+  { "source": "TR-22", "type": "defines_minimum", "target": "TR-02" },
+  { "source": "TR-22", "type": "defines_minimum", "target": "TR-03" },
+  { "source": "TR-22", "type": "defines_limit", "target": "TR-08" },
+
+  { "source": "TR-23", "type": "cost_sensitive", "target": "LM" },
+  { "source": "TR-23", "type": "cost_sensitive", "target": "WPsys" },
+  { "source": "TR-23", "type": "cost_sensitive", "target": "TR-04a" },
+  { "source": "TR-23", "type": "cost_sensitive", "target": "TR-04b" },
+
+  { "source": "TR-24", "type": "requires_access", "target": "TR-07" },
+  { "source": "TR-24", "type": "requires_access", "target": "TR-06" },
+  { "source": "TR-24", "type": "requires_access", "target": "TR-13" },
+  { "source": "TR-24", "type": "requires_access", "target": "TR-14" },
+
+  { "source": "TR-25", "type": "risk_factor", "target": "TR-08" },
+  { "source": "TR-25", "type": "risk_factor", "target": "TR-01" },
+  { "source": "TR-25", "type": "risk_factor", "target": "TR-02" },
+  { "source": "TR-25", "type": "risk_factor", "target": "TR-03" }
+]
