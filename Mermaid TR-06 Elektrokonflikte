@@ -1,0 +1,42 @@
+config:
+  layout: fixed
+---
+flowchart LR
+ subgraph Elektro["TR‑06 – Elektro Detailkonflikte"]
+        TR06a["TR‑06a Zählerschrank – Platzbedarf<br>(Technische Realität)"]
+        TR06b["TR‑06b Arbeitsraum – DIN VDE 0100‑729<br>(Technische Realität)"]
+        TR06c["TR‑06c Brandschutzabschnitt – Zählerplatz<br>(Technische Realität)"]
+        TR06d["TR‑06d APZ / SMGW / Zusatzfelder<br>(Technische Realität)"]
+        TR06e["TR‑06e §14a Steuerbox<br>(Technische Realität)"]
+        TR06f["TR‑06f Hausanschlussverstärkung<br>(Technische Realität)"]
+  end
+ subgraph Normen["Regulatorische Realität"]
+        RF080["RF‑080 VDE‑AR‑N 4100 – Zählerplatznorm"]
+        RF081["RF‑081 DIN VDE 0100‑729 – Arbeitsraum"]
+        RF082["RF‑082 TAB – APZ / SMGW / Platzbedarf"]
+        RF083["RF‑083 MLAR – Brandabschnitt Zählerplatz"]
+        RF084["RF‑084 EltBauVO – elektrische Betriebsräume"]
+        RF085["RF‑085 NAV – Netzanschlussverstärkung"]
+        RF086["RF‑086 LBO – Leitungsführung in Rettungswegen"]
+  end
+ subgraph Folgen["Konfliktfolgen"]
+        B1["F‑01 Baulich nicht herstellbar"]
+        B2["F‑02 Unwirtschaftlich / Netzverstärkung nicht möglich"]
+        IMP["F‑99 Systemisch nicht realisierbar"]
+  end
+    TR06a --> RF080
+    RF080 --> RF082
+    RF082 --> RF086 & B1
+    RF086 --> B1
+    TR06b --> RF081
+    RF081 --> B1
+    TR06c --> RF083
+    RF083 --> RF084
+    RF084 --> B1
+    TR06d --> RF082
+    TR06e --> RF082
+    TR06f --> RF085
+    RF085 --> B2
+    B1 --> IMP
+    B2 --> IMP
+    Normen --> B1
