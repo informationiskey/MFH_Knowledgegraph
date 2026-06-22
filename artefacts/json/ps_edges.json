@@ -1,0 +1,77 @@
+[
+  /* ============================================================
+     WÄRMEPUMPE (PS-WP-01)
+     ============================================================ */
+  { "source": "PS-WP-01", "type": "provides", "target": "TR-01" },
+  { "source": "PS-WP-01", "type": "limited_by", "target": "TR-18-T" },
+  { "source": "PS-WP-01", "type": "affected_by", "target": "TR-18-R" },
+  { "source": "PS-WP-01", "type": "defines", "target": "TR-33" },
+
+  /* ============================================================
+     WARMWASSERSPEICHER (PS-SP-01)
+     ============================================================ */
+  { "source": "PS-SP-01", "type": "defines", "target": "TR-04a" },
+  { "source": "PS-SP-01", "type": "modulates", "target": "TR-04b" },
+  { "source": "PS-SP-01", "type": "enables", "target": "TR-02" },
+
+  /* ============================================================
+     PUFFERSPEICHER (PS-SP-02)
+     ============================================================ */
+  { "source": "PS-SP-02", "type": "stabilizes", "target": "TR-01" },
+  { "source": "PS-SP-02", "type": "reduces_variability", "target": "TR-00a" },
+
+  /* ============================================================
+     FRISCHWASSERSTATION (PS-FWS-01)
+     ============================================================ */
+  { "source": "PS-FWS-01", "type": "defines", "target": "TR-00b" },
+  { "source": "PS-FWS-01", "type": "requires", "target": "TR-02" },
+
+  /* ============================================================
+     ZIRKULATION (PS-ZR-01)
+     ============================================================ */
+  { "source": "PS-ZR-01", "type": "increases_losses", "target": "TR-11" },
+  { "source": "PS-ZR-01", "type": "requires", "target": "TR-03" },
+
+  /* ============================================================
+     HEIZKREIS (PS-HK-01)
+     ============================================================ */
+  { "source": "PS-HK-01", "type": "defines", "target": "TR-01" },
+  { "source": "PS-HK-01", "type": "influences", "target": "TR-00a" },
+
+  /* ============================================================
+     HYDRAULIKGRUPPE (PS-HY-01)
+     ============================================================ */
+  { "source": "PS-HY-01", "type": "modulates", "target": "TR-01" },
+  { "source": "PS-HY-01", "type": "modulates", "target": "TR-04b" },
+
+  /* ============================================================
+     ELEKTROINSTALLATION (PS-EL-01)
+     ============================================================ */
+  { "source": "PS-EL-01", "type": "defines_limit", "target": "TR-18-T" },
+  { "source": "PS-EL-01", "type": "defines_limit", "target": "TR-21" },
+  { "source": "PS-EL-01", "type": "defines_limit", "target": "TR-06" },
+
+  /* ============================================================
+     REGELUNG (PS-RG-01)
+     ============================================================ */
+  { "source": "PS-RG-01", "type": "controls", "target": "TR-38" },
+  { "source": "PS-RG-01", "type": "modulates", "target": "TR-00b" },
+
+  /* ============================================================
+     WARMWASSERVERTEILUNG (PS-VT-01)
+     ============================================================ */
+  { "source": "PS-VT-01", "type": "increases_losses", "target": "TR-11" },
+  { "source": "PS-VT-01", "type": "defines", "target": "TR-03" },
+
+  /* ============================================================
+     LÜFTUNGSANLAGE (PS-LU-01)
+     ============================================================ */
+  { "source": "PS-LU-01", "type": "reduces_losses", "target": "TR-11" },
+  { "source": "PS-LU-01", "type": "reduces_temp", "target": "TR-01" },
+
+  /* ============================================================
+     ERZEUGER BESTAND (PS-ER-01)
+     ============================================================ */
+  { "source": "PS-ER-01", "type": "provides", "target": "TR-01" },
+  { "source": "PS-ER-01", "type": "defines", "target": "TR-02" }
+]
