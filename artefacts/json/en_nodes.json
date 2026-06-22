@@ -1,0 +1,170 @@
+[
+  {
+    "id": "EN-01",
+    "label": "Alternative Nachweisführung",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht alternative technische oder rechnerische Nachweise außerhalb der Standardnorm.",
+      "source": "GEG / Fachkommentierung",
+      "tags": ["alternative_proof", "system"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-02",
+    "label": "Bestandsschutz",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht abweichende technische Lösungen im Bestand, wenn Normerfüllung nicht möglich ist.",
+      "source": "LBO / GEG",
+      "tags": ["bestand", "abweichung"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-03",
+    "label": "Risikobasierter Brandschutz",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht abweichende Lösungen im Brandschutz durch Risikoanalyse.",
+      "source": "MLAR / VdS",
+      "tags": ["brandschutz", "risk"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-04",
+    "label": "Technische Kompensationsmaßnahmen",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Kompensation von Normabweichungen durch technische Zusatzmaßnahmen.",
+      "source": "GEG / LBO",
+      "tags": ["kompensation", "technik"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-05",
+    "label": "Betriebliche Kompensationsmaßnahmen",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Kompensation durch Betriebsführung, Wartung oder organisatorische Maßnahmen.",
+      "source": "GEG / Betreiberpflichten",
+      "tags": ["betrieb", "kompensation"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-06",
+    "label": "Systemische Bewertung",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Bewertung des Gesamtsystems statt einzelner Komponenten.",
+      "source": "GEG / Fachkommentierung",
+      "tags": ["system", "evaluation"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-06b",
+    "label": "Systemischer GEG-Nachweis",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht GEG-Nachweis auf Basis der Systembilanz statt Einzelkomponenten. Entschärft Konflikte zwischen TR-Realität und RF-60/61/63.",
+      "source": "GEG / Fachkommentierung",
+      "tags": ["geg", "systembilanz", "enabler"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-07",
+    "label": "Abweichung nach LBO",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Abweichungen von bauordnungsrechtlichen Anforderungen bei gleichwertigem Schutzniveau.",
+      "source": "LBO / VVTB",
+      "tags": ["abweichung", "bauordnung"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-08",
+    "label": "Mietrechtliche Anerkennung Strommangellage",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Berücksichtigung von Strommangellagen im Mietrecht, z. B. bei WP-Betrieb.",
+      "source": "Rechtsprechung / Fachliteratur",
+      "tags": ["mietrecht", "strommangel"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-09",
+    "label": "Erweiterte Betreiberverantwortung",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht technische Abweichungen, wenn der Betreiber zusätzliche Pflichten übernimmt.",
+      "source": "Betriebssicherheitsverordnung",
+      "tags": ["betrieb", "verantwortung"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-10",
+    "label": "Wirtschaftlichkeitsabwägung",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Abweichungen, wenn technische Anforderungen wirtschaftlich unzumutbar sind.",
+      "source": "GEG §102",
+      "tags": ["wirtschaftlichkeit", "abwägung"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-11",
+    "label": "Technische Gleichwertigkeit",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht alternative technische Lösungen bei nachgewiesener Gleichwertigkeit.",
+      "source": "GEG / LBO",
+      "tags": ["gleichwertigkeit", "technik"],
+      "version": "2.0"
+    }
+  },
+
+  {
+    "id": "EN-12",
+    "label": "Prognosebasierte Bewertung",
+    "type": "EN",
+    "properties": {
+      "domain": "enabler",
+      "description": "Ermöglicht Bewertung auf Basis von Prognosen statt statischer Werte.",
+      "source": "GEG / Fachkommentierung",
+      "tags": ["prognose", "bewertung"],
+      "version": "2.0"
+    }
+  }
+]
