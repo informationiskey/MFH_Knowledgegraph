@@ -1,0 +1,61 @@
+digraph KnowledgeGraph_EN {
+    rankdir=LR;
+    splines=true;
+    overlap=false;
+    fontsize=12;
+    nodesep=0.6;
+    ranksep=1.0;
+
+    node [shape=box, style=filled, fillcolor="#f2f2f2", fontname="Arial"];
+
+    /* ============================================================
+       CLUSTER: EN – ENABLER
+       ============================================================ */
+    subgraph cluster_EN {
+        label="Ebene EN – Enabler";
+        color="#cccccc";
+        style="rounded";
+
+        "EN-06b" [label="EN-06b\nSystembilanz"];
+        "EN-06c" [label="EN-06c\nBilanzierungslogik"];
+        "EN-07"  [label="EN-07\nOptimierungslogik"];
+        "EN-08"  [label="EN-08\nEffizienzbewertung"];
+        "EN-09"  [label="EN-09\nKomfortmodell"];
+        "EN-10"  [label="EN-10\nRisikoaggregation"];
+    }
+
+    /* ============================================================
+       EDGES: EN → TR
+       ============================================================ */
+    "EN-06b" -> "TR-00a" [label="evaluates"];
+    "EN-06b" -> "TR-00b" [label="evaluates"];
+    "EN-06b" -> "TR-04a" [label="evaluates"];
+    "EN-06b" -> "TR-04b" [label="evaluates"];
+    "EN-06b" -> "TR-11"  [label="evaluates"];
+
+    "EN-08"  -> "TR-33"  [label="evaluates"];
+    "EN-08"  -> "TR-01"  [label="evaluates"];
+    "EN-08"  -> "TR-11"  [label="evaluates"];
+
+    "EN-09"  -> "TR-22"  [label="evaluates"];
+    "EN-09"  -> "TR-01"  [label="evaluates"];
+
+    "EN-10"  -> "TR-25"  [label="aggregates"];
+    "EN-10"  -> "TR-08"  [label="aggregates"];
+    "EN-10"  -> "TR-02"  [label="aggregates"];
+
+    /* ============================================================
+       EDGES: EN → RF
+       ============================================================ */
+    "EN-06c" -> "RF-60" [label="uses_method"];
+    "EN-06c" -> "RF-61" [label="uses_method"];
+    "EN-06c" -> "RF-62" [label="uses_method"];
+    "EN-06c" -> "RF-63" [label="uses_method"];
+
+    /* ============================================================
+       EDGES: EN → PS
+       ============================================================ */
+    "EN-07" -> "PS-WP-01" [label="optimizes"];
+    "EN-07" -> "PS-SP-01" [label="optimizes"];
+    "EN-07" -> "PS-RG-01" [label="optimizes"];
+}
