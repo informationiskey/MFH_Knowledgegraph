@@ -1,0 +1,146 @@
+[
+  {
+    "id": "PS-WP-01",
+    "label": "Wärmepumpe",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Zentrale Wärmepumpeneinheit für Heizung und Warmwasser.",
+      "source": "Systemarchitektur",
+      "tags": ["heatpump", "generation"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-SP-01",
+    "label": "Warmwasserspeicher",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Speicher zur Bereitstellung von Warmwasser.",
+      "source": "Systemarchitektur",
+      "tags": ["storage", "warmwater"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-SP-02",
+    "label": "Pufferspeicher",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Pufferspeicher zur hydraulischen Entkopplung.",
+      "source": "Systemarchitektur",
+      "tags": ["buffer", "hydraulics"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-FWS-01",
+    "label": "Frischwasserstation",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Frischwasserstation zur hygienischen Warmwasserbereitung.",
+      "source": "Systemarchitektur",
+      "tags": ["freshwater", "heat_exchanger"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-ZR-01",
+    "label": "Zirkulationssystem",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Zirkulationsleitungen und Pumpen für Warmwasser.",
+      "source": "Systemarchitektur",
+      "tags": ["circulation", "warmwater"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-HK-01",
+    "label": "Heizkreis",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Heizkreis mit Radiatoren oder Fußbodenheizung.",
+      "source": "Systemarchitektur",
+      "tags": ["heating_circuit", "distribution"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-HY-01",
+    "label": "Hydraulikgruppe",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Pumpen, Mischer, Ventile zur hydraulischen Steuerung.",
+      "source": "Systemarchitektur",
+      "tags": ["hydraulics", "control"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-EL-01",
+    "label": "Elektroinstallation",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Elektrische Infrastruktur inkl. Absicherung und Phasen.",
+      "source": "Systemarchitektur",
+      "tags": ["electrical", "installation"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-RG-01",
+    "label": "Regelung / Steuerung",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Regelstrategie, LM-Integration, Temperaturführung.",
+      "source": "Systemarchitektur",
+      "tags": ["control", "regulation"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-VT-01",
+    "label": "Warmwasserverteilung",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Leitungsnetz für Warmwasserverteilung.",
+      "source": "Systemarchitektur",
+      "tags": ["distribution", "warmwater"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-LU-01",
+    "label": "Lüftungsanlage",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Zentrale oder dezentrale Lüftung mit oder ohne WRG.",
+      "source": "Systemarchitektur",
+      "tags": ["ventilation", "wrg"],
+      "version": "2.0"
+    }
+  },
+  {
+    "id": "PS-ER-01",
+    "label": "Wärmeerzeuger Bestand",
+    "type": "PS",
+    "properties": {
+      "domain": "physical_system",
+      "description": "Bestandswärmeerzeuger wie Gastherme oder Kessel.",
+      "source": "Systemarchitektur",
+      "tags": ["legacy", "heating"],
+      "version": "2.0"
+    }
+  }
+]
