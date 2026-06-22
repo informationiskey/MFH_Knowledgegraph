@@ -1,0 +1,28 @@
+[
+  /* ============================================================
+     SB – interne Bedeutungsbeziehungen
+     ============================================================ */
+
+  { "source": "SB-01", "type": "enables",  "target": "SB-02" },
+  { "source": "SB-02", "type": "enables",  "target": "SB-03" },
+
+  { "source": "SB-10", "type": "requires", "target": "SB-11" },
+
+  { "source": "SB-20", "type": "affects",  "target": "SB-21" },
+
+  { "source": "SB-30", "type": "limits",   "target": "SB-31" },
+
+  { "source": "SB-40", "type": "requires", "target": "SB-41" },
+
+
+  /* ============================================================
+     SB – Konfliktknoten (K7–K12)
+     ============================================================ */
+
+  { "source": "SB-K7",  "type": "conflict_with", "target": "SB-01" },
+  { "source": "SB-K8",  "type": "conflict_with", "target": "SB-31" },
+  { "source": "SB-K9",  "type": "conflict_with", "target": "SB-30" },
+  { "source": "SB-K10", "type": "conflict_with", "target": "SB-03" },
+  { "source": "SB-K11", "type": "conflict_with", "target": "SB-31" },
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" }
+]
