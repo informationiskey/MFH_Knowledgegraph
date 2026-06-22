@@ -4,67 +4,114 @@ Wissensgraph für technische Realität (TR), Regulatorik (RF), Szenarien (E4), E
 Dieses Repository enthält alle Artefakte zur Modellierung, Analyse und Visualisierung eines modularen, normtreuen Knowledge Graphs für MFH‑Systeme.
 
 ---
+# 📘 Projektstruktur – Übersicht & Dokumentation
 
-## 📁 Projektstruktur
+Dieses Repository enthält alle Artefakte, Skripte und Dokumentationen zur Modellierung, Validierung und Visualisierung eines mehrschichtigen, normbasierten Wissensgraphen (RF/TR/Norm/EN/WW/Szenarien) inklusive ETL‑Pipeline, Neo4j‑Importskripten und DOT‑Visualisierungen.
 
-artefacts/
-  json/
-    nodes/
-      rf_nodes.json
-      tr_nodes.json
-      norm_nodes.json
-      scenario_nodes.json
-      ww_nodes.json
-      en_nodes.json
-    edges/
-      rf_edges.json
-      tr_edges.json
-      norm_edges.json
-      scenario_edges.json
-      ww_edges.json
-      crosslayer_edges.json
-      en_edges.json
-  alerts/
-    alert_rules.json
-    alert_instances.json
+---
 
-dot/
-  overview.dot
-  rf_tr_layers.dot
-  scenarios.dot
-  warmwater.dot
-  geg_cluster.dot
-  konfliktketten.dot
-  en_cluster.dot
+## 📁 Artefakte (`artefacts/`)
 
-cypher/
-  import_nodes.cypher
-  import_edges.cypher
-  import_alerts.cypher
-  validation.cypher
-  cleanup.cypher
-  constraints.cypher
+Der zentrale Speicherort für **modellierte Graph‑Artefakte**.  
+Unterteilt in **Nodes**, **Edges** und **Alert‑Definitionen**.
 
-etl/
-  loader.py
-  validator.py
-  schema.py
-  config.yaml
+### `artefacts/json/nodes/`
+Enthält alle **Knotencluster** des Wissensgraphen:
 
-docs/
-  architecture.md
-  changelog.md
-  modelling_decisions.md
-  conflict_analysis.md
-  geg_heatmap.md
+- rf_nodes.json — Regulatorische Anforderungen (RF)  
+- tr_nodes.json — Technische Realität (TR)  
+- norm_nodes.json — Normen & Standards  
+- scenario_nodes.json — Szenarien & Varianten  
+- ww_nodes.json — Warmwasser‑Cluster  
+- en_nodes.json — Energienetz‑Cluster  
 
-exports/
-  aura_export.cypher
-  snapshots/
+### `artefacts/json/edges/`
+Alle **Kantencluster**, inkl. Cross‑Layer‑Beziehungen:
 
-config/
-  neo4j.conf
-  settings.json
+- rf_edges.json — regulatorische Abhängigkeiten  
+- tr_edges.json — technische Abhängigkeiten  
+- norm_edges.json — normative Verweise  
+- scenario_edges.json — Szenario‑Beziehungen  
+- ww_edges.json — Warmwasser‑Beziehungen  
+- crosslayer_edges.json — RF↔TR↔Norm↔EN‑Verknüpfungen  
+- en_edges.json — Energienetz‑Beziehungen  
+
+### `artefacts/alerts/`
+Alert‑System für Konfliktketten, Heatmaps und Compliance‑Checks:
+
+- alert_rules.json — definierte Alert‑Regeln  
+- alert_instances.json — konkrete Alert‑Instanzen  
+
+---
+
+## 📁 DOT‑Visualisierungen (`dot/`)
+
+Graphviz‑Dateien zur **Visualisierung der Modelllogik**:
+
+- overview.dot — Gesamtübersicht  
+- rf_tr_layers.dot — RF/TR‑Schichtenmodell  
+- scenarios.dot — Szenario‑Graph  
+- warmwater.dot — Warmwasser‑Cluster  
+- geg_cluster.dot — GEG‑Cluster  
+- konfliktketten.dot — Konfliktkettenmodell  
+- en_cluster.dot — Energienetz‑Cluster  
+
+---
+
+## 📁 Cypher‑Skripte (`cypher/`)
+
+Skripte für **Import, Validierung und Bereinigung** in Neo4j:
+
+- import_nodes.cypher — lädt alle Nodes  
+- import_edges.cypher — lädt alle Edges  
+- import_alerts.cypher — lädt Alerts  
+- validation.cypher — strukturelle & semantische Checks  
+- cleanup.cypher — Reset & Bereinigung  
+- constraints.cypher — Constraints & Indizes  
+
+---
+
+## 📁 ETL‑Pipeline (`etl/`)
+
+Python‑basierte Pipeline für Artefakt‑Generierung, Validierung und Schema‑Management:
+
+- loader.py — orchestriert den Import  
+- validator.py — prüft Struktur & Normkonformität  
+- schema.py — definiert das Artefakt‑Schema  
+- config.yaml — ETL‑Konfiguration  
+
+---
+
+## 📁 Dokumentation (`docs/`)
+
+Fachliche und technische Dokumente:
+
+- architecture.md — Systemarchitektur  
+- changelog.md — Versionierung  
+- modelling_decisions.md — Modellierungsentscheidungen  
+- conflict_analysis.md — Konfliktkettenanalyse  
+- geg_heatmap.md — GEG‑Heatmap  
+
+---
+
+## 📁 Exporte (`exports/`)
+
+Exportierte Daten und Snapshots:
+
+- aura_export.cypher — Exportskript für Neo4j Aura  
+- snapshots/ — versionierte Graph‑Snapshots  
+
+---
+
+## 📁 Konfiguration (`config/`)
+
+Projekt‑ und Neo4j‑Konfiguration:
+
+- neo4j.conf — Neo4j‑Serverkonfiguration  
+- settings.json — projektweite Settings  
+
+
+
 
 
 ---
