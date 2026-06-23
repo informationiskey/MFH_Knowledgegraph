@@ -1,24 +1,26 @@
 [
   /* ============================================================
-     PB‑01 – GEG‑65%-Regel vs. Systembilanz (bereinigt, JAZ-frei)
+     PB‑01 – GEG‑65%-Regel vs. reale Gebäudeparameter
      ============================================================ */
   { "source": "TR-00a", "type": "feeds_blockade",     "target": "PB-01" },
-  { "source": "RF-61",  "type": "regulates_blockade", "target": "PB-01" },
+  { "source": "TR-00b", "type": "feeds_blockade",     "target": "PB-01" },
   { "source": "RF-60",  "type": "regulates_blockade", "target": "PB-01" },
+  { "source": "RF-61",  "type": "regulates_blockade", "target": "PB-01" },
+  { "source": "RF-63",  "type": "regulates_blockade", "target": "PB-01" },
 
   /* ============================================================
      PB‑02 – LBO‑Schall vs. WP‑Außenaufstellung
      ============================================================ */
-  { "source": "TR-08",  "type": "feeds_blockade",     "target": "PB-02" },
   { "source": "TR-07",  "type": "feeds_blockade",     "target": "PB-02" },
+  { "source": "TR-08",  "type": "feeds_blockade",     "target": "PB-02" },
   { "source": "RF-86",  "type": "regulates_blockade", "target": "PB-02" },
   { "source": "RF-79",  "type": "regulates_blockade", "target": "PB-02" },
 
   /* ============================================================
      PB‑03 – Mietrecht vs. Lastmanagement
      ============================================================ */
-  { "source": "TR-38",  "type": "feeds_blockade",     "target": "PB-03" },
   { "source": "TR-23",  "type": "feeds_blockade",     "target": "PB-03" },
+  { "source": "TR-38",  "type": "feeds_blockade",     "target": "PB-03" },
   { "source": "RF-100", "type": "regulates_blockade", "target": "PB-03" },
   { "source": "RF-101", "type": "regulates_blockade", "target": "PB-03" },
   { "source": "RF-102", "type": "regulates_blockade", "target": "PB-03" },
@@ -50,9 +52,10 @@
   { "source": "RF-85",  "type": "regulates_blockade", "target": "PB-06" },
 
   /* ============================================================
-     PB‑07 – Förderlogik vs. Wirtschaftlichkeit im MFH
+     PB‑07 – Förderlogik vs. Wirtschaftlichkeit
      ============================================================ */
-  { "source": "WPsys",  "type": "feeds_blockade",     "target": "PB-07" },
+  { "source": "TR-00a", "type": "feeds_blockade",     "target": "PB-07" },
+  { "source": "TR-00b", "type": "feeds_blockade",     "target": "PB-07" },
   { "source": "RF-90",  "type": "regulates_blockade", "target": "PB-07" },
   { "source": "RF-91",  "type": "regulates_blockade", "target": "PB-07" },
   { "source": "RF-92",  "type": "regulates_blockade", "target": "PB-07" }
