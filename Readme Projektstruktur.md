@@ -15,7 +15,7 @@ project-root/
     │   │   ├── pb_nodes.json
     │   │   ├── ps_nodes.json
     │   │   ├── scenario_nodes.json
-    │   │   └── meta_nodes.json
+    │   │   └── meta_nodes.json   # ← optional
     │   │
     │   ├── edges/
     │   │   ├── tr_edges.json
