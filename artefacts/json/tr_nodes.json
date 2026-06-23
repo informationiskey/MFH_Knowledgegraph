@@ -1,147 +1,189 @@
 [
   { "id": "TR-00a", "label": "Heizlast", "type": "TR",
-    "properties": { "domain": "thermal", "description": "Gebäude-Heizlast aus Transmission und Lüftung.", "version": "2.0" }},
+    "properties": { "domain": "thermal", "description": "Gebäude-Heizlast aus Transmission und Lüftung.", "version": "2.2" }},
 
   { "id": "TR-00b", "label": "Schüttleistung", "type": "TR",
-    "properties": { "domain": "warmwater", "description": "Warmwasser-Spitzenlast für Speicher- und LM-Bewertung.", "version": "2.0" }},
+    "properties": { "domain": "warmwater", "description": "Warmwasser-Spitzenlast für Speicher- und LM-Bewertung.", "version": "2.2" }},
 
   { "id": "TR-01", "label": "Systemtemperaturen", "type": "TR",
-    "properties": { "domain": "thermal", "description": "Vorlauf-/Rücklauftemperaturen im Heizsystem.", "version": "2.0" }},
+    "properties": { "domain": "thermal", "description": "Vorlauf-/Rücklauftemperaturen im Heizsystem.", "version": "2.2" }},
 
   { "id": "TR-02", "label": "60°C Hygiene", "type": "TR",
-    "properties": { "domain": "hygiene", "description": "Hygieneanforderung für Trinkwasser gemäß DVGW/TrinkwV.", "version": "2.0" }},
+    "properties": { "domain": "hygiene", "description": "Hygieneanforderung für Trinkwasser gemäß DVGW/TrinkwV.", "version": "2.2" }},
 
   { "id": "TR-03", "label": "Zirkulation", "type": "TR",
-    "properties": { "domain": "warmwater", "description": "Zirkulationssysteme und deren thermische Anforderungen.", "version": "2.0" }},
+    "properties": { "domain": "warmwater", "description": "Zirkulationssysteme und deren thermische Anforderungen.", "version": "2.2" }},
 
   { "id": "TR-04a", "label": "Trinkwasserspeicher", "type": "TR",
-    "properties": { "domain": "warmwater", "description": "Direkte Warmwasserspeicherung.", "version": "2.0" }},
+    "properties": { "domain": "warmwater", "description": "Direkte Warmwasserspeicherung.", "version": "2.2" }},
 
   { "id": "TR-04b", "label": "Pufferspeicher + FWS", "type": "TR",
-    "properties": { "domain": "warmwater", "description": "Pufferspeicher mit Frischwasserstation oder WT-Kaskade.", "version": "2.0" }},
+    "properties": { "domain": "warmwater", "description": "Pufferspeicher mit Frischwasserstation oder WT-Kaskade.", "version": "2.2" }},
 
   { "id": "TR-05", "label": "Verteilverluste", "type": "TR",
-    "properties": { "domain": "thermal", "description": "Wärmeverluste im Bestand und Bilanzierungsdifferenzen.", "version": "2.0" }},
+    "properties": { "domain": "thermal", "description": "Wärmeverluste im Bestand und Bilanzierungsdifferenzen.", "version": "2.2" }},
 
   { "id": "TR-06", "label": "Alt-Norm Elektro", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Elektrische Bestandsanlagen nach alten Normen.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Elektrische Bestandsanlagen nach alten Normen.", "version": "2.2" }},
 
   { "id": "TR-07", "label": "Aufstellflächen", "type": "TR",
-    "properties": { "domain": "infrastructure", "description": "Platzbedarf und Aufstellbedingungen für Anlagen.", "version": "2.0" }},
+    "properties": { "domain": "infrastructure", "description": "Platzbedarf und Aufstellbedingungen für Anlagen.", "version": "2.2" }},
 
   { "id": "TR-08", "label": "Schall", "type": "TR",
-    "properties": { "domain": "acoustic", "description": "Schallanforderungen und Immissionsschutz.", "version": "2.0" }},
+    "properties": { "domain": "acoustic", "description": "Schallanforderungen und Immissionsschutz.", "version": "2.2" }},
 
   { "id": "TR-09", "label": "Brandschutz", "type": "TR",
-    "properties": { "domain": "safety", "description": "Brandschutzanforderungen gemäß MLAR/LBO.", "version": "2.0" }},
+    "properties": { "domain": "safety", "description": "Brandschutzanforderungen gemäß MLAR/LBO.", "version": "2.2" }},
 
   { "id": "TR-10", "label": "Baualtersklassen", "type": "TR",
-    "properties": { "domain": "building", "description": "Gebäudestruktur und Baualtersklassen.", "version": "2.0" }},
+    "properties": { "domain": "building", "description": "Gebäudestruktur und Baualtersklassen.", "version": "2.2" }},
 
   { "id": "TR-11", "label": "Wärmeverluste", "type": "TR",
-    "properties": { "domain": "thermal", "description": "Verluste im Bestand, Einfluss auf Effizienz.", "version": "2.0" }},
+    "properties": { "domain": "thermal", "description": "Verluste im Bestand, Einfluss auf Effizienz.", "version": "2.2" }},
 
   { "id": "TR-12a", "label": "Nutzeranzahl", "type": "TR",
-    "properties": { "domain": "behavior", "description": "Einfluss der Nutzeranzahl auf WW-Lasten.", "version": "2.0" }},
+    "properties": { "domain": "behavior", "description": "Einfluss der Nutzeranzahl auf WW-Lasten.", "version": "2.2" }},
 
   { "id": "TR-12b", "label": "Fensterlüftung", "type": "TR",
-    "properties": { "domain": "behavior", "description": "Lüftungsverhalten der Nutzer.", "version": "2.0" }},
+    "properties": { "domain": "behavior", "description": "Lüftungsverhalten der Nutzer.", "version": "2.2" }},
 
   { "id": "TR-12c", "label": "Warmwasserverhalten", "type": "TR",
-    "properties": { "domain": "behavior", "description": "Zapfverhalten und Nutzungsmuster.", "version": "2.0" }},
+    "properties": { "domain": "behavior", "description": "Zapfverhalten und Nutzungsmuster.", "version": "2.2" }},
 
   { "id": "TR-13", "label": "Dezentrale Lüftung mit WRG", "type": "TR",
-    "properties": { "domain": "ventilation", "description": "WRG-Lüftungssysteme und Bilanzwirkung.", "version": "2.0" }},
+    "properties": { "domain": "ventilation", "description": "WRG-Lüftungssysteme und Bilanzwirkung.", "version": "2.2" }},
 
   { "id": "TR-14", "label": "Zentrale Zu-/Abluft", "type": "TR",
-    "properties": { "domain": "ventilation", "description": "Zentrale Lüftungssysteme.", "version": "2.0" }},
+    "properties": { "domain": "ventilation", "description": "Zentrale Lüftungssysteme.", "version": "2.2" }},
 
   { "id": "TR-15", "label": "DLE Zapfstelle", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Durchlauferhitzer an Zapfstellen.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Durchlauferhitzer an Zapfstellen.", "version": "2.2" }},
 
   { "id": "TR-16", "label": "DLE Etage", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Etagen-Durchlauferhitzer.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Etagen-Durchlauferhitzer.", "version": "2.2" }},
 
   { "id": "TR-17", "label": "DLE Haus", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Zentrale DLE-Systeme.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Zentrale DLE-Systeme.", "version": "2.2" }},
 
   { "id": "TR-18-R", "label": "4,2 kW – regulatorische Schwelle", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Regulatorische Leistungsgrenze nach §14a.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Regulatorische Leistungsgrenze nach §14a.", "version": "2.2" }},
 
   { "id": "TR-18-T", "label": "4,2 kW – technische Leistungsgrenze", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Technische Leistungsgrenze der Elektroinstallation.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Technische Leistungsgrenze der Elektroinstallation.", "version": "2.2" }},
 
   { "id": "TR-19", "label": "12 kW", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Leistungsstufe 12 kW.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Leistungsstufe 12 kW.", "version": "2.2" }},
 
   { "id": "TR-20", "label": "21 kW", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Leistungsstufe 21 kW.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Leistungsstufe 21 kW.", "version": "2.2" }},
 
   { "id": "TR-21", "label": "3,7 kW Einphasen", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Einphasenbegrenzung 3,7 kW.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Einphasenbegrenzung 3,7 kW.", "version": "2.2" }},
 
   { "id": "TR-22", "label": "Mietrechtliche Komfortanforderungen", "type": "TR",
-    "properties": { "domain": "legal", "description": "Komfortanforderungen gemäß Mietrecht.", "version": "2.0" }},
+    "properties": { "domain": "legal", "description": "Komfortanforderungen gemäß Mietrecht.", "version": "2.2" }},
 
   { "id": "TR-23", "label": "Umlagefähigkeit / Betriebskosten", "type": "TR",
-    "properties": { "domain": "legal", "description": "Kostenrelevanz im Betrieb.", "version": "2.0" }},
+    "properties": { "domain": "legal", "description": "Kostenrelevanz im Betrieb.", "version": "2.2" }},
 
   { "id": "TR-24", "label": "Duldungspflichten / Zugang", "type": "TR",
-    "properties": { "domain": "legal", "description": "Zugangspflichten für Installationen.", "version": "2.0" }},
+    "properties": { "domain": "legal", "description": "Zugangspflichten für Installationen.", "version": "2.2" }},
 
   { "id": "TR-25", "label": "Mietminderung / Störfaktoren", "type": "TR",
-    "properties": { "domain": "legal", "description": "Mietminderungstatbestände.", "version": "2.0" }},
+    "properties": { "domain": "legal", "description": "Mietminderungstatbestände.", "version": "2.2" }},
 
   { "id": "TR-26", "label": "Legionellenrisiko", "type": "TR",
-    "properties": { "domain": "hygiene", "description": "Legionellenrisiko durch Temperatur/Verweilzeiten.", "version": "2.0" }},
+    "properties": { "domain": "hygiene", "description": "Legionellenrisiko durch Temperatur/Verweilzeiten.", "version": "2.2" }},
+
+  { "id": "TR-27", "label": "Warmwasser-Lastprofil", "type": "TR",
+    "properties": { "domain": "warmwater", "description": "Zeitliche und mengenmäßige Lastprofile für Warmwasser.", "version": "2.2" }},
+
+  { "id": "TR-28", "label": "Speicherladeleistung", "type": "TR",
+    "properties": { "domain": "warmwater", "description": "Erforderliche Ladeleistung für Speicher und FWS.", "version": "2.2" }},
+
+  { "id": "TR-29", "label": "Hydraulische Einbindung", "type": "TR",
+    "properties": { "domain": "hydraulics", "description": "Hydraulische Einbindung von WP, Speicher und Heizkreis.", "version": "2.2" }},
+
+  { "id": "TR-30", "label": "Rücklauftemperatur", "type": "TR",
+    "properties": { "domain": "thermal", "description": "Rücklauftemperaturen im Heizsystem.", "version": "2.2" }},
+
+  { "id": "TR-31", "label": "Vorlauftemperaturbedarf", "type": "TR",
+    "properties": { "domain": "thermal", "description": "Erforderliche Vorlauftemperaturen für Heizflächen.", "version": "2.2" }},
 
   { "id": "TR-32", "label": "Verdichterleistung", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Verdichterleistung der WP.", "version": "2.0" }},
+    "properties": { "domain": "heatpump", "description": "Verdichterleistung der WP.", "version": "2.2" }},
 
   { "id": "TR-33", "label": "JAZ / COP", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Jahresarbeitszahl und COP.", "version": "2.0" }},
+    "properties": { "domain": "heatpump", "description": "Jahresarbeitszahl und COP.", "version": "2.2" }},
+
+  { "id": "TR-34", "label": "WP-Quellentemperatur", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Temperatur der Wärmequelle (Luft, Sole, Wasser).", "version": "2.2" }},
+
+  { "id": "TR-35", "label": "WP-Leistungszahl", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Leistungszahl der WP unter Normbedingungen.", "version": "2.2" }},
+
+  { "id": "TR-36", "label": "WP-Abtauzyklen", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Abtauzyklen und deren Einfluss auf Effizienz.", "version": "2.2" }},
+
+  { "id": "TR-37", "label": "WP-Bivalenzpunkt", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Bivalenzpunkt der WP.", "version": "2.2" }},
 
   { "id": "TR-38", "label": "Lastmanagement", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Lastmanagementsysteme.", "version": "2.0" }},
+    "properties": { "domain": "electrical", "description": "Lastmanagementsysteme.", "version": "2.2" }},
+
+  { "id": "TR-39", "label": "Elektrische Anschlussleistung", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Erforderliche elektrische Anschlussleistung.", "version": "2.2" }},
+
+  { "id": "TR-40", "label": "Steigzonen-Kapazität", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Kapazität der Steigzonen für neue Leitungen.", "version": "2.2" }},
+
+  { "id": "TR-41", "label": "Zählerplatzbedarf", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Erforderlicher Platz für Zählerfelder.", "version": "2.2" }},
+
+  { "id": "TR-42", "label": "Hausanschlusskapazität", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Kapazität des Hausanschlusskastens.", "version": "2.2" }},
+
+  { "id": "TR-43", "label": "Netzverträglichkeit", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Netzverträglichkeit neuer elektrischer Lasten.", "version": "2.2" }},
 
   { "id": "TR-44", "label": "Speichergröße", "type": "TR",
-    "properties": { "domain": "warmwater", "description": "Speicherbemessung.", "version": "2.0" }},
+    "properties": { "domain": "warmwater", "description": "Speicherbemessung.", "version": "2.2" }},
 
   { "id": "TR-45", "label": "Heizkreisverteiler", "type": "TR",
-    "properties": { "domain": "hydraulics", "description": "Verteiler im Heizkreis.", "version": "2.0" }},
+    "properties": { "domain": "hydraulics", "description": "Verteiler im Heizkreis.", "version": "2.2" }},
 
   { "id": "TR-46", "label": "Wärmeerzeuger Bestand", "type": "TR",
-    "properties": { "domain": "heating", "description": "Bestandswärmeerzeuger.", "version": "2.0" }},
+    "properties": { "domain": "heating", "description": "Bestandswärmeerzeuger.", "version": "2.2" }},
 
   { "id": "TR-47", "label": "Gasverbrauch Bestand", "type": "TR",
-    "properties": { "domain": "heating", "description": "Gasverbrauchsdaten.", "version": "2.0" }},
+    "properties": { "domain": "heating", "description": "Gasverbrauchsdaten.", "version": "2.2" }},
 
-  { "id": "WPEff", "label": "WP-Effizienz", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Effizienz der Wärmepumpe.", "version": "2.0" }},
+  { "id": "TR-48", "label": "WP-Effizienz", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Effizienz der Wärmepumpe.", "version": "2.2" }},
 
-  { "id": "WPDir", "label": "WP-Direkterzeugung", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Direkterzeugung der WP.", "version": "2.0" }},
+  { "id": "TR-49", "label": "WP-Direkterzeugung", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Direkterzeugung der WP.", "version": "2.2" }},
 
-  { "id": "WPTmp", "label": "WP-Temperaturniveau", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Temperaturniveau der WP.", "version": "2.0" }},
+  { "id": "TR-50", "label": "WP-Temperaturniveau", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Temperaturniveau der WP.", "version": "2.2" }},
 
-  { "id": "WPNT", "label": "WP-NT-Betrieb", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Niedertemperaturbetrieb.", "version": "2.0" }},
+  { "id": "TR-51", "label": "WP-NT-Betrieb", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Niedertemperaturbetrieb.", "version": "2.2" }},
 
-  { "id": "WPDim", "label": "WP-Dimensionierung", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Dimensionierung der WP.", "version": "2.0" }},
+  { "id": "TR-52", "label": "WP-Dimensionierung", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Dimensionierung der WP.", "version": "2.2" }},
 
-  { "id": "WPsys", "label": "WP-Systeme", "type": "TR",
-    "properties": { "domain": "heatpump", "description": "Systemarchitektur der WP.", "version": "2.0" }},
+  { "id": "TR-53", "label": "WP-Systeme", "type": "TR",
+    "properties": { "domain": "heatpump", "description": "Systemarchitektur der WP.", "version": "2.2" }},
 
-  { "id": "EffBew", "label": "Effizienzbewertung", "type": "TR",
-    "properties": { "domain": "energy", "description": "Interne Effizienzbewertung.", "version": "2.0" }},
+  { "id": "TR-54", "label": "Effizienzbewertung", "type": "TR",
+    "properties": { "domain": "energy", "description": "Interne Effizienzbewertung.", "version": "2.2" }},
 
-  { "id": "GEG", "label": "GEG-Berechnungslogik", "type": "TR",
-    "properties": { "domain": "regulatory", "description": "GEG-Bilanzierungslogik.", "version": "2.0" }},
+  { "id": "TR-55", "label": "GEG-Berechnungslogik", "type": "TR",
+    "properties": { "domain": "regulatory", "description": "GEG-Bilanzierungslogik.", "version": "2.2" }},
 
-  { "id": "LM", "label": "Lastmanagement", "type": "TR",
-    "properties": { "domain": "electrical", "description": "Lastmanagementsysteme.", "version": "2.0" }},
+  { "id": "TR-56", "label": "Lastmanagementsysteme", "type": "TR",
+    "properties": { "domain": "electrical", "description": "Systeme zur Laststeuerung und Lastspitzenvermeidung.", "version": "2.2" }},
 
   { "id": "Reg", "label": "Regulatorik (Placeholder)", "type": "TR",
     "properties": { "domain": "regulatory", "description": "Platzhalter für regulatorische Interaktion.", "version": "2.0" }}
