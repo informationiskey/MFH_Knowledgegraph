@@ -1,0 +1,191 @@
+/* ============================================================
+   CLUSTER: TR – Technische Realität (v2.1, vollständiger Freeze)
+   ============================================================ */
+
+subgraph cluster_TR {
+    label="Ebene TR – Technische Realität (v2.1)";
+    color="#b0c4de";
+    style="rounded";
+    fontname="Arial";
+
+    node [shape=box, style=filled, fillcolor="#eef3fb", fontname="Arial"];
+
+    /* ============================
+       TR‑NODES (vollständig)
+       ============================ */
+
+    "TR-00a" [label="TR‑00a\nHeizlast"];
+    "TR-00b" [label="TR‑00b\nSchüttleistung"];
+    "TR-01"  [label="TR‑01\nSystemtemperaturen"];
+    "TR-02"  [label="TR‑02\n60°C Hygiene"];
+    "TR-03"  [label="TR‑03\nZirkulation"];
+    "TR-04a" [label="TR‑04a\nTrinkwasserspeicher"];
+    "TR-04b" [label="TR‑04b\nPufferspeicher + FWS"];
+    "TR-05"  [label="TR‑05\nVerteilverluste"];
+    "TR-06"  [label="TR‑06\nAlt‑Norm Elektro"];
+    "TR-07"  [label="TR‑07\nAufstellflächen"];
+    "TR-08"  [label="TR‑08\nSchall"];
+    "TR-09"  [label="TR‑09\nBrandschutz"];
+    "TR-10"  [label="TR‑10\nBaualtersklassen"];
+    "TR-11"  [label="TR‑11\nWärmeverluste"];
+    "TR-12a" [label="TR‑12a\nNutzeranzahl"];
+    "TR-12b" [label="TR‑12b\nFensterlüftung"];
+    "TR-12c" [label="TR‑12c\nWarmwasserverhalten"];
+    "TR-13"  [label="TR‑13\nDezentrale Lüftung mit WRG"];
+    "TR-14"  [label="TR‑14\nZentrale Zu-/Abluft"];
+    "TR-15"  [label="TR‑15\nDLE Zapfstelle"];
+    "TR-16"  [label="TR‑16\nDLE Etage"];
+    "TR-17"  [label="TR‑17\nDLE Haus"];
+    "TR-18-R" [label="TR‑18‑R\n4,2 kW – regulatorische Schwelle"];
+    "TR-18-T" [label="TR‑18‑T\n4,2 kW – technische Leistungsgrenze"];
+    "TR-19"  [label="TR‑19\n12 kW"];
+    "TR-20"  [label="TR‑20\n21 kW"];
+    "TR-21"  [label="TR‑21\n3,7 kW Einphasen"];
+    "TR-22"  [label="TR‑22\nMietrechtliche Komfortanforderungen"];
+    "TR-23"  [label="TR‑23\nUmlagefähigkeit / Betriebskosten"];
+    "TR-24"  [label="TR‑24\nDuldungspflichten / Zugang"];
+    "TR-25"  [label="TR‑25\nMietminderung / Störfaktoren"];
+    "TR-26"  [label="TR‑26\nLegionellenrisiko"];
+    "TR-32"  [label="TR‑32\nVerdichterleistung"];
+    "TR-33"  [label="TR‑33\nJAZ / COP"];
+    "TR-38"  [label="TR‑38\nLastmanagement"];
+    "TR-44"  [label="TR‑44\nSpeichergröße"];
+    "TR-45"  [label="TR‑45\nHeizkreisverteiler"];
+    "TR-46"  [label="TR‑46\nWärmeerzeuger Bestand"];
+    "TR-47"  [label="TR‑47\nGasverbrauch Bestand"];
+    "WPEff"  [label="WPEff\nWP‑Effizienz"];
+    "WPDir"  [label="WPDir\nWP‑Direkterzeugung"];
+    "WPTmp"  [label="WPTmp\nWP‑Temperaturniveau"];
+    "WPNT"   [label="WPNT\nWP‑NT‑Betrieb"];
+    "WPDim"  [label="WPDim\nWP‑Dimensionierung"];
+    "WPsys"  [label="WPsys\nWP‑Systeme"];
+    "EffBew" [label="EffBew\nEffizienzbewertung"];
+    "GEG"    [label="GEG\nGEG‑Berechnungslogik"];
+    "LM"     [label="LM\nLastmanagement"];
+    "Reg"    [label="Reg\nRegulatorik (Placeholder)"];
+
+    /* ============================
+       TR‑EDGES (vollständig)
+       ============================ */
+
+    /* Physikalische Bedarfsgrößen */
+    "TR-00a" -> "TR-01"  [label="prerequisite_for"];
+    "TR-00b" -> "TR-04a" [label="prerequisite_for"];
+    "TR-00b" -> "TR-04b" [label="modulates"];
+    "TR-00b" -> "TR-03"  [label="prerequisite_for"];
+
+    /* Nutzerverhalten */
+    "TR-12a" -> "TR-00b" [label="reinforces"];
+    "TR-12a" -> "TR-04a" [label="prerequisite_for"];
+    "TR-12a" -> "TR-04b" [label="modulates"];
+    "TR-12a" -> "TR-00b" [label="increases_peak_load"];
+    "TR-12a" -> "TR-00a" [label="increases_variability"];
+
+    "TR-12b" -> "TR-00a" [label="increases_real_heating_demand"];
+    "TR-12b" -> "TR-00a" [label="increases_variability"];
+    "TR-12b" -> "TR-01"  [label="increases_required_temperature"];
+    "TR-12b" -> "GEG"    [label="conflicts_with"];
+
+    "TR-12c" -> "TR-04a" [label="enforces"];
+    "TR-12c" -> "TR-04b" [label="modulates"];
+    "TR-12c" -> "TR-00b" [label="increases_peak_load"];
+    "TR-12c" -> "LM"     [label="conflicts_with"];
+
+    /* Lüftungssysteme */
+    "TR-13" -> "TR-11" [label="reduces_losses"];
+    "TR-13" -> "TR-01" [label="reduces_temp"];
+    "TR-13" -> "WPEff" [label="enables"];
+
+    "TR-14" -> "TR-11" [label="reduces_losses"];
+    "TR-14" -> "TR-01" [label="reduces_temp"];
+    "TR-14" -> "WPEff" [label="enables"];
+
+    /* Verluste */
+    "TR-05" -> "TR-11"   [label="misrepresents_reality"];
+    "TR-05" -> "EffBew"  [label="creates_bilanzkonflikt"];
+    "TR-11" -> "EffBew"  [label="redefines"];
+
+    /* DLE‑Pfad */
+    "TR-15" -> "TR-00b" [label="modulates"];
+    "TR-16" -> "TR-00b" [label="modulates"];
+    "TR-17" -> "TR-00b" [label="modulates"];
+
+    "TR-02" -> "TR-15" [label="conflicts_with"];
+    "TR-02" -> "TR-16" [label="conflicts_with"];
+    "TR-02" -> "TR-17" [label="conflicts_with"];
+
+    "TR-15" -> "TR-03" [label="blocks"];
+    "TR-16" -> "TR-03" [label="blocks"];
+    "TR-17" -> "TR-03" [label="blocks"];
+
+    "TR-15" -> "WPsys" [label="conflicts_with"];
+    "TR-16" -> "WPsys" [label="conflicts_with"];
+    "TR-17" -> "WPsys" [label="conflicts_with"];
+
+    "TR-15" -> "TR-06" [label="increases_required_capacity"];
+    "TR-16" -> "TR-06" [label="increases_required_capacity"];
+    "TR-17" -> "TR-06" [label="increases_required_capacity"];
+
+    "TR-15" -> "LM" [label="increases_peak_load"];
+    "TR-16" -> "LM" [label="increases_peak_load"];
+    "TR-17" -> "LM" [label="increases_peak_load"];
+
+    /* Leistungsgrenzen TR‑18‑R / TR‑18‑T */
+    "TR-15" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+    "TR-16" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+    "TR-17" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+
+    "TR-15" -> "TR-18-T" [label="exceeds_technical_threshold"];
+    "TR-16" -> "TR-18-T" [label="exceeds_technical_threshold"];
+    "TR-17" -> "TR-18-T" [label="exceeds_technical_threshold"];
+
+    /* TR‑18‑T → technische Folgen */
+    "TR-18-T" -> "TR-01" [label="reduces_heating_capacity"];
+    "TR-18-T" -> "TR-02" [label="prevents_60C_hygiene"];
+    "TR-18-T" -> "TR-22" [label="prevents_21C"];
+    "TR-18-T" -> "TR-25" [label="enables_mietminderung"];
+
+    /* Leistungsstufen 12/21 kW */
+    "TR-15" -> "TR-19" [label="exceeds_threshold"];
+    "TR-16" -> "TR-19" [label="exceeds_threshold"];
+    "TR-17" -> "TR-19" [label="exceeds_threshold"];
+
+    "TR-15" -> "TR-20" [label="may_exceed_threshold"];
+    "TR-16" -> "TR-20" [label="likely_exceeds_threshold"];
+    "TR-17" -> "TR-20" [label="exceeds_threshold"];
+
+    "TR-19" -> "TR-06" [label="requires_registration"];
+    "TR-20" -> "TR-06" [label="requires_approval"];
+
+    "TR-19" -> "LM" [label="increases_load"];
+    "TR-20" -> "LM" [label="critical_load"];
+
+    /* Einphasenbegrenzung */
+    "TR-21" -> "TR-15" [label="prerequisite_for"];
+    "TR-21" -> "TR-16" [label="prerequisite_for"];
+    "TR-21" -> "TR-17" [label="prerequisite_for"];
+
+    "TR-21" -> "TR-06" [label="increases_complexity"];
+    "TR-21" -> "TR-07" [label="increases_installation_effort"];
+
+    /* Mietrechtliche TR‑Knoten */
+    "TR-22" -> "TR-01" [label="defines_minimum"];
+    "TR-22" -> "TR-02" [label="defines_minimum"];
+    "TR-22" -> "TR-03" [label="defines_minimum"];
+    "TR-22" -> "TR-08" [label="defines_limit"];
+
+    "TR-23" -> "LM"     [label="cost_sensitive"];
+    "TR-23" -> "WPsys"  [label="cost_sensitive"];
+    "TR-23" -> "TR-04a" [label="cost_sensitive"];
+    "TR-23" -> "TR-04b" [label="cost_sensitive"];
+
+    "TR-24" -> "TR-07" [label="requires_access"];
+    "TR-24" -> "TR-06" [label="requires_access"];
+    "TR-24" -> "TR-13" [label="requires_access"];
+    "TR-24" -> "TR-14" [label="requires_access"];
+
+    "TR-25" -> "TR-08" [label="risk_factor"];
+    "TR-25" -> "TR-01" [label="risk_factor"];
+    "TR-25" -> "TR-02" [label="risk_factor"];
+    "TR-25" -> "TR-03" [label="risk_factor"];
+}
