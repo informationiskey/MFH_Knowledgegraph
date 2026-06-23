@@ -1,6 +1,6 @@
 [
   /* ============================================================
-     PB‑01 – GEG‑65%-Regel vs. WP‑JAZ
+     PB‑01 – GEG‑65%-Regel vs. Systembilanz (bereinigt, JAZ-frei)
      ============================================================ */
   { "source": "TR-00a", "type": "feeds_blockade",     "target": "PB-01" },
   { "source": "RF-61",  "type": "regulates_blockade", "target": "PB-01" },
