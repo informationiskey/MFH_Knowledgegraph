@@ -100,7 +100,7 @@ Regulatorik fordert WP, aber die Elektroinfrastruktur verhindert sie.
 
 ---
 
-## 📉 SB‑K12 – GEG vs. WP‑JAZ
+## 📉 SB‑K12 – GEG vs. GEG‑Bilanz vs. Effizienz‑Missinterpretation - Details unter SB-K12 Herleitung als MFH Problem
 
 **Semantische Bedeutung:**  
 Dieser Konflikt beschreibt die Kollision zwischen der **GEG‑Bilanzierungslogik** (Primärenergie, Endenergie, DIN V 18599) und der **realen Jahresarbeitszahl (JAZ)** von Wärmepumpen im Bestand.
