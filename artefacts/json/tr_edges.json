@@ -1,11 +1,15 @@
 [
-  /* Physikalische Bedarfsgrößen */
+  /* ============================================================
+     PHYSIKALISCHE BEDARFSGRÖSSEN
+     ============================================================ */
   { "source": "TR-00a", "type": "prerequisite_for", "target": "TR-01" },
   { "source": "TR-00b", "type": "prerequisite_for", "target": "TR-04a" },
   { "source": "TR-00b", "type": "modulates", "target": "TR-04b" },
   { "source": "TR-00b", "type": "prerequisite_for", "target": "TR-03" },
 
-  /* Nutzerverhalten */
+  /* ============================================================
+     NUTZERVERHALTEN
+     ============================================================ */
   { "source": "TR-12a", "type": "reinforces", "target": "TR-00b" },
   { "source": "TR-12a", "type": "prerequisite_for", "target": "TR-04a" },
   { "source": "TR-12a", "type": "modulates", "target": "TR-04b" },
@@ -15,28 +19,34 @@
   { "source": "TR-12b", "type": "increases_real_heating_demand", "target": "TR-00a" },
   { "source": "TR-12b", "type": "increases_variability", "target": "TR-00a" },
   { "source": "TR-12b", "type": "increases_required_temperature", "target": "TR-01" },
-  { "source": "TR-12b", "type": "conflicts_with", "target": "GEG" },
+  { "source": "TR-12b", "type": "conflicts_with", "target": "TR-55" },
 
   { "source": "TR-12c", "type": "enforces", "target": "TR-04a" },
   { "source": "TR-12c", "type": "modulates", "target": "TR-04b" },
   { "source": "TR-12c", "type": "increases_peak_load", "target": "TR-00b" },
-  { "source": "TR-12c", "type": "conflicts_with", "target": "LM" },
+  { "source": "TR-12c", "type": "conflicts_with", "target": "TR-56" },
 
-  /* Lüftungssysteme */
+  /* ============================================================
+     LÜFTUNGSSYSTEME
+     ============================================================ */
   { "source": "TR-13", "type": "reduces_losses", "target": "TR-11" },
   { "source": "TR-13", "type": "reduces_temp", "target": "TR-01" },
-  { "source": "TR-13", "type": "enables", "target": "WPEff" },
+  { "source": "TR-13", "type": "enables", "target": "TR-48" },
 
   { "source": "TR-14", "type": "reduces_losses", "target": "TR-11" },
   { "source": "TR-14", "type": "reduces_temp", "target": "TR-01" },
-  { "source": "TR-14", "type": "enables", "target": "WPEff" },
+  { "source": "TR-14", "type": "enables", "target": "TR-48" },
 
-  /* Verluste */
+  /* ============================================================
+     VERLUSTE / BILANZKONFLIKTE
+     ============================================================ */
   { "source": "TR-05", "type": "misrepresents_reality", "target": "TR-11" },
-  { "source": "TR-05", "type": "creates_bilanzkonflikt", "target": "EffBew" },
-  { "source": "TR-11", "type": "redefines", "target": "EffBew" },
+  { "source": "TR-05", "type": "creates_bilanzkonflikt", "target": "TR-54" },
+  { "source": "TR-11", "type": "redefines", "target": "TR-54" },
 
-  /* DLE-Pfad */
+  /* ============================================================
+     DLE-PFAD (TR-15/16/17)
+     ============================================================ */
   { "source": "TR-15", "type": "modulates", "target": "TR-00b" },
   { "source": "TR-16", "type": "modulates", "target": "TR-00b" },
   { "source": "TR-17", "type": "modulates", "target": "TR-00b" },
@@ -49,19 +59,21 @@
   { "source": "TR-16", "type": "blocks", "target": "TR-03" },
   { "source": "TR-17", "type": "blocks", "target": "TR-03" },
 
-  { "source": "TR-15", "type": "conflicts_with", "target": "WPsys" },
-  { "source": "TR-16", "type": "conflicts_with", "target": "WPsys" },
-  { "source": "TR-17", "type": "conflicts_with", "target": "WPsys" },
+  { "source": "TR-15", "type": "conflicts_with", "target": "TR-53" },
+  { "source": "TR-16", "type": "conflicts_with", "target": "TR-53" },
+  { "source": "TR-17", "type": "conflicts_with", "target": "TR-53" },
 
   { "source": "TR-15", "type": "increases_required_capacity", "target": "TR-06" },
   { "source": "TR-16", "type": "increases_required_capacity", "target": "TR-06" },
   { "source": "TR-17", "type": "increases_required_capacity", "target": "TR-06" },
 
-  { "source": "TR-15", "type": "increases_peak_load", "target": "LM" },
-  { "source": "TR-16", "type": "increases_peak_load", "target": "LM" },
-  { "source": "TR-17", "type": "increases_peak_load", "target": "LM" },
+  { "source": "TR-15", "type": "increases_peak_load", "target": "TR-56" },
+  { "source": "TR-16", "type": "increases_peak_load", "target": "TR-56" },
+  { "source": "TR-17", "type": "increases_peak_load", "target": "TR-56" },
 
-  /* Leistungsgrenzen – NEU: TR‑18‑R / TR‑18‑T */
+  /* ============================================================
+     LEISTUNGSGRENZEN – TR‑18‑R / TR‑18‑T
+     ============================================================ */
   { "source": "TR-15", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
   { "source": "TR-16", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
   { "source": "TR-17", "type": "exceeds_regulatory_threshold", "target": "TR-18-R" },
@@ -70,13 +82,15 @@
   { "source": "TR-16", "type": "exceeds_technical_threshold", "target": "TR-18-T" },
   { "source": "TR-17", "type": "exceeds_technical_threshold", "target": "TR-18-T" },
 
-  /* TR‑18‑T → technische Folgen */
+  /* technische Folgen */
   { "source": "TR-18-T", "type": "reduces_heating_capacity", "target": "TR-01" },
   { "source": "TR-18-T", "type": "prevents_60C_hygiene", "target": "TR-02" },
   { "source": "TR-18-T", "type": "prevents_21C", "target": "TR-22" },
   { "source": "TR-18-T", "type": "enables_mietminderung", "target": "TR-25" },
 
-  /* Leistungsstufen 12/21 kW */
+  /* ============================================================
+     LEISTUNGSSTUFEN 12/21 kW
+     ============================================================ */
   { "source": "TR-15", "type": "exceeds_threshold", "target": "TR-19" },
   { "source": "TR-16", "type": "exceeds_threshold", "target": "TR-19" },
   { "source": "TR-17", "type": "exceeds_threshold", "target": "TR-19" },
@@ -88,10 +102,12 @@
   { "source": "TR-19", "type": "requires_registration", "target": "TR-06" },
   { "source": "TR-20", "type": "requires_approval", "target": "TR-06" },
 
-  { "source": "TR-19", "type": "increases_load", "target": "LM" },
-  { "source": "TR-20", "type": "critical_load", "target": "LM" },
+  { "source": "TR-19", "type": "increases_load", "target": "TR-56" },
+  { "source": "TR-20", "type": "critical_load", "target": "TR-56" },
 
-  /* Einphasenbegrenzung */
+  /* ============================================================
+     EINPHASENBEGRENZUNG
+     ============================================================ */
   { "source": "TR-21", "type": "prerequisite_for", "target": "TR-15" },
   { "source": "TR-21", "type": "prerequisite_for", "target": "TR-16" },
   { "source": "TR-21", "type": "prerequisite_for", "target": "TR-17" },
@@ -99,14 +115,16 @@
   { "source": "TR-21", "type": "increases_complexity", "target": "TR-06" },
   { "source": "TR-21", "type": "increases_installation_effort", "target": "TR-07" },
 
-  /* Mietrechtliche TR-Knoten */
+  /* ============================================================
+     MIETRECHTLICHE TR-KNOTEN
+     ============================================================ */
   { "source": "TR-22", "type": "defines_minimum", "target": "TR-01" },
   { "source": "TR-22", "type": "defines_minimum", "target": "TR-02" },
   { "source": "TR-22", "type": "defines_minimum", "target": "TR-03" },
   { "source": "TR-22", "type": "defines_limit", "target": "TR-08" },
 
-  { "source": "TR-23", "type": "cost_sensitive", "target": "LM" },
-  { "source": "TR-23", "type": "cost_sensitive", "target": "WPsys" },
+  { "source": "TR-23", "type": "cost_sensitive", "target": "TR-56" },
+  { "source": "TR-23", "type": "cost_sensitive", "target": "TR-53" },
   { "source": "TR-23", "type": "cost_sensitive", "target": "TR-04a" },
   { "source": "TR-23", "type": "cost_sensitive", "target": "TR-04b" },
 
