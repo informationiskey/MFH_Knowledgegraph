@@ -79,281 +79,108 @@
   { "source": "SB-40", "type": "requires", "target": "SB-41" },
 
   /* ============================================================
-     SB – KONFLIKTKNOTEN (K7–K12)
-     ------------------------------------------------------------
-     Semantische Bedeutung:
-       - Konfliktknoten sind semantische Meta-Knoten.
-       - Sie beschreiben KEINE technischen Konflikte (TR),
-         KEINE regulatorischen Konflikte (RF),
-         KEINE politischen Blockaden (PB),
-         sondern rein semantische Bedeutungs-Kollisionen.
-       - Jeder Konfliktknoten verweist auf die SB‑Bedeutungen,
-         die im Konflikt stehen.
-       - Die Kante "conflict_with" bedeutet:
-         Der Konfliktknoten beschreibt eine Bedeutungs-Kollision
-         zwischen zwei semantischen Konzepten.
+     SB-K01 – DLE erzeugt elektrische Spitzenlast
      ============================================================ */
-
-  /* ------------------------------------------------------------
-     SB‑K7 – Hygiene vs. Effizienz
-     ------------------------------------------------------------
-     Bedeutung:
-       - Hygiene fordert hohe Temperaturen (60°C).
-       - Effizienz fordert niedrige Temperaturen (WP).
-       - Der Konflikt beschreibt die Kollision zwischen
-         hygienischen Mindesttemperaturen und energetischer Effizienz.
-     ------------------------------------------------------------ */
-
-  { "source": "SB-K7", "type": "conflict_with", "target": "SB-01" },
-  { "source": "SB-K7", "type": "conflict_with", "target": "SB-02" },
-  { "source": "SB-K7", "type": "conflict_with", "target": "SB-03" },
-  { "source": "SB-K7", "type": "conflict_with", "target": "SB-10" },
-  { "source": "SB-K7", "type": "conflict_with", "target": "SB-11" },
-
-  /* ------------------------------------------------------------
-     SB‑K8 – DLE vs. Elektroinstallation
-     ------------------------------------------------------------
-     Bedeutung:
-       - DLE benötigen hohe elektrische Leistung (18–24 kW).
-       - Bestandsinstallationen sind oft unterdimensioniert.
-       - Der Konflikt beschreibt die Kollision zwischen
-         DLE‑Leistungsanforderungen und Installationsgrenzen.
-     ------------------------------------------------------------ */
-
-  { "source": "SB-K8", "type": "conflict_with", "target": "SB-30" },
-  { "source": "SB-K8", "type": "conflict_with", "target": "SB-31" },
-  { "source": "SB-K8", "type": "conflict_with", "target": "SB-10" },
-
-  /* ------------------------------------------------------------
-     SB‑K9 – Schall vs. Aufstellfläche
-     ------------------------------------------------------------
-     Bedeutung:
-       - Schallgrenzwerte (TA Lärm) verlangen Mindestabstände.
-       - MFH‑Grundstücke bieten oft nicht genug Platz.
-       - Der Konflikt beschreibt die Kollision zwischen
-         Schallschutz und realen Aufstellflächen.
-     ------------------------------------------------------------ */
-
-  { "source": "SB-K9", "type": "conflict_with", "target": "SB-30" },
-  { "source": "SB-K9", "type": "conflict_with", "target": "SB-31" },
-  { "source": "SB-K9", "type": "conflict_with", "target": "SB-10" },
-
-  /* ------------------------------------------------------------
-     SB‑K10 – Komfort vs. WP‑Temperatur
-     ------------------------------------------------------------
-     Bedeutung:
-       - Komfort (21°C, Warmwasserkomfort) verlangt hohe Temperaturen.
-       - WP‑Temperaturniveau ist im Bestand oft zu niedrig.
-       - Der Konflikt beschreibt die Kollision zwischen
-         Komfortanforderungen und WP‑Effizienzgrenzen.
-     ------------------------------------------------------------ */
-
-  { "source": "SB-K10", "type": "conflict_with", "target": "SB-20" },
-  { "source": "SB-K10", "type": "conflict_with", "target": "SB-21" },
-  { "source": "SB-K10", "type": "conflict_with", "target": "SB-01" },
-  { "source": "SB-K10", "type": "conflict_with", "target": "SB-02" },
-  { "source": "SB-K10", "type": "conflict_with", "target": "SB-03" },
-
-  
-  /* ============================================================
-     SB‑K11 – Neue Elektroanforderungen vs. Bestandsschutz
-     ------------------------------------------------------------
-     Version: 2.2
-     Semantische Bedeutung:
-       Dieser Konflikt beschreibt NICHT eine Unterdimensionierung
-       des elektrischen Bestands, sondern die Kollision zwischen:
-
-       (1) einem normgerechten, funktionierenden Altbestand
-           (Bestandsschutz nach alten VDE-Normen)
-
-       und
-
-       (2) neuen technischen und regulatorischen Anforderungen,
-           die erst durch die Anmeldung einer Wärmepumpe ausgelöst
-           werden (VDE-AR-N 4100, §14a EnWG, TAB, NAV).
-
-       Die WP ist ein „neuer, steuerbarer Verbraucher“ und hebt
-       dadurch den Bestandsschutz auf. Das führt zu neuen Pflichten:
-         - Steuerbarkeit (§14a)
-         - Anmeldepflicht (VDE-AR-N 4100)
-         - Zustimmungspflicht (Netzbetreiber)
-         - neue Zählerplatzanforderungen
-         - neue Selektivitätsanforderungen
-
-       Dieser Konflikt ist im MFH besonders scharf, weil:
-         - Steigzonen begrenzt sind
-         - Zählerplatzmangel häufig ist
-         - Umbauten teuer oder unmöglich sind
-         - mehrere Wohneinheiten gleichzeitig betroffen sind
-
-       Im EFH ist der Konflikt schwach ausgeprägt, weil:
-         - Platz für neue Zählerfelder vorhanden ist
-         - Steigleitungen kurz und zugänglich sind
-         - Netzbetreiberanforderungen leichter erfüllbar sind
-         - die WP den Bestandsschutz nicht in gleichem Maße aufhebt
-     ============================================================ */
-
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑50 (Bestandsschutz Elektro)
-     Der WP-Anschluss hebt den Bestandsschutz auf.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "conflict_with", "target": "SB-50" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑51 (Neue Anforderungen durch WP-Anmeldung)
-     Die WP triggert neue Normen und Prozesse.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-51" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑52 (§14a-Pflicht)
-     Die WP wird zur steuerbaren Verbrauchseinrichtung.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-52" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑53 (Anmeldepflicht VDE-AR-N 4100)
-     Die WP ist anmelde- und zustimmungspflichtig.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-53" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑54 (Zählerplatzanforderungen)
-     Neue Messkonzepte und Zählerfelder werden notwendig.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-54" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑55 (Selektivitätspflicht)
-     Neue Schutzorgane müssen selektiv abgestimmt werden.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-55" },
-
-  /* ------------------------------------------------------------
-     SB‑K11 → SB‑56 (Netzbetreiberzustimmung)
-     Der Netzbetreiber muss prüfen und zustimmen.
-     ------------------------------------------------------------ */
-  { "source": "SB-K11", "type": "requires", "target": "SB-56" },
-
+  { "source": "SB-K01", "type": "explains", "target": "TR-15" },
+  { "source": "SB-K01", "type": "explains", "target": "TR-16" },
+  { "source": "SB-K01", "type": "explains", "target": "TR-17" },
+  { "source": "SB-K01", "type": "explains", "target": "TR-56" },
+  { "source": "SB-K01", "type": "explains", "target": "TR-18-R" },
+  { "source": "SB-K01", "type": "explains", "target": "TR-18-T" },
 
   /* ============================================================
-     MFH‑Spezifische Verstärkungen des Konflikts
+     SB-K02 – Technische Leistungsgrenze überschritten
      ============================================================ */
+  { "source": "SB-K02", "type": "explains", "target": "TR-18-T" },
+  { "source": "SB-K02", "type": "explains", "target": "TR-01" },
+  { "source": "SB-K02", "type": "explains", "target": "TR-02" },
+  { "source": "SB-K02", "type": "explains", "target": "TR-22" },
 
-  /* ------------------------------------------------------------
-     SB‑59 (Gebäudetyp MFH) verstärkt SB‑K11
-     ------------------------------------------------------------ */
-  { "source": "SB-59", "type": "amplifies", "target": "SB-K11" },
-
-  /* ------------------------------------------------------------
-     SB‑60 (Gebäudetyp EFH) schwächt SB‑K11
-     ------------------------------------------------------------ */
-  { "source": "SB-60", "type": "attenuates", "target": "SB-K11" },
-
-  /* ------------------------------------------------------------
-     MFH → Steigzonenbegrenzung
-     ------------------------------------------------------------ */
-  { "source": "SB-59", "type": "causes", "target": "SB-57" },
-
-  /* ------------------------------------------------------------
-     MFH → Zählerplatzmangel
-     ------------------------------------------------------------ */
-  { "source": "SB-59", "type": "causes", "target": "SB-58" },
-
-  /* ------------------------------------------------------------
-     Steigzonenbegrenzung → verstärkt Zählerplatzanforderungen
-     ------------------------------------------------------------ */
-  { "source": "SB-57", "type": "amplifies", "target": "SB-54" },
-
-  /* ------------------------------------------------------------
-     Zählerplatzmangel → verstärkt Netzbetreiberzustimmung
-     ------------------------------------------------------------ */
-  { "source": "SB-58", "type": "amplifies", "target": "SB-56" }
-
- 
   /* ============================================================
-     SB‑K12 – Systembilanz vs. Maßnahmenlogik (v2.2)
-     ------------------------------------------------------------
-     Semantische Bedeutung (v2.2):
-       Dieser Konflikt beschreibt die Kollision zwischen:
-
-       (1) der systemischen Bilanzierungslogik des GEG
-           - Primärenergiebedarf
-           - Endenergiebedarf
-           - DIN V 18599
-           - gesamtsystemische Betrachtung
-
-       und
-
-       (2) der maßnahmenspezifischen Logik vieler abgeleiteter
-           Regulierungen und Förderprogramme (BEG, BAFA, KfW),
-           die einzelne Komponenten, Grenzwerte oder Maßnahmen
-           isoliert bewerten.
-
-       → GEG bewertet das Gesamtsystem.
-       → Förderrecht bewertet Einzelmaßnahmen.
-       → Technische Normen bewerten Einzelgrenzwerte.
-
-       Diese beiden Logiken sind NICHT deckungsgleich.
-
-     MFH‑Gewichtung:
-       Der Konflikt wird im Mehrfamilienhaus (MFH) besonders scharf,
-       weil:
-         * Warmwasser ein Systemtreiber ist (Schüttleistung,
-           Zirkulation, Speicherverluste)
-         * Maßnahmenlogik und Systemlogik stark auseinanderfallen
-         * Netzrestriktionen und Platzprobleme stärker wirken
-         * mehrere Wohneinheiten gleichzeitig betroffen sind
-         * Förderlogik oft nicht zur Systembilanz passt
-
-       Im Einfamilienhaus (EFH) ist der Konflikt schwach ausgeprägt,
-       weil:
-         * Maßnahme = System
-         * Bilanzgrenzen deckungsgleich sind
-         * Warmwasserlast gering ist
-         * Netzrestriktionen selten limitierend sind
-
-     Neue Knotenbeziehungen (v2.2):
-       SB‑K12 → SB‑10  (Regulatorische Grenze GEG)
-       SB‑K12 → SB‑11  (Nachweispflicht GEG)
-       SB‑K12 → SB‑02  (Energiebedarf – Maßnahmenlogik bewertet oft nur Einzelenergie)
-       SB‑K12 → SB‑03  (Leistungsbilanz – GEG bewertet Systembilanz)
-
-       MFH‑Kontext:
-       SB‑59 (MFH) → verstärkt → SB‑K12
-       SB‑60 (EFH) → schwächt → SB‑K12
-       SB‑59 → verursacht → SB‑57 (Steigzonenbegrenzung)
-       SB‑59 → verursacht → SB‑58 (Zählerplatzmangel)
-
-       Diese MFH‑Kontextknoten verstärken indirekt die Maßnahmenlogik‑Problematik,
-       weil im MFH die Umsetzung systemischer Anforderungen schwieriger ist.
+     SB-K03 – Regulatorische Leistungsgrenze überschritten
      ============================================================ */
+  { "source": "SB-K03", "type": "explains", "target": "RF-78" },
+  { "source": "SB-K03", "type": "explains", "target": "RF-85" },
+  { "source": "SB-K03", "type": "explains", "target": "RF-100" },
+  { "source": "SB-K03", "type": "explains", "target": "TR-18-R" },
 
+  /* ============================================================
+     SB-K04 – Hygieneanforderung 60°C verletzt
+     ============================================================ */
+  { "source": "SB-K04", "type": "explains", "target": "TR-02" },
+  { "source": "SB-K04", "type": "explains", "target": "TR-04a" },
+  { "source": "SB-K04", "type": "explains", "target": "TR-04b" },
+  { "source": "SB-K04", "type": "explains", "target": "RF-70" },
+  { "source": "SB-K04", "type": "explains", "target": "RF-71" },
+  { "source": "SB-K04", "type": "explains", "target": "RF-72" },
 
-  /* ------------------------------------------------------------
-     SB‑K12 → SB‑10 (Regulatorische Grenze GEG)
-     GEG definiert die systemische Bilanzierungslogik.
-     ------------------------------------------------------------ */
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-10" },
+  /* ============================================================
+     SB-K05 – Komfortanforderung 21°C verletzt
+     ============================================================ */
+  { "source": "SB-K05", "type": "explains", "target": "TR-01" },
+  { "source": "SB-K05", "type": "explains", "target": "TR-22" },
+  { "source": "SB-K05", "type": "explains", "target": "TR-25" },
 
-  /* ------------------------------------------------------------
-     SB‑K12 → SB‑11 (Nachweispflicht GEG)
-     GEG‑Nachweis ist systemisch, nicht maßnahmenbezogen.
-     ------------------------------------------------------------ */
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" },
+  /* ============================================================
+     SB-K06 – Mietminderungstatbestand entsteht
+     ============================================================ */
+  { "source": "SB-K06", "type": "explains", "target": "TR-25" },
+  { "source": "SB-K06", "type": "explains", "target": "RF-101" },
+  { "source": "SB-K06", "type": "explains", "target": "RF-102" },
 
-  /* ------------------------------------------------------------
-     SB‑K12 → SB‑02 (Energiebedarf)
-     Maßnahmenlogik bewertet oft nur Einzelenergie (z. B. Bauteile).
-     ------------------------------------------------------------ */
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-02" },
+  /* ============================================================
+     SB-K07 – Speicherverluste verschlechtern Bilanz
+     ============================================================ */
+  { "source": "SB-K07", "type": "explains", "target": "TR-05" },
+  { "source": "SB-K07", "type": "explains", "target": "TR-11" },
+  { "source": "SB-K07", "type": "explains", "target": "RF-63" },
 
-  /* ------------------------------------------------------------
-     SB‑K12 → SB‑03 (Leistungsbilanz)
-     GEG bewertet die Systembilanz (DIN V 18599).
-     ------------------------------------------------------------ */
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-03" },
+  /* ============================================================
+     SB-K08 – WRG verbessert Bilanz
+     ============================================================ */
+  { "source": "SB-K08", "type": "explains", "target": "TR-13" },
+  { "source": "SB-K08", "type": "explains", "target": "TR-14" },
+  { "source": "SB-K08", "type": "explains", "target": "RF-60" },
+  { "source": "SB-K08", "type": "explains", "target": "RF-61" },
+  { "source": "SB-K08", "type": "explains", "target": "RF-63" },
+
+  /* ============================================================
+     SB-K09 – Schallgrenze überschritten
+     ============================================================ */
+  { "source": "SB-K09", "type": "explains", "target": "TR-07" },
+  { "source": "SB-K09", "type": "explains", "target": "TR-08" },
+  { "source": "SB-K09", "type": "explains", "target": "RF-86" },
+
+  /* ============================================================
+     SB-K10 – Legionellenrisiko erhöht
+     ============================================================ */
+  { "source": "SB-K10", "type": "explains", "target": "TR-26" },
+  { "source": "SB-K10", "type": "explains", "target": "RF-72" },
+
+  /* ============================================================
+     SB-K11 – GEG-Bilanz verschlechtert
+     ============================================================ */
+  { "source": "SB-K11", "type": "explains", "target": "RF-60" },
+  { "source": "SB-K11", "type": "explains", "target": "RF-61" },
+  { "source": "SB-K11", "type": "explains", "target": "TR-54" },
+
+  /* ============================================================
+     SB-K12 – Förderfähigkeit reduziert
+     ============================================================ */
+  { "source": "SB-K12", "type": "explains", "target": "RF-90" },
+  { "source": "SB-K12", "type": "explains", "target": "RF-91" },
+  { "source": "SB-K12", "type": "explains", "target": "RF-92" },
+
+  /* ============================================================
+     SB – Kontextknoten (MFH / EFH)
+     ============================================================ */
+  { "source": "SB-59", "type": "contextualizes", "target": "TR-06" },
+  { "source": "SB-59", "type": "contextualizes", "target": "TR-07" },
+  { "source": "SB-59", "type": "contextualizes", "target": "TR-08" },
+  { "source": "SB-59", "type": "contextualizes", "target": "TR-18-T" },
+
+  { "source": "SB-60", "type": "contextualizes", "target": "TR-06" },
+  { "source": "SB-60", "type": "contextualizes", "target": "TR-18-T" },
 
 
   /* ============================================================
