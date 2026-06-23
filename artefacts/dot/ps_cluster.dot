@@ -1,0 +1,85 @@
+/* ============================================================
+   CLUSTER: PS – Physical Systems (v2.1, vollständiger Freeze)
+   ============================================================ */
+
+subgraph cluster_PS {
+    label="Ebene PS – Physikalische Systeme (v2.1)";
+    color="#c8e6c9";
+    style="rounded";
+    fontname="Arial";
+
+    node [shape=box, style=filled, fillcolor="#e8f5e9", fontname="Arial"];
+
+    /* ============================
+       PS‑NODES (vollständig)
+       ============================ */
+
+    "PS-WP-01"  [label="PS‑WP‑01\nWärmepumpe"];
+    "PS-SP-01"  [label="PS‑SP‑01\nWarmwasserspeicher"];
+    "PS-SP-02"  [label="PS‑SP‑02\nPufferspeicher"];
+    "PS-FWS-01" [label="PS‑FWS‑01\nFrischwasserstation"];
+    "PS-ZR-01"  [label="PS‑ZR‑01\nZirkulationssystem"];
+    "PS-HK-01"  [label="PS‑HK‑01\nHeizkreis"];
+    "PS-HY-01"  [label="PS‑HY‑01\nHydraulikgruppe"];
+    "PS-EL-01"  [label="PS‑EL‑01\nElektroinstallation"];
+    "PS-RG-01"  [label="PS‑RG‑01\nRegelung / Steuerung"];
+    "PS-VT-01"  [label="PS‑VT‑01\nWarmwasserverteilung"];
+    "PS-LU-01"  [label="PS‑LU‑01\nLüftungsanlage"];
+    "PS-ER-01"  [label="PS‑ER‑01\nWärmeerzeuger Bestand"];
+}
+
+/* ============================================================
+   PS‑EDGES (vollständig)
+   ============================================================ */
+
+    /* Wärmepumpe */
+    "PS-WP-01" -> "TR-01"   [label="provides"];
+    "PS-WP-01" -> "TR-18-T" [label="limited_by"];
+    "PS-WP-01" -> "TR-18-R" [label="affected_by"];
+    "PS-WP-01" -> "TR-33"   [label="defines"];
+
+    /* Warmwasserspeicher */
+    "PS-SP-01" -> "TR-04a" [label="defines"];
+    "PS-SP-01" -> "TR-04b" [label="modulates"];
+    "PS-SP-01" -> "TR-02"  [label="enables"];
+
+    /* Pufferspeicher */
+    "PS-SP-02" -> "TR-01"  [label="stabilizes"];
+    "PS-SP-02" -> "TR-00a" [label="reduces_variability"];
+
+    /* Frischwasserstation */
+    "PS-FWS-01" -> "TR-00b" [label="defines"];
+    "PS-FWS-01" -> "TR-02"  [label="requires"];
+
+    /* Zirkulation */
+    "PS-ZR-01" -> "TR-11" [label="increases_losses"];
+    "PS-ZR-01" -> "TR-03" [label="requires"];
+
+    /* Heizkreis */
+    "PS-HK-01" -> "TR-01"  [label="defines"];
+    "PS-HK-01" -> "TR-00a" [label="influences"];
+
+    /* Hydraulikgruppe */
+    "PS-HY-01" -> "TR-01"  [label="modulates"];
+    "PS-HY-01" -> "TR-04b" [label="modulates"];
+
+    /* Elektroinstallation */
+    "PS-EL-01" -> "TR-18-T" [label="defines_limit"];
+    "PS-EL-01" -> "TR-21"   [label="defines_limit"];
+    "PS-EL-01" -> "TR-06"   [label="defines_limit"];
+
+    /* Regelung */
+    "PS-RG-01" -> "TR-38" [label="controls"];
+    "PS-RG-01" -> "TR-00b" [label="modulates"];
+
+    /* Warmwasserverteilung */
+    "PS-VT-01" -> "TR-11" [label="increases_losses"];
+    "PS-VT-01" -> "TR-03" [label="defines"];
+
+    /* Lüftungsanlage */
+    "PS-LU-01" -> "TR-11" [label="reduces_losses"];
+    "PS-LU-01" -> "TR-01" [label="reduces_temp"];
+
+    /* Erzeuger Bestand */
+    "PS-ER-01" -> "TR-01" [label="provides"];
+    "PS-ER-01" -> "TR-02" [label="defines"];
