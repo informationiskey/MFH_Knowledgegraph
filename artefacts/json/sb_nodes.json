@@ -199,14 +199,14 @@
     }
   },
   {
-    "id": "SB-K12",
-    "label": "GEG vs. WP-JAZ",
-    "type": "SB",
-    "properties": {
-      "domain": "semantic_conflict",
-      "description": "Konflikt zwischen GEG-Anforderungen und realer WP-JAZ.",
-      "source": "GEG / DIN V 18599",
-      "version": "2.0"
-    }
+  "id": "SB-K12",
+  "label": "Systembilanz vs. Maßnahmenlogik",
+  "type": "SB",
+  "properties": {
+    "domain": "semantic_conflict",
+    "description": "Konflikt zwischen der systemischen Bilanzierungslogik des GEG und der maßnahmenspezifischen Logik vieler abgeleiteter Regulierungen und Förderprogramme. Während das GEG das Gesamtsystem bewertet, arbeiten BEG, BAFA, KfW und technische Einzelanforderungen mit isolierten Grenzwerten und Komponentenanforderungen, die nicht immer konsistent zur Systembilanz sind.",
+    "source": "GEG / BEG / BAFA / KfW / DIN V 18599",
+    "version": "2.1"
   }
+}
 ]
