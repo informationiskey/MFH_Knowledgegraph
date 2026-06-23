@@ -31,6 +31,7 @@ Bitte lies diese Richtlinien sorgfältig, bevor du Änderungen einreichst.
 ---
 
 ## 📁 Ordnerstruktur (Kurzüberblick)
+```
 artefacts/
 json/
 nodes/      # TR, RF, EN, SB, PB, PS, SCENARIO
@@ -40,7 +41,7 @@ kk/         # Konfliktketten
 dot/          # Graphviz-Layer
 exports/      # Neo4j-CSV, Bilder, Reports
 logs/         # Build- und Validierungsprotokolle
-
+```
 ---
 
 ## 🧱 Regeln für Nodes
