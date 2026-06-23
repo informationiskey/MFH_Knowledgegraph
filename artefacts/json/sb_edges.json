@@ -271,38 +271,114 @@
      ------------------------------------------------------------ */
   { "source": "SB-58", "type": "amplifies", "target": "SB-56" }
 
-  /* ------------------------------------------------------------
-     SB‑K12 – Systembilanz vs. Maßnahmenlogik
+ 
+  /* ============================================================
+     SB‑K12 – Systembilanz vs. Maßnahmenlogik (v2.2)
      ------------------------------------------------------------
-     Bedeutung:
-       - Dieser Konflikt beschreibt die Kollision zwischen der
-         systemischen Bilanzierungslogik des GEG (Primärenergie,
-         Endenergie, DIN V 18599) und der maßnahmenspezifischen
-         Logik vieler abgeleiteter Regulierungen (BEG, BAFA, KfW),
-         die einzelne Komponenten, Grenzwerte oder Maßnahmen isoliert
-         bewerten.
-       
-       - Während das GEG das Gesamtsystem betrachtet, arbeiten
-         Förderprogramme und technische Einzelanforderungen mit
-         Einzelkennwerten, die nicht immer konsistent zur Systembilanz
-         sind.
+     Semantische Bedeutung (v2.2):
+       Dieser Konflikt beschreibt die Kollision zwischen:
 
-       - Dieser Konflikt ist im Mehrfamilienhaus (MFH) besonders
-         ausgeprägt, weil:
-           * Warmwasser ein Systemtreiber ist (Schüttleistung,
-             Zirkulation, Speicherverluste).
-           * Netzrestriktionen (VDE‑AR‑N 4100, NAV) stärker wirken.
-           * Komfortanforderungen (BGB §535/536) rechtlich relevanter
-             sind.
-           * Maßnahmenlogik und Systemlogik im MFH stark auseinanderfallen.
-       
-       - Im Einfamilienhaus (EFH) existiert dieser Konflikt kaum,
-         weil dort Maßnahme = System ist und die Bilanzgrenzen
-         deckungsgleich sind.
+       (1) der systemischen Bilanzierungslogik des GEG
+           - Primärenergiebedarf
+           - Endenergiebedarf
+           - DIN V 18599
+           - gesamtsystemische Betrachtung
+
+       und
+
+       (2) der maßnahmenspezifischen Logik vieler abgeleiteter
+           Regulierungen und Förderprogramme (BEG, BAFA, KfW),
+           die einzelne Komponenten, Grenzwerte oder Maßnahmen
+           isoliert bewerten.
+
+       → GEG bewertet das Gesamtsystem.
+       → Förderrecht bewertet Einzelmaßnahmen.
+       → Technische Normen bewerten Einzelgrenzwerte.
+
+       Diese beiden Logiken sind NICHT deckungsgleich.
+
+     MFH‑Gewichtung:
+       Der Konflikt wird im Mehrfamilienhaus (MFH) besonders scharf,
+       weil:
+         * Warmwasser ein Systemtreiber ist (Schüttleistung,
+           Zirkulation, Speicherverluste)
+         * Maßnahmenlogik und Systemlogik stark auseinanderfallen
+         * Netzrestriktionen und Platzprobleme stärker wirken
+         * mehrere Wohneinheiten gleichzeitig betroffen sind
+         * Förderlogik oft nicht zur Systembilanz passt
+
+       Im Einfamilienhaus (EFH) ist der Konflikt schwach ausgeprägt,
+       weil:
+         * Maßnahme = System
+         * Bilanzgrenzen deckungsgleich sind
+         * Warmwasserlast gering ist
+         * Netzrestriktionen selten limitierend sind
+
+     Neue Knotenbeziehungen (v2.2):
+       SB‑K12 → SB‑10  (Regulatorische Grenze GEG)
+       SB‑K12 → SB‑11  (Nachweispflicht GEG)
+       SB‑K12 → SB‑02  (Energiebedarf – Maßnahmenlogik bewertet oft nur Einzelenergie)
+       SB‑K12 → SB‑03  (Leistungsbilanz – GEG bewertet Systembilanz)
+
+       MFH‑Kontext:
+       SB‑59 (MFH) → verstärkt → SB‑K12
+       SB‑60 (EFH) → schwächt → SB‑K12
+       SB‑59 → verursacht → SB‑57 (Steigzonenbegrenzung)
+       SB‑59 → verursacht → SB‑58 (Zählerplatzmangel)
+
+       Diese MFH‑Kontextknoten verstärken indirekt die Maßnahmenlogik‑Problematik,
+       weil im MFH die Umsetzung systemischer Anforderungen schwieriger ist.
+     ============================================================ */
+
+
+  /* ------------------------------------------------------------
+     SB‑K12 → SB‑10 (Regulatorische Grenze GEG)
+     GEG definiert die systemische Bilanzierungslogik.
      ------------------------------------------------------------ */
-
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-10" },
+
+  /* ------------------------------------------------------------
+     SB‑K12 → SB‑11 (Nachweispflicht GEG)
+     GEG‑Nachweis ist systemisch, nicht maßnahmenbezogen.
+     ------------------------------------------------------------ */
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" },
+
+  /* ------------------------------------------------------------
+     SB‑K12 → SB‑02 (Energiebedarf)
+     Maßnahmenlogik bewertet oft nur Einzelenergie (z. B. Bauteile).
+     ------------------------------------------------------------ */
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-02" },
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-03" }
+
+  /* ------------------------------------------------------------
+     SB‑K12 → SB‑03 (Leistungsbilanz)
+     GEG bewertet die Systembilanz (DIN V 18599).
+     ------------------------------------------------------------ */
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-03" },
+
+
+  /* ============================================================
+     MFH‑Spezifische Verstärkungen des Konflikts
+     ============================================================ */
+
+  /* ------------------------------------------------------------
+     SB‑59 (Gebäudetyp MFH) verstärkt SB‑K12
+     ------------------------------------------------------------ */
+  { "source": "SB-59", "type": "amplifies", "target": "SB-K12" },
+
+  /* ------------------------------------------------------------
+     SB‑60 (Gebäudetyp EFH) schwächt SB‑K12
+     ------------------------------------------------------------ */
+  { "source": "SB-60", "type": "attenuates", "target": "SB-K12" },
+
+  /* ------------------------------------------------------------
+     MFH → Steigzonenbegrenzung
+     (indirekter Verstärker: erschwert systemische Maßnahmen)
+     ------------------------------------------------------------ */
+  { "source": "SB-59", "type": "causes", "target": "SB-57" },
+
+  /* ------------------------------------------------------------
+     MFH → Zählerplatzmangel
+     (indirekter Verstärker: erschwert systemische Maßnahmen)
+     ------------------------------------------------------------ */
+  { "source": "SB-59", "type": "causes", "target": "SB-58" }
 ]
