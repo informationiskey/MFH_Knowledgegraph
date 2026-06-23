@@ -1,56 +1,102 @@
 [
   /* ============================================================
-     RF – Bauordnung (LBO / VVTB / MLAR)
+     RF – Bauordnung (LBO generisch → LBO Landesvarianten)
+     ------------------------------------------------------------
+     Zweck:
+       - Die generische LBO (RF-86) wird durch die Landesbauordnungen
+         der Bundesländer überschrieben.
+     Semantik:
+       - "overrides" = gültiger RF-Edge-Typ laut Taxonomie v2.1.
+       - Normative Übersteuerung: Landesrecht > generisches Modell.
      ============================================================ */
-  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-BW" },
-  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-BY" },
-  { "source": "RF-86",     "type": "overrides",        "target": "RF-86-HE" },
-
-  { "source": "RF-86-BW",  "type": "delegates_to",     "target": "RF-87-BW" },
-  { "source": "RF-86-BY",  "type": "delegates_to",     "target": "RF-87-BY" },
-  { "source": "RF-86-HE",  "type": "delegates_to",     "target": "RF-87-HE" },
-
-  { "source": "RF-87-BW",  "type": "introduces",       "target": "RF-79" },
-  { "source": "RF-87-BY",  "type": "introduces",       "target": "RF-79" },
-  { "source": "RF-87-HE",  "type": "introduces",       "target": "RF-79" },
+  {
+    "source": "RF-86",
+    "type": "overrides",
+    "target": "RF-86-BW"
+  },
+  {
+    "source": "RF-86",
+    "type": "overrides",
+    "target": "RF-86-BY"
+  },
+  {
+    "source": "RF-86",
+    "type": "overrides",
+    "target": "RF-86-HE"
+  },
 
   /* ============================================================
-     RF – Elektro (VDE / NAV / DGUV)
+     RF – Bauordnung (LBO Landesvarianten → VVTB Landesvarianten)
+     ------------------------------------------------------------
+     Zweck:
+       - Die Landesbauordnung verweist auf die jeweilige VVTB.
+     Semantik:
+       - "delegates_to" = gültiger RF-Edge-Typ.
+       - Delegation: LBO verweist auf technische Baubestimmungen.
      ============================================================ */
-  { "source": "RF-85",     "type": "legal_framework_for", "target": "RF-78" },
-
-  { "source": "RF-78",     "type": "requires_compliance", "target": "RF-77" },
-  { "source": "RF-78",     "type": "requires_compliance", "target": "RF-80" },
-
-  { "source": "RF-83",     "type": "details",          "target": "RF-84" },
+  {
+    "source": "RF-86-BW",
+    "type": "delegates_to",
+    "target": "RF-87-BW"
+  },
+  {
+    "source": "RF-86-BY",
+    "type": "delegates_to",
+    "target": "RF-87-BY"
+  },
+  {
+    "source": "RF-86-HE",
+    "type": "delegates_to",
+    "target": "RF-87-HE"
+  },
 
   /* ============================================================
-     RF – Wasser / Hygiene (TrinkwV / DVGW)
+     RF – Hygiene (Trinkwasser / DVGW)
+     ------------------------------------------------------------
+     Zweck:
+       - TrinkwV (RF-70) verweist auf Legionellenprävention (W551).
+       - W551 verweist auf Zirkulationsanforderungen (W553).
+     Semantik:
+       - "requires" = gültiger RF-Edge-Typ.
+       - Normative Abhängigkeit: spätere Norm baut auf früherer auf.
      ============================================================ */
-  { "source": "RF-70",     "type": "requires",         "target": "RF-71" },
-  { "source": "RF-71",     "type": "details",          "target": "RF-72" },
+  {
+    "source": "RF-70",
+    "type": "requires",
+    "target": "RF-71"
+  },
+  {
+    "source": "RF-71",
+    "type": "requires",
+    "target": "RF-72"
+  },
 
   /* ============================================================
      RF – GEG / Energie / Bilanzierung
+     ------------------------------------------------------------
+     Zweck:
+       - RF-63 (DIN V 18599 Systembilanzierung) definiert die
+         Methodik, die in RF-60/61/62 angewendet wird.
+     Semantik:
+       - "defines" = gültiger RF-Edge-Typ.
+       - Methodische Grundlage → Anwendungsnormen.
+     Hinweis:
+       - Dies ersetzt die alten v2.0-Kanten "uses_method".
      ============================================================ */
-  { "source": "RF-60",     "type": "uses_method",      "target": "RF-63" },
-  { "source": "RF-61",     "type": "uses_method",      "target": "RF-63" },
-  { "source": "RF-62",     "type": "uses_method",      "target": "RF-63" },
-
-  /* ============================================================
-     RF – Förderung (BEG / BAFA / KfW)
-     ============================================================ */
-  { "source": "RF-90",     "type": "implements",       "target": "RF-91" },
-  { "source": "RF-90",     "type": "implements",       "target": "RF-92" },
-
-  /* ============================================================
-     RF – Mietrecht (BGB / BetrKV)
-     ============================================================ */
-  { "source": "RF-100",    "type": "related_to",       "target": "RF-101" },
-
-  { "source": "RF-102",    "type": "defines_costs",    "target": "RF-106" },
-
-  { "source": "RF-103",    "type": "interacts_with",   "target": "RF-102" },
-
-  { "source": "RF-104",    "type": "extends",          "target": "RF-105" }
+  {
+    "source": "RF-63",
+    "type": "defines",
+    "target": "RF-60"
+  },
+  {
+    "source": "RF-63",
+    "type": "defines",
+    "target": "RF-61"
+  },
+  {
+    "source": "RF-63",
+    "type": "defines",
+    "target": "RF-62"
+  }
 ]
+
