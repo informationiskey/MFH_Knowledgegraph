@@ -64,7 +64,8 @@
   { "source": "TR-03", "type": "regulated_by", "target": "RF-71" },
   { "source": "TR-03", "type": "regulated_by", "target": "RF-72" },
 
-  { "source": "TR-22", "type": "influences", "target": "RF-72" },
+   /* Legionellenprüfung → TR‑26 (korrekt) */
+  { "source": "TR-26", "type": "influences", "target": "RF-72" },
 
   /* ============================================================
      GEG / BILANZIERUNG
