@@ -81,6 +81,8 @@ Komfortansprüche kollidieren mit der Effizienzgrenze der WP.
 
 ---
 
+[SB-K11 zieht einen komplett Umbau nach sich (V2.2)](Modeldesign/SB_edges_konflikt_semantik.md)
+
 ## ⚙ SB‑K11 – WP‑Erzeugerzwang vs. Elektro‑Bestand
 
 **Semantische Bedeutung:**  
