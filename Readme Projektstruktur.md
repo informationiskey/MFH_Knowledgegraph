@@ -37,6 +37,25 @@ project-root/
     │   │
     │   └── kk/
     │       └── kk.json
+    │
+    ├── dot/
+    │   ├── tr.dot
+    │   ├── rf.dot
+    │   ├── en.dot
+    │   ├── sb.dot
+    │   ├── pb.dot
+    │   ├── ps.dot
+    │   ├── scenario.dot
+    │   └── knowledgegraph.dot
+    │
+    ├── exports/
+    │   ├── neo4j/
+    │   ├── images/
+    │   └── reports/
+    │
+    └── logs/
+        ├── build.log
+        └── validation.log
 
 ## 📁 Artefakte (`artefacts/`)
 
