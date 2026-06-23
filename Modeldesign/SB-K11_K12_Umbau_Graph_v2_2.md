@@ -149,6 +149,104 @@ Wenn wir diese Umbauten machen, dann kann der Knowledge Graph:
 - den EFH‑Nicht‑Konflikt korrekt modellieren
 - die Normlogik korrekt darstellen
 - die Kausalität korrekt abbilden
+
+Welche Ebenen müssen für SB‑K11/SB‑K12 zwingend mitspielen?
+
+Für SB‑K11 (Neue Elektroanforderungen vs. Bestandsschutz):
+
+    SB:  
+    Bedeutungen wie „Bestandsschutz“, „neue Anforderungen“, „§14a“, „Anmeldepflicht“, „Zählerplatz“, „Netzbetreiberprozess“, „MFH/EFH“.
+
+    RF (Regulatorik):
+
+        RF‑Knoten zu: VDE‑AR‑N 4100, §14a EnWG, NAV, TAB, ggf. LBO/VVTB, GEG‑Verweise.
+
+        Kanten: requires, constrains, delegates_to etc.
+
+    TR (Technische Realität):
+
+        TR‑Knoten: WP als elektrischer Verbraucher, Zähleranlage, Steigleitung, Lastprofil, Anschlussleistung.
+
+        Kanten: WP → elektrische Last, Zählerfeld → Anschluss, Steigzone → physische Begrenzung.
+
+    PS/PB (Politik/Blockade):
+
+        PS: politischer WP‑Push, Förderlogik, Dekarbonisierungsziele.
+
+        PB: Blockaden durch Netzbetreiberanforderungen, Umbaukosten, Platzmangel, MFH‑Spezifik.
+
+    optional SCENARIO:
+
+        Szenarien „MFH mit WP‑Nachrüstung“, „EFH mit WP‑Nachrüstung“ → um den Unterschied explizit zu machen.
+
+2. Was ist aktuell sicher noch nicht im Graphen abgebildet?
+
+Aus dem, was wir gerade gemeinsam hergeleitet haben, fehlen mit hoher Wahrscheinlichkeit:
+
+    SB‑Nodes: Bestandsschutz, neue Anforderungen durch WP, §14a‑Pflicht, Anmeldepflicht, Zählerplatzanforderungen, Selektivität, MFH/EFH‑Typen, Steigzonenbegrenzung, Zählerplatzmangel.
+
+    RF‑Edges: klare Ketten von VDE‑AR‑N 4100 / §14a / NAV → „neue Anforderungen bei WP‑Anschluss“.
+
+    TR‑Edges: WP als „steuerbare Verbrauchseinrichtung“ mit besonderem Lastprofil, nicht als „zu großer Verbraucher“.
+
+    PS/PB‑Edges: politischer WP‑Zwang ↔ technische/regulatorische Hürden im MFH.
+
+Kurz: die semantische Story ist da, aber die Cross‑Layer‑Verdrahtung fehlt noch.
+3. Sinnvolle Reihenfolge für den Umbau
+
+Schritt 1 – SB sauber fertigziehen (haben wir inhaltlich):
+
+    SB‑K11 neu definieren (haben wir).
+
+    fehlende SB‑Nodes für Bestandsschutz / neue Anforderungen / MFH/EFH ergänzen.
+
+    SB‑Edges innerhalb SB‑Layer setzen.
+
+Schritt 2 – RF‑Layer anbinden:
+
+    RF‑Knoten identifizieren: VDE‑AR‑N 4100, §14a EnWG, NAV, TAB, GEG‑Verweise.
+
+    Cross‑Layer‑Edges: SB‑„Neue Anforderungen“ → RF‑Normen; SB‑„Bestandsschutz“ → RF‑Altbestand/Übergangsregeln.
+
+Schritt 3 – TR‑Layer anbinden:
+
+    TR‑Knoten: WP‑Verbraucher, Zähleranlage, Steigleitung, Anschlussleistung.
+
+    Cross‑Layer‑Edges: TR‑WP → SB‑„steuerbare Verbrauchseinrichtung“; TR‑Zählerfeld → SB‑„Zählerplatzanforderung“; TR‑Steigzone → SB‑„Steigzonenbegrenzung“.
+
+Schritt 4 – PS/PB‑Layer anbinden:
+
+    PS: „WP‑Pfad politisch gewollt“.
+
+    PB: „Netzbetreiber fordert Umbau“, „Kostenblockade MFH“, „Platzblockade MFH“.
+
+    Edges: PS‑WP‑Pfad → verstärkt SB‑K11; PB‑Knoten → konkretisieren die Blockadeketten.
+
+Schritt 5 – optional SCENARIO:
+
+    Szenario EFH vs. MFH → zeigt, dass SB‑K11 im EFH nicht scharf wird.
+
+4. Konkreter nächster Schritt
+
+Bevor wir „blind“ umbauen, wäre der saubere Weg:
+
+    Du schickst mir die relevanten RF‑Nodes/Edges zu VDE‑AR‑N 4100, §14a, NAV, TAB, GEG,
+
+    plus die TR‑Nodes/Edges rund um WP, Zähleranlage, Steigleitungen,
+
+    dann baue ich dir:
+
+    eine Cross‑Layer‑Konfliktkette SB‑K11 ↔ RF ↔ TR ↔ PS/PB,
+
+    als JSON‑Edges + kommentierten DOT‑Block,
+
+    so, dass du es direkt in deinen v2.1‑Stand integrieren kannst.
+
+Wenn du magst, können wir wirklich „hart“ anfangen mit:
+
+    „Hier sind meine RF‑Knoten zu §14a / VDE‑AR‑N 4100 / NAV“
+
+und ich ziehe dir daraus die passende Verdrahtung zu SB‑K11.
 - die regulatorische Realität korrekt wiedergeben
 
 Und das alles **ohne Fehlinterpretationen**.
