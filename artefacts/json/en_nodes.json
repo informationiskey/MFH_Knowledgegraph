@@ -79,7 +79,7 @@
       "domain": "enabler",
       "description": "Ermöglicht GEG-Nachweis auf Basis der Systembilanz statt Einzelkomponenten.",
       "source": "GEG / DIN V 18599",
-      "tags": ["systemic", "alternative_path", "bilanzierung"],
+      "tags": ["systemic", "alternative_path", "balancing"],
       "version": "2.1"
     }
   },
@@ -91,7 +91,7 @@
       "domain": "enabler",
       "description": "Ermöglicht Abweichungen von bauordnungsrechtlichen Anforderungen bei gleichwertigem Schutzniveau.",
       "source": "LBO / VVTB",
-      "tags": ["deviation", "bauordnung"],
+      "tags": ["deviation", "building_code"],
       "version": "2.1"
     }
   },
@@ -103,7 +103,7 @@
       "domain": "enabler",
       "description": "Ermöglicht mietrechtliche Berücksichtigung von Strommangellagen, z. B. bei netzbedingten Abschaltungen.",
       "source": "Rechtsprechung / Fachliteratur",
-      "tags": ["mietrecht", "legal"],
+      "tags": ["tenancy_law", "legal"],
       "version": "2.1"
     }
   },
@@ -151,7 +151,7 @@
       "domain": "enabler",
       "description": "Ermöglicht Bewertung auf Basis von Prognosen statt statischer Werte.",
       "source": "GEG / Fachkommentierung",
-      "tags": ["prognose", "systemic"],
+      "tags": ["forecast", "systemic"],
       "version": "2.1"
     }
   }
