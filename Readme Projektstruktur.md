@@ -13,7 +13,7 @@ project-root/
     │   │   ├── en_nodes.json
     │   │   ├── sb_nodes.json
     │   │   ├── pb_nodes.json
-    │   │   ├── ps_nodes.json          # ← JA, weiterhin vorhanden
+    │   │   ├── ps_nodes.json
     │   │   ├── scenario_nodes.json
     │   │   └── meta_nodes.json
     │   │
@@ -23,7 +23,7 @@ project-root/
     │   │   ├── en_edges.json
     │   │   ├── sb_edges.json
     │   │   ├── pb_edges.json
-    │   │   ├── ps_edges.json          # ← JA, weiterhin vorhanden
+    │   │   ├── ps_edges.json
     │   │   ├── scenario_edges.json
     │   │   ├── crosslayer_edges.json
     │   │   └── kk_edges.json
