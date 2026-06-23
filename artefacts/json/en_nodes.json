@@ -84,9 +84,9 @@
     "properties": {
       "domain": "enabler",
       "description": "Ermöglicht GEG-Nachweis auf Basis der Systembilanz statt Einzelkomponenten. Entschärft Konflikte zwischen TR-Realität und RF-60/61/63.",
-      "source": "GEG / Fachkommentierung",
-      "tags": ["geg", "systembilanz", "enabler"],
-      "version": "2.0"
+      "source": "GEG / DIN V 18599 / Fachkommentierung",
+      "tags": ["geg", "systembilanz", "bilanzierung", "enabler"],
+      "version": "2.1"
     }
   },
 
