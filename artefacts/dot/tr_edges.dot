@@ -1,0 +1,144 @@
+digraph TR_Edges_v22 {
+    rankdir=LR;
+    splines=true;
+    overlap=false;
+    fontsize=12;
+
+    /* ============================================================
+       PHYSIKALISCHE BEDARFSGRÖSSEN
+       ============================================================ */
+    "TR-00a" -> "TR-01"  [label="prerequisite_for"];
+    "TR-00b" -> "TR-04a" [label="prerequisite_for"];
+    "TR-00b" -> "TR-04b" [label="modulates"];
+    "TR-00b" -> "TR-03"  [label="prerequisite_for"];
+
+    /* ============================================================
+       NUTZERVERHALTEN
+       ============================================================ */
+    "TR-12a" -> "TR-00b" [label="reinforces"];
+    "TR-12a" -> "TR-04a" [label="prerequisite_for"];
+    "TR-12a" -> "TR-04b" [label="modulates"];
+    "TR-12a" -> "TR-00b" [label="increases_peak_load"];
+    "TR-12a" -> "TR-00a" [label="increases_variability"];
+
+    "TR-12b" -> "TR-00a" [label="increases_real_heating_demand"];
+    "TR-12b" -> "TR-00a" [label="increases_variability"];
+    "TR-12b" -> "TR-01"  [label="increases_required_temperature"];
+    "TR-12b" -> "TR-55"  [label="conflicts_with"];
+
+    "TR-12c" -> "TR-04a" [label="enforces"];
+    "TR-12c" -> "TR-04b" [label="modulates"];
+    "TR-12c" -> "TR-00b" [label="increases_peak_load"];
+    "TR-12c" -> "TR-56"  [label="conflicts_with"];
+
+    /* ============================================================
+       LÜFTUNGSSYSTEME
+       ============================================================ */
+    "TR-13" -> "TR-11" [label="reduces_losses"];
+    "TR-13" -> "TR-01" [label="reduces_temp"];
+    "TR-13" -> "TR-48" [label="enables"];
+
+    "TR-14" -> "TR-11" [label="reduces_losses"];
+    "TR-14" -> "TR-01" [label="reduces_temp"];
+    "TR-14" -> "TR-48" [label="enables"];
+
+    /* ============================================================
+       VERLUSTE / BILANZKONFLIKTE
+       ============================================================ */
+    "TR-05" -> "TR-11" [label="misrepresents_reality"];
+    "TR-05" -> "TR-54" [label="creates_bilanzkonflikt"];
+    "TR-11" -> "TR-54" [label="redefines"];
+
+    /* ============================================================
+       DLE-PFAD (TR-15/16/17)
+       ============================================================ */
+    "TR-15" -> "TR-00b" [label="modulates"];
+    "TR-16" -> "TR-00b" [label="modulates"];
+    "TR-17" -> "TR-00b" [label="modulates"];
+
+    "TR-02" -> "TR-15" [label="conflicts_with"];
+    "TR-02" -> "TR-16" [label="conflicts_with"];
+    "TR-02" -> "TR-17" [label="conflicts_with"];
+
+    "TR-15" -> "TR-03" [label="blocks"];
+    "TR-16" -> "TR-03" [label="blocks"];
+    "TR-17" -> "TR-03" [label="blocks"];
+
+    "TR-15" -> "TR-53" [label="conflicts_with"];
+    "TR-16" -> "TR-53" [label="conflicts_with"];
+    "TR-17" -> "TR-53" [label="conflicts_with"];
+
+    "TR-15" -> "TR-06" [label="increases_required_capacity"];
+    "TR-16" -> "TR-06" [label="increases_required_capacity"];
+    "TR-17" -> "TR-06" [label="increases_required_capacity"];
+
+    "TR-15" -> "TR-56" [label="increases_peak_load"];
+    "TR-16" -> "TR-56" [label="increases_peak_load"];
+    "TR-17" -> "TR-56" [label="increases_peak_load"];
+
+    /* ============================================================
+       LEISTUNGSGRENZEN – TR‑18‑R / TR‑18‑T
+       ============================================================ */
+    "TR-15" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+    "TR-16" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+    "TR-17" -> "TR-18-R" [label="exceeds_regulatory_threshold"];
+
+    "TR-15" -> "TR-18-T" [label="exceeds_technical_threshold"];
+    "TR-16" -> "TR-18-T" [label="exceeds_technical_threshold"];
+    "TR-17" -> "TR-18-T" [label="exceeds_technical_threshold"];
+
+    "TR-18-T" -> "TR-01" [label="reduces_heating_capacity"];
+    "TR-18-T" -> "TR-02" [label="prevents_60C_hygiene"];
+    "TR-18-T" -> "TR-22" [label="prevents_21C"];
+    "TR-18-T" -> "TR-25" [label="enables_mietminderung"];
+
+    /* ============================================================
+       LEISTUNGSSTUFEN 12/21 kW
+       ============================================================ */
+    "TR-15" -> "TR-19" [label="exceeds_threshold"];
+    "TR-16" -> "TR-19" [label="exceeds_threshold"];
+    "TR-17" -> "TR-19" [label="exceeds_threshold"];
+
+    "TR-15" -> "TR-20" [label="may_exceed_threshold"];
+    "TR-16" -> "TR-20" [label="likely_exceeds_threshold"];
+    "TR-17" -> "TR-20" [label="exceeds_threshold"];
+
+    "TR-19" -> "TR-06" [label="requires_registration"];
+    "TR-20" -> "TR-06" [label="requires_approval"];
+
+    "TR-19" -> "TR-56" [label="increases_load"];
+    "TR-20" -> "TR-56" [label="critical_load"];
+
+    /* ============================================================
+       EINPHASENBEGRENZUNG
+       ============================================================ */
+    "TR-21" -> "TR-15" [label="prerequisite_for"];
+    "TR-21" -> "TR-16" [label="prerequisite_for"];
+    "TR-21" -> "TR-17" [label="prerequisite_for"];
+
+    "TR-21" -> "TR-06" [label="increases_complexity"];
+    "TR-21" -> "TR-07" [label="increases_installation_effort"];
+
+    /* ============================================================
+       MIETRECHTLICHE TR-KNOTEN
+       ============================================================ */
+    "TR-22" -> "TR-01" [label="defines_minimum"];
+    "TR-22" -> "TR-02" [label="defines_minimum"];
+    "TR-22" -> "TR-03" [label="defines_minimum"];
+    "TR-22" -> "TR-08" [label="defines_limit"];
+
+    "TR-23" -> "TR-56" [label="cost_sensitive"];
+    "TR-23" -> "TR-53" [label="cost_sensitive"];
+    "TR-23" -> "TR-04a" [label="cost_sensitive"];
+    "TR-23" -> "TR-04b" [label="cost_sensitive"];
+
+    "TR-24" -> "TR-07" [label="requires_access"];
+    "TR-24" -> "TR-06" [label="requires_access"];
+    "TR-24" -> "TR-13" [label="requires_access"];
+    "TR-24" -> "TR-14" [label="requires_access"];
+
+    "TR-25" -> "TR-08" [label="risk_factor"];
+    "TR-25" -> "TR-01" [label="risk_factor"];
+    "TR-25" -> "TR-02" [label="risk_factor"];
+    "TR-25" -> "TR-03" [label="risk_factor"];
+}
