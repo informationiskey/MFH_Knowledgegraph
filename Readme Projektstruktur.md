@@ -3,6 +3,7 @@
 Dieses Repository enthält alle Artefakte, Skripte und Dokumentationen zur Modellierung, Validierung und Visualisierung eines mehrschichtigen, normbasierten Wissensgraphen (RF/TR/EN/Szenarien/SB/PB) inklusive ETL‑Pipeline, Neo4j‑Importskripten und DOT‑Visualisierungen.
 
 ---
+```
 project-root/
 └── artefacts/
     ├── json/
@@ -56,7 +57,7 @@ project-root/
     └── logs/
         ├── build.log
         └── validation.log
-
+```
 ## 📁 Artefakte (`artefacts/`)
 
 Der zentrale Speicherort für **modellierte Graph‑Artefakte**.  
