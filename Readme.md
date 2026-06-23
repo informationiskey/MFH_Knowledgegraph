@@ -3,6 +3,38 @@ Wissensgraph für technische Realität (TR), Regulatorik (RF), Szenarien (E4), E
 
 Dieses Repository enthält alle Artefakte zur Modellierung, Analyse und Visualisierung eines modularen, normtreuen Knowledge Graphs für MFH‑Systeme.
 
+## ✔ Ziel des Projekts
+
+Ein vollständiger, normtreuer, konfliktfähiger Wissensgraph für MFH‑Systeme,
+der technische, regulatorische, politische und semantische Ebenen integriert.
+
+---
+## 🧩 Layer‑Beschreibung
+
+### **TR – Technische Realität**
+Physikalische, hydraulische, thermische und elektrische Systemknoten.
+
+### **RF – Regulatorische Felder**
+GEG, LBO, TA Lärm, DVGW, VDE, EnWG, NAV, Förderrecht.
+
+### **EN – Energienetz**
+Netzrestriktionen, Anschlussbedingungen, Lastprofile, Netzbetreiberlogik.
+
+### **SB – Semantische Bedeutungen & Konflikte**
+Konfliktknoten (SB‑K01 … SB‑K12), Bedeutungsachsen, Kontextknoten.
+
+### **PB – Politische Blockaden**
+Politische Zielkonflikte, Maßnahmenlogik, politische Restriktionen.
+
+### **PS – Policy‑System**
+Förderlogik, Programme, EU‑Richtlinien, nationale Strategien.
+
+### **SCENARIO – Szenarien**
+Warmwasserbedarf, Heizlast, WP‑Varianten, Speichergrößen, Betriebsmodi.
+
+### **KK – Konfliktketten**
+Geordnete SB‑Sequenzen (KK1 … KK6).
+
 ---
 
 ## 🧩 Modellübersicht
@@ -156,6 +188,20 @@ Die DOT‑Dateien enthalten:
 - GEG‑Heatmap  
 - Änderungsprotokoll  
 
+---
+
+## 🔄 Build‑Pipeline (empfohlen)
+
+1. **Nodes generieren**  
+2. **Edges generieren**  
+3. **Cross‑Layer‑Edges validieren**  
+4. **Konfliktketten generieren**  
+5. **DOT‑Layer erzeugen**  
+6. **Gesamtgraph rendern**  
+7. **Neo4j‑CSV exportieren**  
+8. **Validation‑Checks durchführen**
+
+---
 ---
 
 ## 📝 Lizenz
