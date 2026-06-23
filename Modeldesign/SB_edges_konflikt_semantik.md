@@ -1,4 +1,4 @@
-# SB‑Konfliktknoten – Vollständige Semantik (v2.1)
+# SB‑Konfliktknoten – Vollständige Semantik (v2.1) und Weiterentwicklung zur v2.2
 
 Die Konfliktknoten SB‑K7 bis SB‑K12 sind **semantische Meta‑Knoten**, die keine technischen oder regulatorischen Konflikte abbilden, sondern **Bedeutungskollisionen** zwischen verschiedenen SB‑Bedeutungsbereichen.  
 Sie dienen als **Interpretationsanker**, um Konflikte zwischen Physik, Regulatorik, Legal, Infrastruktur und Prozessen zu modellieren.
@@ -117,3 +117,44 @@ Dieser Konflikt beschreibt die Kollision zwischen der **GEG‑Bilanzierungslogik
 
 **Konfliktursache:**  
 GEG bewertet das System, nicht die reale Effizienz → WP kann GEG erfüllen, aber ineffizient laufen.
+
+
+---
+# SB‑Konfliktknoten (v2.2)
+## Die alten SB‑K7 bis SB‑K12 waren:
+- knapp beschrieben
+- ohne technische Ursache
+- ohne Normbezug
+- ohne Konfliktketten
+- ohne Effekte (TR/RF‑Nodes)
+- ohne Intensität
+- ohne semantische Tiefe
+- Version 2.0 / 2.1
+
+strukturell korrekt, aber inhaltlich unvollständig
+Sie waren ursprünglich nur Platzhalter für Konfliktfamilien.
+
+Mapping alt → neu (vollständige Zuordnung)
+Alt (v2.0/2.1)	Neu (v2.2)	Status
+SB‑K7 „Hygiene vs. Effizienz“	SB‑K04 + SB‑K10	ersetzt & aufgeteilt
+SB‑K8 „DLE vs. Elektroinstallation“	SB‑K01 + SB‑K02 + SB‑K03	ersetzt & erweitert
+SB‑K9 „Schall vs. Aufstellfläche“	SB‑K09	1:1 ersetzt
+SB‑K10 „Komfort vs. WP‑Temperatur“	SB‑K05	1:1 ersetzt
+SB‑K11 „WP‑Erzeugerzwang vs. Elektro‑Bestand“	SB‑K03 + SB‑K11	ersetzt & erweitert
+SB‑K12 „Systembilanz vs. Maßnahmenlogik“	SB‑K12	1:1 ersetzt (inhaltlich erweitert)
+
+## SB‑Konfliktknoten für jede Konfliktart
+- SB‑K01: „DLE erzeugt Spitzenlast“
+- SB‑K02: „Spitzenlast überschreitet technische Grenze“
+- SB‑K03: „Spitzenlast überschreitet regulatorische Grenze“
+- SB‑K04: „Hygieneanforderung 60°C wird verletzt“
+- SB‑K05: „Komfortanforderung 21°C wird verletzt“
+- SB‑K06: „Mietminderungstatbestand entsteht“
+- SB‑K07: „Speicherverluste verschlechtern Bilanz“
+- SB‑K08: „WRG verbessert Bilanz“
+- SB‑K09: „Schallgrenze überschritten“
+- SB‑K10: „Legionellenrisiko erhöht“
+- SB‑K11: „GEG‑Bilanz verschlechtert“
+- SB‑K12: „Förderfähigkeit reduziert“
+
+Diese Knoten enthalten die ausführliche Semantik, die bislang in den Kommentaren waren.
