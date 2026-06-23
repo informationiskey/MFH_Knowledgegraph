@@ -1,45 +1,92 @@
 [
   /* ============================================================
-     EN‑06b – Systembilanz
+     EN‑01 – Alternative Nachweisführung
      ============================================================ */
-  { "source": "EN-06b", "type": "evaluates", "target": "TR-00a" },
-  { "source": "EN-06b", "type": "evaluates", "target": "TR-00b" },
-  { "source": "EN-06b", "type": "evaluates", "target": "TR-04a" },
-  { "source": "EN-06b", "type": "evaluates", "target": "TR-04b" },
-  { "source": "EN-06b", "type": "evaluates", "target": "TR-11" },
+  { "source": "EN-01", "type": "enables_alternative_path", "target": "RF-60" },
+  { "source": "EN-01", "type": "enables_alternative_path", "target": "RF-61" },
+  { "source": "EN-01", "type": "enables_alternative_path", "target": "RF-63" },
+  { "source": "EN-01", "type": "enables_alternative_path", "target": "RF-71" },
+  { "source": "EN-01", "type": "enables_alternative_path", "target": "RF-86" },
 
   /* ============================================================
-     EN‑06c – Bilanzierungslogik (GEG / DIN V 18599)
+     EN‑02 – Bestandsschutz
      ============================================================ */
-  { "source": "EN-06c", "type": "uses_method", "target": "RF-60" },
-  { "source": "EN-06c", "type": "uses_method", "target": "RF-61" },
-  { "source": "EN-06c", "type": "uses_method", "target": "RF-62" },
-  { "source": "EN-06c", "type": "uses_method", "target": "RF-63" },
+  { "source": "EN-02", "type": "allows_deviation", "target": "RF-70" },
+  { "source": "EN-02", "type": "allows_deviation", "target": "RF-71" },
+  { "source": "EN-02", "type": "allows_deviation", "target": "RF-86" },
+  { "source": "EN-02", "type": "allows_deviation", "target": "RF-100" },
 
   /* ============================================================
-     EN‑07 – Optimierungslogik (WP‑Systeme)
+     EN‑03 – Risikobasierter Brandschutz
      ============================================================ */
-  { "source": "EN-07", "type": "optimizes", "target": "PS-WP-01" },
-  { "source": "EN-07", "type": "optimizes", "target": "PS-SP-01" },
-  { "source": "EN-07", "type": "optimizes", "target": "PS-RG-01" },
+  { "source": "EN-03", "type": "modulates", "target": "RF-87-BW" },
+  { "source": "EN-03", "type": "modulates", "target": "RF-87-BY" },
+  { "source": "EN-03", "type": "modulates", "target": "RF-87-HE" },
 
   /* ============================================================
-     EN‑08 – Effizienzbewertung
+     EN‑04 – Technische Kompensationsmaßnahmen
      ============================================================ */
-  { "source": "EN-08", "type": "evaluates", "target": "TR-33" },
-  { "source": "EN-08", "type": "evaluates", "target": "TR-01" },
-  { "source": "EN-08", "type": "evaluates", "target": "TR-11" },
+  { "source": "EN-04", "type": "compensates", "target": "RF-70" },
+  { "source": "EN-04", "type": "compensates", "target": "RF-71" },
+  { "source": "EN-04", "type": "compensates", "target": "RF-72" },
+  { "source": "EN-04", "type": "compensates", "target": "RF-86" },
 
   /* ============================================================
-     EN‑09 – Komfortmodell
+     EN‑05 – Betriebliche Kompensationsmaßnahmen
      ============================================================ */
-  { "source": "EN-09", "type": "evaluates", "target": "TR-22" },
-  { "source": "EN-09", "type": "evaluates", "target": "TR-01" },
+  { "source": "EN-05", "type": "compensates", "target": "RF-70" },
+  { "source": "EN-05", "type": "compensates", "target": "RF-101" },
 
   /* ============================================================
-     EN‑10 – Risikoaggregation
+     EN‑06 – Systemische Bewertung
      ============================================================ */
-  { "source": "EN-10", "type": "aggregates", "target": "TR-25" },
-  { "source": "EN-10", "type": "aggregates", "target": "TR-08" },
-  { "source": "EN-10", "type": "aggregates", "target": "TR-02" }
+  { "source": "EN-06", "type": "systemic_override", "target": "RF-63" },
+  { "source": "EN-06", "type": "systemic_override", "target": "RF-60" },
+  { "source": "EN-06", "type": "systemic_override", "target": "RF-61" },
+
+  /* ============================================================
+     EN‑06b – Systemischer GEG‑Nachweis (bereinigt, JAZ‑frei)
+     ============================================================ */
+  { "source": "EN-06b", "type": "relieves_conflict", "target": "RF-60" },
+  { "source": "EN-06b", "type": "relieves_conflict", "target": "RF-61" },
+  { "source": "EN-06b", "type": "relieves_conflict", "target": "RF-63" },
+
+  /* ============================================================
+     EN‑07 – Abweichung nach LBO
+     ============================================================ */
+  { "source": "EN-07", "type": "allows_deviation", "target": "RF-86" },
+  { "source": "EN-07", "type": "allows_deviation", "target": "RF-87-BW" },
+  { "source": "EN-07", "type": "allows_deviation", "target": "RF-87-BY" },
+  { "source": "EN-07", "type": "allows_deviation", "target": "RF-87-HE" },
+
+  /* ============================================================
+     EN‑08 – Mietrechtliche Anerkennung Strommangellage
+     ============================================================ */
+  { "source": "EN-08", "type": "relieves_conflict", "target": "RF-100" },
+  { "source": "EN-08", "type": "relieves_conflict", "target": "RF-101" },
+
+  /* ============================================================
+     EN‑09 – Erweiterte Betreiberverantwortung
+     ============================================================ */
+  { "source": "EN-09", "type": "modulates", "target": "RF-70" },
+  { "source": "EN-09", "type": "modulates", "target": "RF-101" },
+
+  /* ============================================================
+     EN‑10 – Wirtschaftlichkeitsabwägung
+     ============================================================ */
+  { "source": "EN-10", "type": "relieves_conflict", "target": "RF-102" },
+
+  /* ============================================================
+     EN‑11 – Technische Gleichwertigkeit
+     ============================================================ */
+  { "source": "EN-11", "type": "enables_alternative_path", "target": "RF-70" },
+  { "source": "EN-11", "type": "enables_alternative_path", "target": "RF-86" },
+
+  /* ============================================================
+     EN‑12 – Prognosebasierte Bewertung
+     ============================================================ */
+  { "source": "EN-12", "type": "systemic_override", "target": "RF-60" },
+  { "source": "EN-12", "type": "systemic_override", "target": "RF-61" },
+  { "source": "EN-12", "type": "systemic_override", "target": "RF-63" }
 ]
+
