@@ -1,0 +1,76 @@
+digraph CrossLayer_TR_RF_v22 {
+    rankdir=LR;
+    splines=true;
+    overlap=false;
+    fontsize=12;
+
+    /* ============================================================
+       ELEKTRO / VDE / NAV / TAB
+       ============================================================ */
+    "TR-06" -> "RF-78" [label="requires"];
+    "TR-06" -> "RF-77" [label="requires"];
+    "TR-06" -> "RF-80" [label="requires"];
+    "TR-06" -> "RF-82" [label="requires"];
+    "TR-06" -> "RF-83" [label="requires"];
+    "TR-06" -> "RF-84" [label="requires"];
+    "TR-06" -> "RF-85" [label="requires"];
+
+    /* TR‑18‑R – regulatorische Leistungsgrenze */
+    "TR-18-R" -> "RF-78"  [label="requires"];
+    "TR-18-R" -> "RF-85"  [label="depends_on"];
+    "TR-18-R" -> "RF-100" [label="influences"];
+
+    /* TR‑18‑T – technische Leistungsgrenze */
+    "TR-18-T" -> "RF-78" [label="constrains"];
+
+    /* Leistungsstufen 12/21 kW */
+    "TR-19" -> "RF-85" [label="depends_on"];
+    "TR-20" -> "RF-85" [label="depends_on"];
+    "TR-21" -> "RF-78" [label="constrains"];
+
+    /* ============================================================
+       HYGIENE / TRINKWASSER
+       ============================================================ */
+    "TR-02" -> "RF-70" [label="enforced_by"];
+    "TR-02" -> "RF-71" [label="enforced_by"];
+
+    "TR-03" -> "RF-71" [label="regulated_by"];
+    "TR-03" -> "RF-72" [label="regulated_by"];
+
+    /* Legionellenprüfung (korrekt: TR‑26) */
+    "TR-26" -> "RF-72" [label="influences"];
+
+    /* ============================================================
+       GEG / BILANZIERUNG
+       ============================================================ */
+    "TR-04b" -> "RF-61" [label="depends_on"];
+    "TR-03"  -> "RF-62" [label="influences"];
+
+    "TR-13" -> "RF-60" [label="evaluated_by"];
+    "TR-13" -> "RF-61" [label="evaluated_by"];
+    "TR-13" -> "RF-63" [label="evaluated_by"];
+
+    "TR-14" -> "RF-60" [label="evaluated_by"];
+    "TR-14" -> "RF-61" [label="evaluated_by"];
+    "TR-14" -> "RF-63" [label="evaluated_by"];
+
+    "TR-05" -> "RF-63" [label="evaluated_by"];
+    "TR-11" -> "RF-63" [label="evaluated_by"];
+
+    /* ============================================================
+       BAUORDNUNG / SCHALL / AUFSTELLFLÄCHEN
+       ============================================================ */
+    "TR-07" -> "RF-86" [label="requires"];
+    "TR-08" -> "RF-86" [label="requires"];
+
+    /* ============================================================
+       FÖRDERLOGIK (BEG / BAFA / KfW)
+       ============================================================ */
+    "TR-00a" -> "RF-90" [label="relevant_for"];
+    "TR-00a" -> "RF-91" [label="relevant_for"];
+    "TR-00a" -> "RF-92" [label="relevant_for"];
+
+    "TR-00b" -> "RF-90" [label="relevant_for"];
+    "TR-00b" -> "RF-91" [label="relevant_for"];
+    "TR-00b" -> "RF-92" [label="relevant_for"];
+}
