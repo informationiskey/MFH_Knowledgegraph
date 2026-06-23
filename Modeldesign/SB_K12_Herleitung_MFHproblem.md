@@ -1,5 +1,5 @@
 # Warum SB‑K12 im Mehrfamilienhaus ein echter Konflikt ist — und im EFH nicht
-
+[Siehe Umbau Graph](SB-K11_K12_Umbau_Graph_v2_2.md)
 Der Konflikt SB‑K12 („Systembilanz vs. Maßnahmenlogik“) entsteht **nicht** aus technischen Effizienzparametern wie der JAZ, sondern aus einem **strukturellen Widerspruch** zwischen:
 
 - der **systemischen Bilanzierungslogik des GEG**  
