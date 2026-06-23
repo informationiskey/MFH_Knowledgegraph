@@ -1,61 +1,104 @@
-digraph KnowledgeGraph_EN {
-    rankdir=LR;
-    splines=true;
-    overlap=false;
-    fontsize=12;
-    nodesep=0.6;
-    ranksep=1.0;
+/* ============================================================
+   CLUSTER: EN – Enabler (v21, englische Tags, deutsche Labels)
+   ============================================================ */
 
+subgraph cluster_EN {
+    label="Ebene EN – Enabler (v21)";
+    color="#cccccc";
+    style="rounded";
+    fontname="Arial";
+
+    /* Node Style */
     node [shape=box, style=filled, fillcolor="#f2f2f2", fontname="Arial"];
 
-    /* ============================================================
-       CLUSTER: EN – ENABLER
-       ============================================================ */
-    subgraph cluster_EN {
-        label="Ebene EN – Enabler";
-        color="#cccccc";
-        style="rounded";
+    /* ========================================================
+       EN‑01 – Alternative Nachweisführung
+       ======================================================== */
+    "EN-01" [
+        label="EN‑01\nAlternative Nachweisführung\nTags: alternative_path, systemic"
+    ];
 
-        "EN-06b" [label="EN-06b\nSystembilanz"];
-        "EN-06c" [label="EN-06c\nBilanzierungslogik"];
-        "EN-07"  [label="EN-07\nOptimierungslogik"];
-        "EN-08"  [label="EN-08\nEffizienzbewertung"];
-        "EN-09"  [label="EN-09\nKomfortmodell"];
-        "EN-10"  [label="EN-10\nRisikoaggregation"];
-    }
+    /* ========================================================
+       EN‑02 – Bestandsschutz
+       ======================================================== */
+    "EN-02" [
+        label="EN‑02\nBestandsschutz\nTags: deviation, legal"
+    ];
 
-    /* ============================================================
-       EDGES: EN → TR
-       ============================================================ */
-    "EN-06b" -> "TR-00a" [label="evaluates"];
-    "EN-06b" -> "TR-00b" [label="evaluates"];
-    "EN-06b" -> "TR-04a" [label="evaluates"];
-    "EN-06b" -> "TR-04b" [label="evaluates"];
-    "EN-06b" -> "TR-11"  [label="evaluates"];
+    /* ========================================================
+       EN‑03 – Risikobasierter Brandschutz
+       ======================================================== */
+    "EN-03" [
+        label="EN‑03\nRisikobasierter Brandschutz\nTags: risk, deviation"
+    ];
 
-    "EN-08"  -> "TR-33"  [label="evaluates"];
-    "EN-08"  -> "TR-01"  [label="evaluates"];
-    "EN-08"  -> "TR-11"  [label="evaluates"];
+    /* ========================================================
+       EN‑04 – Technische Kompensationsmaßnahmen
+       ======================================================== */
+    "EN-04" [
+        label="EN‑04\nTechnische Kompensationsmaßnahmen\nTags: compensation, technical"
+    ];
 
-    "EN-09"  -> "TR-22"  [label="evaluates"];
-    "EN-09"  -> "TR-01"  [label="evaluates"];
+    /* ========================================================
+       EN‑05 – Betriebliche Kompensationsmaßnahmen
+       ======================================================== */
+    "EN-05" [
+        label="EN‑05\nBetriebliche Kompensationsmaßnahmen\nTags: compensation, operational"
+    ];
 
-    "EN-10"  -> "TR-25"  [label="aggregates"];
-    "EN-10"  -> "TR-08"  [label="aggregates"];
-    "EN-10"  -> "TR-02"  [label="aggregates"];
+    /* ========================================================
+       EN‑06 – Systemische Bewertung
+       ======================================================== */
+    "EN-06" [
+        label="EN‑06\nSystemische Bewertung\nTags: systemic, evaluation"
+    ];
 
-    /* ============================================================
-       EDGES: EN → RF
-       ============================================================ */
-    "EN-06c" -> "RF-60" [label="uses_method"];
-    "EN-06c" -> "RF-61" [label="uses_method"];
-    "EN-06c" -> "RF-62" [label="uses_method"];
-    "EN-06c" -> "RF-63" [label="uses_method"];
+    /* ========================================================
+       EN‑06b – Systemischer GEG‑Nachweis
+       ======================================================== */
+    "EN-06b" [
+        label="EN‑06b\nSystemischer GEG‑Nachweis\nTags: systemic, alternative_path, balancing"
+    ];
 
-    /* ============================================================
-       EDGES: EN → PS
-       ============================================================ */
-    "EN-07" -> "PS-WP-01" [label="optimizes"];
-    "EN-07" -> "PS-SP-01" [label="optimizes"];
-    "EN-07" -> "PS-RG-01" [label="optimizes"];
+    /* ========================================================
+       EN‑07 – Abweichung nach LBO
+       ======================================================== */
+    "EN-07" [
+        label="EN‑07\nAbweichung nach LBO\nTags: deviation, building_code"
+    ];
+
+    /* ========================================================
+       EN‑08 – Mietrechtliche Anerkennung Strommangellage
+       ======================================================== */
+    "EN-08" [
+        label="EN‑08\nMietrechtliche Anerkennung Strommangellage\nTags: tenancy_law, legal"
+    ];
+
+    /* ========================================================
+       EN‑09 – Erweiterte Betreiberverantwortung
+       ======================================================== */
+    "EN-09" [
+        label="EN‑09\nErweiterte Betreiberverantwortung\nTags: operational, deviation"
+    ];
+
+    /* ========================================================
+       EN‑10 – Wirtschaftlichkeitsabwägung
+       ======================================================== */
+    "EN-10" [
+        label="EN‑10\nWirtschaftlichkeitsabwägung\nTags: economic, deviation"
+    ];
+
+    /* ========================================================
+       EN‑11 – Technische Gleichwertigkeit
+       ======================================================== */
+    "EN-11" [
+       label="EN‑11\nTechnische Gleichwertigkeit\nTags: alternative_path, technical"
+    ];
+
+    /* ========================================================
+       EN‑12 – Prognosebasierte Bewertung
+       ======================================================== */
+    "EN-12" [
+        label="EN‑12\nPrognosebasierte Bewertung\nTags: forecast, systemic"
+    ];
 }
