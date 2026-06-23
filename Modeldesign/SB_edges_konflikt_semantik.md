@@ -158,3 +158,34 @@ SB‑K12 „Systembilanz vs. Maßnahmenlogik“	SB‑K12	1:1 ersetzt (inhaltlich
 - SB‑K12: „Förderfähigkeit reduziert“
 
 Diese Knoten enthalten die ausführliche Semantik, die bislang in den Kommentaren waren.
+
+---
+
+#  Mapping der Konfliktketten auf SB‑Knoten
+## KK1 – Hygiene vs. WP vs. GEG
+- SB‑K04 (Hygiene 60°C verletzt)
+- SB‑K11 (GEG‑Bilanz verschlechtert)
+- SB‑K05 (Komfortanforderung verletzt)
+- SB‑K06 (Mietminderungstatbestand)
+## KK2 – DLE vs. LM vs. Elektro / §14a
+- SB‑K01 (DLE erzeugt Spitzenlast)
+- SB‑K02 (technische Grenze überschritten)
+- SB‑K03 (regulatorische Grenze überschritten)
+## KK3 – Lüftung / WRG vs. GEG‑Bilanzierung
+- SB‑K08 (WRG verbessert Bilanz)
+- SB‑K07 (Speicher-/Verteilverluste verschlechtern Bilanz)
+- SB‑K11 (GEG‑Bilanz verschlechtert)
+## KK4 – Aufstellflächen / Schall / LBO
+- SB‑K09 (Schallgrenze überschritten)
+- SB‑10 (Regulatorische Grenze)
+- SB‑30 (Netzrestriktion / Aufstellflächen)
+## KK5 – Komfort vs. WP vs. GEG vs. Mietrecht
+- SB‑K05 (Komfortanforderung verletzt)
+- SB‑K11 (GEG‑Bilanz verschlechtert)
+- SB‑K06 (Mietminderungstatbestand)
+## KK6 – TR‑18‑R/T Konfliktfamilie
+- SB‑K03 (regulatorische Grenze überschritten)
+- SB‑K02 (technische Grenze überschritten)
+- SB‑K05 (Komfortanforderung verletzt)
+- SB‑K04 (Hygieneanforderung verletzt)
+- SB‑K06 (Mietminderungstatbestand)
