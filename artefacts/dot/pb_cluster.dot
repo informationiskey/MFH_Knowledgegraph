@@ -1,0 +1,75 @@
+/* ============================================================
+   CLUSTER: PB – Politische Blockaden (v2.1, vollständiger Freeze)
+   ============================================================ */
+
+subgraph cluster_PB {
+    label="Ebene PB – Politische Blockaden (v2.1)";
+    color="#ffcccc";
+    style="rounded";
+    fontname="Arial";
+
+    node [shape=box, style=filled, fillcolor="#ffecec", fontname="Arial"];
+
+    /* ============================
+       PB‑NODES (vollständig)
+       ============================ */
+
+    "PB-01" [label="PB‑01\nGEG‑65%-Regel vs. Systembilanz"];
+    "PB-02" [label="PB‑02\nLBO‑Schall vs. WP‑Außenaufstellung"];
+    "PB-03" [label="PB‑03\nMietrecht vs. Lastmanagement"];
+    "PB-04" [label="PB‑04\nDVGW‑Hygiene vs. WP‑Temperaturen"];
+    "PB-05" [label="PB‑05\nVDE‑4100 vs. DLE‑Umrüstung"];
+    "PB-06" [label="PB‑06\nNetzanschlussleistung vs. WP‑Systeme"];
+    "PB-07" [label="PB‑07\nFörderlogik vs. Wirtschaftlichkeit im MFH"];
+}
+
+/* ============================================================
+   PB‑EDGES (vollständig)
+   ============================================================ */
+
+    /* PB‑01 – GEG‑65%-Regel vs. reale Gebäudeparameter */
+    "TR-00a" -> "PB-01" [label="feeds_blockade"];
+    "TR-00b" -> "PB-01" [label="feeds_blockade"];
+    "RF-60"  -> "PB-01" [label="regulates_blockade"];
+    "RF-61"  -> "PB-01" [label="regulates_blockade"];
+    "RF-63"  -> "PB-01" [label="regulates_blockade"];
+
+    /* PB‑02 – LBO‑Schall vs. WP‑Außenaufstellung */
+    "TR-07" -> "PB-02" [label="feeds_blockade"];
+    "TR-08" -> "PB-02" [label="feeds_blockade"];
+    "RF-86" -> "PB-02" [label="regulates_blockade"];
+    "RF-79" -> "PB-02" [label="regulates_blockade"];
+
+    /* PB‑03 – Mietrecht vs. Lastmanagement */
+    "TR-23"  -> "PB-03" [label="feeds_blockade"];
+    "TR-38"  -> "PB-03" [label="feeds_blockade"];
+    "RF-100" -> "PB-03" [label="regulates_blockade"];
+    "RF-101" -> "PB-03" [label="regulates_blockade"];
+    "RF-102" -> "PB-03" [label="regulates_blockade"];
+
+    /* PB‑04 – DVGW‑Hygiene vs. WP‑Temperaturen */
+    "TR-02" -> "PB-04" [label="feeds_blockade"];
+    "TR-22" -> "PB-04" [label="feeds_blockade"];
+    "RF-70" -> "PB-04" [label="regulates_blockade"];
+    "RF-71" -> "PB-04" [label="regulates_blockade"];
+
+    /* PB‑05 – VDE‑4100 vs. DLE‑Umrüstung */
+    "TR-15" -> "PB-05" [label="feeds_blockade"];
+    "TR-16" -> "PB-05" [label="feeds_blockade"];
+    "TR-17" -> "PB-05" [label="feeds_blockade"];
+    "RF-78" -> "PB-05" [label="regulates_blockade"];
+    "RF-85" -> "PB-05" [label="regulates_blockade"];
+
+    /* PB‑06 – Netzanschlussleistung vs. WP‑Systeme */
+    "TR-06" -> "PB-06" [label="feeds_blockade"];
+    "TR-19" -> "PB-06" [label="feeds_blockade"];
+    "TR-20" -> "PB-06" [label="feeds_blockade"];
+    "RF-78" -> "PB-06" [label="regulates_blockade"];
+    "RF-85" -> "PB-06" [label="regulates_blockade"];
+
+    /* PB‑07 – Förderlogik vs. Wirtschaftlichkeit */
+    "TR-00a" -> "PB-07" [label="feeds_blockade"];
+    "TR-00b" -> "PB-07" [label="feeds_blockade"];
+    "RF-90"  -> "PB-07" [label="regulates_blockade"];
+    "RF-91"  -> "PB-07" [label="regulates_blockade"];
+    "RF-92"  -> "PB-07" [label="regulates_blockade"];
