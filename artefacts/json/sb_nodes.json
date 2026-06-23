@@ -141,74 +141,216 @@
   },
 
   /* ============================
-     SB – Konfliktknoten (K7–K12)
+     SB – Konfliktknoten (K1–K12)
      ============================ */
   {
-    "id": "SB-K7",
-    "label": "Hygiene vs. Effizienz",
+    "id": "SB-K01",
+    "label": "DLE erzeugt elektrische Spitzenlast",
     "type": "SB",
     "properties": {
       "domain": "semantic_conflict",
-      "description": "Konflikt zwischen Hygieneanforderungen und energetischer Effizienz.",
-      "source": "TrinkwV / GEG",
-      "version": "2.0"
+      "description": "Durchlauferhitzer erzeugen sehr hohe elektrische Spitzenlasten (12–21 kW), die die Hausinstallation, Steigzonen und den Netzanschluss überlasten können.",
+      "source": "VDE-AR-N 4100 / NAV §19 / TAB",
+      "version": "2.2",
+      "family": "Elektro vs. DLE/WP",
+      "technical_cause": "Hohe Leistungsaufnahme der DLE-Geräte bei gleichzeitiger Nutzung.",
+      "regulatory_basis": ["VDE-AR-N 4100", "NAV §19", "TAB Netzbetreiber"],
+      "effects": ["TR-06", "TR-18-R", "TR-18-T", "TR-56"],
+      "conflict_chains": ["KK1", "KK2"],
+      "intensity": 5
     }
   },
   {
-    "id": "SB-K8",
-    "label": "DLE vs. Elektroinstallation",
+    "id": "SB-K02",
+    "label": "Spitzenlast überschreitet technische Grenze",
     "type": "SB",
     "properties": {
       "domain": "semantic_conflict",
-      "description": "Konflikt zwischen DLE-Systemen und Elektroinstallationsgrenzen.",
-      "source": "VDE / NAV",
-      "version": "2.0"
+      "description": "Die technische Leistungsgrenze der Elektroinstallation (TR-18-T) wird überschritten, wodurch Heizleistung, Hygiene und Komfort beeinträchtigt werden.",
+      "source": "VDE 0100 / VDE-AR-N 4100",
+      "version": "2.2",
+      "family": "Elektro vs. Leistungsgrenzen",
+      "technical_cause": "Leitungsquerschnitte, Absicherung, Selektivität und Hausanschlusskapazität reichen nicht aus.",
+      "regulatory_basis": ["VDE 0100", "VDE-AR-N 4100"],
+      "effects": ["TR-01", "TR-02", "TR-22", "TR-25"],
+      "conflict_chains": ["KK1"],
+      "intensity": 4
     }
   },
   {
-    "id": "SB-K9",
-    "label": "Schall vs. Aufstellfläche",
+    "id": "SB-K03",
+    "label": "Spitzenlast überschreitet regulatorische Grenze",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Die regulatorische Leistungsgrenze (TR-18-R) wird überschritten, wodurch Netzbetreiber Eingriffe, Steuerungen oder Ablehnungen auslösen.",
+      "source": "EnWG §14a / NAV / VDE-AR-N 4100",
+      "version": "2.2",
+      "family": "§14a EnWG / Netzbetreiber",
+      "technical_cause": "DLE oder WP-Systeme erzeugen Lastspitzen oberhalb der zulässigen Schwellen.",
+      "regulatory_basis": ["EnWG §14a", "NAV", "VDE-AR-N 4100"],
+      "effects": ["RF-78", "RF-85", "RF-100"],
+      "conflict_chains": ["KK1", "KK2"],
+      "intensity": 4
+    }
+  },
+  {
+    "id": "SB-K04",
+    "label": "Hygieneanforderung 60°C wird verletzt",
     "type": "SB",
     "properties": {
       "domain": "semantic_conflict",
-      "description": "Konflikt zwischen Schallanforderungen und Aufstellflächen.",
-      "source": "LBO / TA Lärm",
-      "version": "2.0"
+      "description": "Die Warmwasserhygiene nach DVGW W551/W553 erfordert 60°C, was WP-Systeme im NT-Betrieb oft nicht erreichen.",
+      "source": "DVGW W551 / W553 / TrinkwV",
+      "version": "2.2",
+      "family": "Hygiene vs. WP",
+      "technical_cause": "WP-Temperaturniveau ist begrenzt; hohe VL-Temperaturen reduzieren COP/JAZ.",
+      "regulatory_basis": ["DVGW W551", "DVGW W553", "TrinkwV"],
+      "effects": ["TR-02", "TR-04a", "TR-04b", "RF-70", "RF-71", "RF-72"],
+      "conflict_chains": ["KK1", "KK6"],
+      "intensity": 5
+    }
+  },
+  {
+    "id": "SB-K05",
+    "label": "Komfortanforderung 21°C wird verletzt",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_legal",
+      "description": "Die mietrechtliche Komfortanforderung (21°C) kann bei NT-WP-Betrieb und hohen Heizlasten unterschritten werden.",
+      "source": "BGB §535 / Rechtsprechung",
+      "version": "2.2",
+      "family": "Komfort vs. WP",
+      "technical_cause": "WP liefert nicht genügend Vorlauftemperatur bei tiefen Außentemperaturen.",
+      "regulatory_basis": ["BGB §535"],
+      "effects": ["TR-01", "TR-22", "TR-25"],
+      "conflict_chains": ["KK1", "KK5"],
+      "intensity": 4
+    }
+  },
+  {
+    "id": "SB-K06",
+    "label": "Mietminderungstatbestand entsteht",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_legal",
+      "description": "Technische Einschränkungen (Temperatur, Schall, Hygiene) können zu Mietminderung führen.",
+      "source": "BGB §536 / Rechtsprechung",
+      "version": "2.2",
+      "family": "Mietrecht",
+      "technical_cause": "Unterschreitung von Komfort- oder Hygienestandards.",
+      "regulatory_basis": ["BGB §536"],
+      "effects": ["TR-25", "RF-101", "RF-102"],
+      "conflict_chains": ["KK1", "KK5"],
+      "intensity": 3
+    }
+  },
+  {
+    "id": "SB-K07",
+    "label": "Speicherverluste verschlechtern Bilanz",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Speicher- und Verteilverluste werden in der GEG-Bilanzierung nicht realitätsnah abgebildet.",
+      "source": "DIN V 18599 / GEG",
+      "version": "2.2",
+      "family": "GEG vs. Realität",
+      "technical_cause": "Hohe Speicher- und Zirkulationsverluste im Bestand.",
+      "regulatory_basis": ["DIN V 18599", "GEG"],
+      "effects": ["TR-05", "TR-11", "RF-63"],
+      "conflict_chains": ["KK2", "KK3"],
+      "intensity": 4
+    }
+  },
+  {
+    "id": "SB-K08",
+    "label": "WRG verbessert Bilanz",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_physical",
+      "description": "WRG-Systeme reduzieren Verluste und verbessern die GEG-Bilanz.",
+      "source": "DIN V 18599 / GEG",
+      "version": "2.2",
+      "family": "Lüftung vs. GEG",
+      "technical_cause": "Wärmerückgewinnung reduziert Lüftungswärmeverluste.",
+      "regulatory_basis": ["DIN V 18599", "GEG"],
+      "effects": ["TR-13", "TR-14", "RF-60", "RF-61", "RF-63"],
+      "conflict_chains": ["KK3"],
+      "intensity": 1
+    }
+  },
+  {
+    "id": "SB-K09",
+    "label": "Schallgrenze überschritten",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Außengeräte von WP überschreiten Schallgrenzen der LBO/VVTB.",
+      "source": "LBO / TA Lärm / VVTB",
+      "version": "2.2",
+      "family": "Schall vs. Aufstellfläche",
+      "technical_cause": "Schallleistungspegel der WP, ungünstige Aufstellung.",
+      "regulatory_basis": ["LBO", "TA Lärm", "VVTB"],
+      "effects": ["TR-07", "TR-08", "RF-86"],
+      "conflict_chains": ["KK5"],
+      "intensity": 4
     }
   },
   {
     "id": "SB-K10",
-    "label": "Komfort vs. WP-Temperatur",
+    "label": "Legionellenrisiko erhöht",
     "type": "SB",
     "properties": {
       "domain": "semantic_conflict",
-      "description": "Konflikt zwischen Nutzerkomfort und WP-Temperaturniveau.",
-      "source": "BGB / GEG",
-      "version": "2.0"
+      "description": "Niedrige Temperaturen oder lange Verweilzeiten erhöhen das Legionellenrisiko.",
+      "source": "DVGW W551 / TrinkwV",
+      "version": "2.2",
+      "family": "Hygiene vs. Speicher",
+      "technical_cause": "Speichergröße, Zirkulation, geringe Temperaturen.",
+      "regulatory_basis": ["DVGW W551", "TrinkwV"],
+      "effects": ["TR-26", "RF-72"],
+      "conflict_chains": ["KK6"],
+      "intensity": 5
     }
   },
   {
     "id": "SB-K11",
-    "label": "WP-Erzeugerzwang vs. Elektro-Bestand",
+    "label": "GEG-Bilanz verschlechtert",
     "type": "SB",
     "properties": {
-      "domain": "semantic_conflict",
-      "description": "Konflikt zwischen WP-Pflicht und elektrischen Bestandsgrenzen.",
-      "source": "GEG / VDE",
-      "version": "2.0"
+      "domain": "semantic_regulatory",
+      "description": "GEG-Bilanzierung bewertet WP-Systeme schlechter, wenn reale Betriebsbedingungen abweichen.",
+      "source": "GEG / DIN V 18599",
+      "version": "2.2",
+      "family": "GEG vs. WP-JAZ",
+      "technical_cause": "Hohe VL-Temperaturen, Abtauzyklen, reale Lastprofile.",
+      "regulatory_basis": ["GEG", "DIN V 18599"],
+      "effects": ["RF-60", "RF-61", "TR-54"],
+      "conflict_chains": ["KK1", "KK3"],
+      "intensity": 4
     }
   },
   {
-  "id": "SB-K12",
-  "label": "Systembilanz vs. Maßnahmenlogik",
-  "type": "SB",
-  "properties": {
-    "domain": "semantic_conflict",
-    "description": "Konflikt zwischen der systemischen Bilanzierungslogik des GEG und der maßnahmenspezifischen Logik vieler abgeleiteter Regulierungen und Förderprogramme. Während das GEG das Gesamtsystem bewertet, arbeiten BEG, BAFA, KfW und technische Einzelanforderungen mit isolierten Grenzwerten und Komponentenanforderungen, die nicht immer konsistent zur Systembilanz sind.",
-    "source": "GEG / BEG / BAFA / KfW / DIN V 18599",
-    "version": "2.1"
-  }
-}
+    "id": "SB-K12",
+    "label": "Förderfähigkeit reduziert",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Technische oder bilanzielle Einschränkungen reduzieren die Förderfähigkeit.",
+      "source": "BEG / BAFA / KfW",
+      "version": "2.2",
+      "family": "BEG / BAFA / KfW",
+      "technical_cause": "Niedrige JAZ, hohe Verluste, unzureichende Systemtemperaturen.",
+      "regulatory_basis": ["BEG", "BAFA", "KfW"],
+      "effects": ["RF-90", "RF-91", "RF-92"],
+      "conflict_chains": ["KK2", "KK3"],
+      "intensity": 3
+    }
+  },
+  /* ============================================================
+     SB – Regulatorik (Elektro / WP-Anmeldung / §14a)
+     ============================================================ */
+
   {
     "id": "SB-50",
     "label": "Bestandsschutz Elektro",
@@ -226,7 +368,7 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_regulatory",
-      "description": "Bedeutung der neuen technischen und regulatorischen Anforderungen, die erst durch die Anmeldung einer Wärmepumpe ausgelöst werden, z. B. Steuerbarkeit, Anmeldepflicht, Zustimmungspflicht.",
+      "description": "Neue technische und regulatorische Anforderungen, die erst durch die Anmeldung einer Wärmepumpe ausgelöst werden, z. B. Steuerbarkeit, Anmeldepflicht, Zustimmungspflicht.",
       "source": "VDE-AR-N 4100 / §14a EnWG / TAB",
       "version": "2.1"
     }
@@ -237,7 +379,7 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_regulatory",
-      "description": "Bedeutung der Einstufung der Wärmepumpe als steuerbare Verbrauchseinrichtung nach §14a EnWG, die besondere Anforderungen an Steuerbarkeit, Messkonzepte und Netzbetreiberprozesse auslöst.",
+      "description": "Einstufung der Wärmepumpe als steuerbare Verbrauchseinrichtung nach §14a EnWG, die besondere Anforderungen an Steuerbarkeit, Messkonzepte und Netzbetreiberprozesse auslöst.",
       "source": "§14a EnWG",
       "version": "2.1"
     }
@@ -248,18 +390,23 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_regulatory",
-      "description": "Bedeutung der Anmelde- und Zustimmungspflicht für Wärmepumpen nach VDE-AR-N 4100, die den Bestandsschutz aufhebt und neue technische Anforderungen auslöst.",
+      "description": "Anmelde- und Zustimmungspflicht für Wärmepumpen nach VDE-AR-N 4100, die den Bestandsschutz aufhebt und neue technische Anforderungen auslöst.",
       "source": "VDE-AR-N 4100",
       "version": "2.1"
     }
   },
+
+  /* ============================================================
+     SB – Infrastruktur (Zählerplatz / Steigzonen / Selektivität)
+     ============================================================ */
+
   {
     "id": "SB-54",
     "label": "Zählerplatzanforderungen",
     "type": "SB",
     "properties": {
       "domain": "semantic_infrastructure",
-      "description": "Bedeutung der Anforderungen an Zählerplätze, Zählerschränke und Messkonzepte, die durch den Anschluss einer WP ausgelöst werden und im MFH oft zu Platzproblemen führen.",
+      "description": "Anforderungen an Zählerplätze, Zählerschränke und Messkonzepte, die durch den Anschluss einer WP ausgelöst werden und im MFH oft zu Platzproblemen führen.",
       "source": "TAB / VDE-AR-N 4100",
       "version": "2.1"
     }
@@ -270,19 +417,8 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_infrastructure",
-      "description": "Bedeutung der Pflicht zur Einhaltung der Selektivität zwischen Schutzorganen, die bei neuen Verbrauchern wie WP neu bewertet werden muss.",
+      "description": "Pflicht zur Einhaltung der Selektivität zwischen Schutzorganen, die bei neuen Verbrauchern wie WP neu bewertet werden muss.",
       "source": "VDE 0100-430 / VDE 0100-530",
-      "version": "2.1"
-    }
-  },
-  {
-    "id": "SB-56",
-    "label": "Netzbetreiberzustimmung",
-    "type": "SB",
-    "properties": {
-      "domain": "semantic_process",
-      "description": "Bedeutung der Zustimmungspflicht des Netzbetreibers für den Anschluss einer WP, die technische Prüfungen, Netzverträglichkeitsanalysen und ggf. Umbauten auslöst.",
-      "source": "VDE-AR-N 4100 / TAB",
       "version": "2.1"
     }
   },
@@ -292,7 +428,7 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_infrastructure",
-      "description": "Bedeutung der baulichen Begrenzungen in Steigzonen von Mehrfamilienhäusern, die die Nachrüstung neuer Leitungen oder Zählerfelder erschweren oder unmöglich machen.",
+      "description": "Bauliche Begrenzungen in Steigzonen von Mehrfamilienhäusern, die die Nachrüstung neuer Leitungen oder Zählerfelder erschweren oder unmöglich machen.",
       "source": "Bestandsbau / MFH-Struktur",
       "version": "2.1"
     }
@@ -303,11 +439,32 @@
     "type": "SB",
     "properties": {
       "domain": "semantic_infrastructure",
-      "description": "Bedeutung des strukturellen Platzmangels für zusätzliche Zählerfelder in MFH, der durch neue Anforderungen wie WP-Anmeldung oder §14a ausgelöst wird.",
+      "description": "Struktureller Platzmangel für zusätzliche Zählerfelder in MFH, der durch neue Anforderungen wie WP-Anmeldung oder §14a ausgelöst wird.",
       "source": "TAB / MFH-Bestandsanalyse",
       "version": "2.1"
     }
   },
+
+  /* ============================================================
+     SB – Prozess (Netzbetreiber / Genehmigung)
+     ============================================================ */
+
+  {
+    "id": "SB-56",
+    "label": "Netzbetreiberzustimmung",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_process",
+      "description": "Zustimmungspflicht des Netzbetreibers für den Anschluss einer WP, die technische Prüfungen, Netzverträglichkeitsanalysen und ggf. Umbauten auslöst.",
+      "source": "VDE-AR-N 4100 / TAB",
+      "version": "2.1"
+    }
+  },
+
+  /* ============================================================
+     SB – Kontext (Gebäudetyp MFH/EFH)
+     ============================================================ */
+
   {
     "id": "SB-59",
     "label": "Gebäudetyp MFH",
