@@ -170,19 +170,37 @@
   { "source": "SB-K11", "type": "conflict_with", "target": "SB-31" },
 
   /* ------------------------------------------------------------
-     SB‑K12 – GEG vs. WP‑JAZ
+     SB‑K12 – Systembilanz vs. Maßnahmenlogik
      ------------------------------------------------------------
      Bedeutung:
-       - GEG bewertet Systembilanz (Primärenergie).
-       - JAZ ist real oft niedriger als theoretisch.
-       - Der Konflikt beschreibt die Kollision zwischen
-         GEG‑Bilanzierung und realer WP‑Effizienz.
+       - Dieser Konflikt beschreibt die Kollision zwischen der
+         systemischen Bilanzierungslogik des GEG (Primärenergie,
+         Endenergie, DIN V 18599) und der maßnahmenspezifischen
+         Logik vieler abgeleiteter Regulierungen (BEG, BAFA, KfW),
+         die einzelne Komponenten, Grenzwerte oder Maßnahmen isoliert
+         bewerten.
+       
+       - Während das GEG das Gesamtsystem betrachtet, arbeiten
+         Förderprogramme und technische Einzelanforderungen mit
+         Einzelkennwerten, die nicht immer konsistent zur Systembilanz
+         sind.
+
+       - Dieser Konflikt ist im Mehrfamilienhaus (MFH) besonders
+         ausgeprägt, weil:
+           * Warmwasser ein Systemtreiber ist (Schüttleistung,
+             Zirkulation, Speicherverluste).
+           * Netzrestriktionen (VDE‑AR‑N 4100, NAV) stärker wirken.
+           * Komfortanforderungen (BGB §535/536) rechtlich relevanter
+             sind.
+           * Maßnahmenlogik und Systemlogik im MFH stark auseinanderfallen.
+       
+       - Im Einfamilienhaus (EFH) existiert dieser Konflikt kaum,
+         weil dort Maßnahme = System ist und die Bilanzgrenzen
+         deckungsgleich sind.
      ------------------------------------------------------------ */
 
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-10" },
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" },
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-01" },
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-02" },
   { "source": "SB-K12", "type": "conflict_with", "target": "SB-03" }
 ]
-
