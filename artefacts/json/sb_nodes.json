@@ -209,4 +209,125 @@
     "version": "2.1"
   }
 }
+  {
+    "id": "SB-50",
+    "label": "Bestandsschutz Elektro",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung des normgerechten elektrischen Anlagenbestands, der nach alten VDE-Normen korrekt errichtet wurde und funktionsfähig ist. Der Bestandsschutz gilt, bis ein neuer Verbraucher angemeldet wird.",
+      "source": "VDE / NAV / historische Normen",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-51",
+    "label": "Neue Anforderungen durch WP-Anmeldung",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung der neuen technischen und regulatorischen Anforderungen, die erst durch die Anmeldung einer Wärmepumpe ausgelöst werden, z. B. Steuerbarkeit, Anmeldepflicht, Zustimmungspflicht.",
+      "source": "VDE-AR-N 4100 / §14a EnWG / TAB",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-52",
+    "label": "§14a-Pflicht (steuerbare Verbrauchseinrichtung)",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung der Einstufung der Wärmepumpe als steuerbare Verbrauchseinrichtung nach §14a EnWG, die besondere Anforderungen an Steuerbarkeit, Messkonzepte und Netzbetreiberprozesse auslöst.",
+      "source": "§14a EnWG",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-53",
+    "label": "Anmeldepflicht VDE-AR-N 4100",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_regulatory",
+      "description": "Bedeutung der Anmelde- und Zustimmungspflicht für Wärmepumpen nach VDE-AR-N 4100, die den Bestandsschutz aufhebt und neue technische Anforderungen auslöst.",
+      "source": "VDE-AR-N 4100",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-54",
+    "label": "Zählerplatzanforderungen",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung der Anforderungen an Zählerplätze, Zählerschränke und Messkonzepte, die durch den Anschluss einer WP ausgelöst werden und im MFH oft zu Platzproblemen führen.",
+      "source": "TAB / VDE-AR-N 4100",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-55",
+    "label": "Selektivitätspflicht",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung der Pflicht zur Einhaltung der Selektivität zwischen Schutzorganen, die bei neuen Verbrauchern wie WP neu bewertet werden muss.",
+      "source": "VDE 0100-430 / VDE 0100-530",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-56",
+    "label": "Netzbetreiberzustimmung",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_process",
+      "description": "Bedeutung der Zustimmungspflicht des Netzbetreibers für den Anschluss einer WP, die technische Prüfungen, Netzverträglichkeitsanalysen und ggf. Umbauten auslöst.",
+      "source": "VDE-AR-N 4100 / TAB",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-57",
+    "label": "Steigzonenbegrenzung MFH",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung der baulichen Begrenzungen in Steigzonen von Mehrfamilienhäusern, die die Nachrüstung neuer Leitungen oder Zählerfelder erschweren oder unmöglich machen.",
+      "source": "Bestandsbau / MFH-Struktur",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-58",
+    "label": "Zählerplatzmangel MFH",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_infrastructure",
+      "description": "Bedeutung des strukturellen Platzmangels für zusätzliche Zählerfelder in MFH, der durch neue Anforderungen wie WP-Anmeldung oder §14a ausgelöst wird.",
+      "source": "TAB / MFH-Bestandsanalyse",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-59",
+    "label": "Gebäudetyp MFH",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_context",
+      "description": "Bedeutung des Gebäudetyps Mehrfamilienhaus als Kontextfaktor, der technische, regulatorische und infrastrukturelle Konflikte verstärkt.",
+      "source": "Gebäudestruktur / MFH-Definition",
+      "version": "2.1"
+    }
+  },
+  {
+    "id": "SB-60",
+    "label": "Gebäudetyp EFH",
+    "type": "SB",
+    "properties": {
+      "domain": "semantic_context",
+      "description": "Bedeutung des Gebäudetyps Einfamilienhaus als Kontextfaktor, bei dem viele Konflikte (z. B. SB-K11) nicht auftreten oder stark abgeschwächt sind.",
+      "source": "Gebäudestruktur / EFH-Definition",
+      "version": "2.1"
+    }
+  }
 ]
