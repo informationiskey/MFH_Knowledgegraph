@@ -1,0 +1,78 @@
+/* ============================================================
+   CLUSTER: RF – Regulatorische Frameworks (v2.1, vollständiger Freeze)
+   ============================================================ */
+
+subgraph cluster_RF {
+    label="Ebene RF – Regulatorische Frameworks (v2.1)";
+    color="#d0d0d0";
+    style="rounded";
+    fontname="Arial";
+
+    node [shape=box, style=filled, fillcolor="#ffffff", fontname="Arial"];
+
+    /* ============================
+       RF‑NODES (vollständig)
+       ============================ */
+
+    "RF-60"  [label="RF‑60\nGEG – Primärenergiebedarf"];
+    "RF-61"  [label="RF‑61\nGEG – Endenergiebedarf"];
+    "RF-62"  [label="RF‑62\nGEG – Warmwasserberechnung"];
+    "RF-63"  [label="RF‑63\nGEG – Systembilanzierung nach DIN V 18599"];
+
+    "RF-70"  [label="RF‑70\nTrinkwV – Trinkwasserverordnung"];
+    "RF-71"  [label="RF‑71\nDVGW W551 – Legionellenprävention"];
+    "RF-72"  [label="RF‑72\nDVGW W553 – Zirkulationssysteme"];
+
+    "RF-77"  [label="RF‑77\nDIN 18015‑2 – Elektroinstallation"];
+    "RF-78"  [label="RF‑78\nVDE‑AR‑N 4100 – Netzanschluss"];
+    "RF-80"  [label="RF‑80\nDIN VDE 0100‑729 – Sicherheit elektrischer Anlagen"];
+    "RF-82"  [label="RF‑82\nEltBauVO – Elektrische Betriebsräume"];
+    "RF-83"  [label="RF‑83\nDGUV V3 – Prüfung elektrischer Anlagen"];
+    "RF-84"  [label="RF‑84\nDGUV 203‑032 – Brandschutz Elektro"];
+    "RF-85"  [label="RF‑85\nNAV – Niederspannungsanschlussverordnung"];
+
+    "RF-79"  [label="RF‑79\nMLAR – Leitungsanlagenrichtlinie"];
+    "RF-86"  [label="RF‑86\nLBO – Landesbauordnung (generisch)"];
+    "RF-86-BW" [label="RF‑86‑BW\nLBO Baden‑Württemberg"];
+    "RF-86-BY" [label="RF‑86‑BY\nLBO Bayern"];
+    "RF-86-HE" [label="RF‑86‑HE\nLBO Hessen"];
+
+    "RF-87-BW" [label="RF‑87‑BW\nVVTB Baden‑Württemberg"];
+    "RF-87-BY" [label="RF‑87‑BY\nVVTB Bayern"];
+    "RF-87-HE" [label="RF‑87‑HE\nVVTB Hessen"];
+
+    "RF-90"  [label="RF‑90\nBEG – Bundesförderung effiziente Gebäude"];
+    "RF-91"  [label="RF‑91\nBAFA – Förderprogramme"];
+    "RF-92"  [label="RF‑92\nKfW – Kredit- und Zuschussprogramme"];
+
+    "RF-100" [label="RF‑100\nBGB §535 – Gebrauchstauglichkeit"];
+    "RF-101" [label="RF‑101\nBGB §536 – Mietminderung"];
+    "RF-102" [label="RF‑102\nBGB §556 – Betriebskosten"];
+    "RF-103" [label="RF‑103\nBGB §559 – Modernisierungsumlage"];
+    "RF-104" [label="RF‑104\nBGB §554 – Zutrittsrechte"];
+    "RF-105" [label="RF‑105\nBGB §555d – Duldung energetischer Maßnahmen"];
+    "RF-106" [label="RF‑106\nBetrKV – Betriebskostenverordnung"];
+
+    /* ============================
+       RF‑EDGES (vollständig)
+       ============================ */
+
+    /* LBO generisch → Landesbauordnungen */
+    "RF-86" -> "RF-86-BW" [label="overrides"];
+    "RF-86" -> "RF-86-BY" [label="overrides"];
+    "RF-86" -> "RF-86-HE" [label="overrides"];
+
+    /* Landesbauordnungen → VVTB */
+    "RF-86-BW" -> "RF-87-BW" [label="delegates_to"];
+    "RF-86-BY" -> "RF-87-BY" [label="delegates_to"];
+    "RF-86-HE" -> "RF-87-HE" [label="delegates_to"];
+
+    /* Hygiene – normative Abhängigkeiten */
+    "RF-70" -> "RF-71" [label="requires"];
+    "RF-71" -> "RF-72" [label="requires"];
+
+    /* GEG – Bilanzierungsmethodik */
+    "RF-63" -> "RF-60" [label="defines"];
+    "RF-63" -> "RF-61" [label="defines"];
+    "RF-63" -> "RF-62" [label="defines"];
+}
