@@ -134,7 +134,7 @@ Nur definierte Typen verwenden:
     Reihenfolge ist kausal, nicht alphabetisch
 
     Beispiel:
-    ```json
+```json
 {
   "id": "KK1",
   "label": "Hygiene vs. WP vs. GEG",
