@@ -1,0 +1,64 @@
+[
+  {
+    "id": "KK1",
+    "label": "Hygiene vs. WP vs. GEG",
+    "steps": [
+      "SB-K04",
+      "SB-K11",
+      "SB-K05",
+      "SB-K06"
+    ]
+  },
+
+  {
+    "id": "KK2",
+    "label": "DLE vs. LM vs. Elektro / §14a",
+    "steps": [
+      "SB-K01",
+      "SB-K02",
+      "SB-K03"
+    ]
+  },
+
+  {
+    "id": "KK3",
+    "label": "Lüftung / WRG vs. GEG-Bilanzierung",
+    "steps": [
+      "SB-K08",
+      "SB-K07",
+      "SB-K11"
+    ]
+  },
+
+  {
+    "id": "KK4",
+    "label": "Aufstellflächen / Schall / LBO",
+    "steps": [
+      "SB-K09",
+      "SB-10",
+      "SB-30"
+    ]
+  },
+
+  {
+    "id": "KK5",
+    "label": "Komfort vs. WP vs. GEG vs. Mietrecht",
+    "steps": [
+      "SB-K05",
+      "SB-K11",
+      "SB-K06"
+    ]
+  },
+
+  {
+    "id": "KK6",
+    "label": "TR-18-R/T Konfliktfamilie",
+    "steps": [
+      "SB-K03",
+      "SB-K02",
+      "SB-K05",
+      "SB-K04",
+      "SB-K06"
+    ]
+  }
+]
