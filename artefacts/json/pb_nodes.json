@@ -1,14 +1,14 @@
 [
   {
     "id": "PB-01",
-    "label": "GEG-65%-Regel vs. WP-JAZ",
+    "label": "GEG‑65%-Regel vs. Systembilanz",
     "type": "PB",
     "properties": {
       "domain": "political_blockade",
-      "description": "Blockade zwischen gesetzlicher 65%-Regel und realer WP-JAZ im MFH.",
-      "source": "GEG / DIN V 18599",
-      "tags": ["geg", "jaz", "conflict"],
-      "version": "2.0"
+      "description": "Blockade entsteht, wenn die GEG‑Systembilanz (RF‑60/61/63) mit der technischen Realität kollidiert. Kein Bezug zu einer JAZ‑Pflicht, da das GEG keine Jahresarbeitszahl fordert.",
+      "source": "GEG / politische Auslegung",
+      "tags": ["geg", "systembilanz", "political_blockade"],
+      "version": "2.1"
     }
   },
   {
@@ -19,7 +19,7 @@
       "domain": "political_blockade",
       "description": "Blockade zwischen Schallanforderungen und Außenaufstellung von Wärmepumpen.",
       "source": "LBO / TA Lärm",
-      "tags": ["schall", "aufstellfläche", "wp"],
+      "tags": ["schall", "wp_aufstellung", "lbo"],
       "version": "2.0"
     }
   },
@@ -31,7 +31,7 @@
       "domain": "political_blockade",
       "description": "Blockade zwischen mietrechtlichen Komfortanforderungen und LM-Sperrzeiten.",
       "source": "BGB / Netzbetreiber",
-      "tags": ["mietrecht", "lm", "komfort"],
+      "tags": ["mietrecht", "lastmanagement", "strommangellage"],
       "version": "2.0"
     }
   },
@@ -43,7 +43,7 @@
       "domain": "political_blockade",
       "description": "Blockade zwischen Hygieneanforderungen (60°C) und WP-Temperaturniveau.",
       "source": "TrinkwV / DVGW W551",
-      "tags": ["hygiene", "temperatur", "wp"],
+      "tags": ["hygiene", "temperatur", "trinkwasser"],
       "version": "2.0"
     }
   },
@@ -55,7 +55,7 @@
       "domain": "political_blockade",
       "description": "Blockade zwischen VDE-Anschlussregeln und DLE-Umrüstung im MFH.",
       "source": "VDE-AR-N 4100 / NAV",
-      "tags": ["elektro", "dle", "anschluss"],
+      "tags": ["vde", "dle", "netzanschluss"],
       "version": "2.0"
     }
   },
@@ -67,7 +67,7 @@
       "domain": "political_blockade",
       "description": "Blockade zwischen begrenzter Netzanschlussleistung und WP-Systemanforderungen.",
       "source": "VDE / Netzbetreiber",
-      "tags": ["netz", "leistung", "wp"],
+      "tags": ["netzanschluss", "leistung", "wp_systeme"],
       "version": "2.0"
     }
   },
