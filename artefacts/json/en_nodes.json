@@ -6,12 +6,11 @@
     "properties": {
       "domain": "enabler",
       "description": "Ermöglicht alternative technische oder rechnerische Nachweise außerhalb der Standardnorm.",
-      "source": "GEG / Fachkommentierung",
-      "tags": ["alternative_proof", "system"],
-      "version": "2.0"
+      "source": "GEG / DIN V 18599 / Fachkommentierung",
+      "tags": ["alternative_path", "systemic"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-02",
     "label": "Bestandsschutz",
@@ -19,12 +18,11 @@
     "properties": {
       "domain": "enabler",
       "description": "Ermöglicht abweichende technische Lösungen im Bestand, wenn Normerfüllung nicht möglich ist.",
-      "source": "LBO / GEG",
-      "tags": ["bestand", "abweichung"],
-      "version": "2.0"
+      "source": "LBO §67 / GEG §105",
+      "tags": ["deviation", "legal"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-03",
     "label": "Risikobasierter Brandschutz",
@@ -32,12 +30,11 @@
     "properties": {
       "domain": "enabler",
       "description": "Ermöglicht abweichende Lösungen im Brandschutz durch Risikoanalyse.",
-      "source": "MLAR / VdS",
-      "tags": ["brandschutz", "risk"],
-      "version": "2.0"
+      "source": "MLAR / VdS 2550",
+      "tags": ["risk", "deviation"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-04",
     "label": "Technische Kompensationsmaßnahmen",
@@ -45,12 +42,11 @@
     "properties": {
       "domain": "enabler",
       "description": "Ermöglicht Kompensation von Normabweichungen durch technische Zusatzmaßnahmen.",
-      "source": "GEG / LBO",
-      "tags": ["kompensation", "technik"],
-      "version": "2.0"
+      "source": "GEG / LBO / Fachkommentierung",
+      "tags": ["compensation", "technical"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-05",
     "label": "Betriebliche Kompensationsmaßnahmen",
@@ -59,11 +55,10 @@
       "domain": "enabler",
       "description": "Ermöglicht Kompensation durch Betriebsführung, Wartung oder organisatorische Maßnahmen.",
       "source": "GEG / Betreiberpflichten",
-      "tags": ["betrieb", "kompensation"],
-      "version": "2.0"
+      "tags": ["compensation", "operational"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-06",
     "label": "Systemische Bewertung",
@@ -72,24 +67,22 @@
       "domain": "enabler",
       "description": "Ermöglicht Bewertung des Gesamtsystems statt einzelner Komponenten.",
       "source": "GEG / Fachkommentierung",
-      "tags": ["system", "evaluation"],
-      "version": "2.0"
+      "tags": ["systemic", "evaluation"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-06b",
     "label": "Systemischer GEG-Nachweis",
     "type": "EN",
     "properties": {
       "domain": "enabler",
-      "description": "Ermöglicht GEG-Nachweis auf Basis der Systembilanz statt Einzelkomponenten. Entschärft Konflikte zwischen TR-Realität und RF-60/61/63.",
-      "source": "GEG / DIN V 18599 / Fachkommentierung",
-      "tags": ["geg", "systembilanz", "bilanzierung", "enabler"],
+      "description": "Ermöglicht GEG-Nachweis auf Basis der Systembilanz statt Einzelkomponenten.",
+      "source": "GEG / DIN V 18599",
+      "tags": ["systemic", "alternative_path", "bilanzierung"],
       "version": "2.1"
     }
   },
-
   {
     "id": "EN-07",
     "label": "Abweichung nach LBO",
@@ -98,24 +91,22 @@
       "domain": "enabler",
       "description": "Ermöglicht Abweichungen von bauordnungsrechtlichen Anforderungen bei gleichwertigem Schutzniveau.",
       "source": "LBO / VVTB",
-      "tags": ["abweichung", "bauordnung"],
-      "version": "2.0"
+      "tags": ["deviation", "bauordnung"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-08",
     "label": "Mietrechtliche Anerkennung Strommangellage",
     "type": "EN",
     "properties": {
       "domain": "enabler",
-      "description": "Ermöglicht Berücksichtigung von Strommangellagen im Mietrecht, z. B. bei WP-Betrieb.",
+      "description": "Ermöglicht mietrechtliche Berücksichtigung von Strommangellagen, z. B. bei netzbedingten Abschaltungen.",
       "source": "Rechtsprechung / Fachliteratur",
-      "tags": ["mietrecht", "strommangel"],
-      "version": "2.0"
+      "tags": ["mietrecht", "legal"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-09",
     "label": "Erweiterte Betreiberverantwortung",
@@ -124,11 +115,10 @@
       "domain": "enabler",
       "description": "Ermöglicht technische Abweichungen, wenn der Betreiber zusätzliche Pflichten übernimmt.",
       "source": "Betriebssicherheitsverordnung",
-      "tags": ["betrieb", "verantwortung"],
-      "version": "2.0"
+      "tags": ["operational", "deviation"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-10",
     "label": "Wirtschaftlichkeitsabwägung",
@@ -137,11 +127,10 @@
       "domain": "enabler",
       "description": "Ermöglicht Abweichungen, wenn technische Anforderungen wirtschaftlich unzumutbar sind.",
       "source": "GEG §102",
-      "tags": ["wirtschaftlichkeit", "abwägung"],
-      "version": "2.0"
+      "tags": ["economic", "deviation"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-11",
     "label": "Technische Gleichwertigkeit",
@@ -150,11 +139,10 @@
       "domain": "enabler",
       "description": "Ermöglicht alternative technische Lösungen bei nachgewiesener Gleichwertigkeit.",
       "source": "GEG / LBO",
-      "tags": ["gleichwertigkeit", "technik"],
-      "version": "2.0"
+      "tags": ["alternative_path", "technical"],
+      "version": "2.1"
     }
   },
-
   {
     "id": "EN-12",
     "label": "Prognosebasierte Bewertung",
@@ -163,8 +151,8 @@
       "domain": "enabler",
       "description": "Ermöglicht Bewertung auf Basis von Prognosen statt statischer Werte.",
       "source": "GEG / Fachkommentierung",
-      "tags": ["prognose", "bewertung"],
-      "version": "2.0"
+      "tags": ["prognose", "systemic"],
+      "version": "2.1"
     }
   }
 ]
