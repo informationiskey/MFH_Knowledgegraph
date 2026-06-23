@@ -81,15 +81,13 @@ Komfortansprüche kollidieren mit der Effizienzgrenze der WP.
 
 ---
 
-[SB-K11 zieht einen komplett Umbau nach sich (V2.2)](Modeldesign/SB_edges_konflikt_semantik.md)
-
 ## ⚙ SB‑K11 – WP‑Erzeugerzwang vs. Elektro‑Bestand
 
 **Semantische Bedeutung:**  
 Dieser Konflikt beschreibt die Kollision zwischen **politisch/regulatorisch gefordertem WP‑Einsatz** (GEG, BEG) und den **elektrischen Bestandsgrenzen** (VDE‑AR‑N 4100, NAV).
 
 - WP benötigen hohe Anlaufströme.  
-- Bestandsnetze sind oft unterdimensioniert.
+- Bestandsnetze sind oft unterdimensioniert. - Das hier ist falsch und muss durch die neue Logik ersetzt werden [SB-K11 zieht einen komplett Umbau nach sich (V2.2)](SB_K12_Herleitung_MFHproblem.md)
 
 **Beteiligte Bedeutungsbereiche:**  
 - SB‑10 Regulatorische Grenze  
