@@ -1,28 +1,188 @@
 [
   /* ============================================================
-     SB – interne Bedeutungsbeziehungen
+     SB – PHYSIK (SB‑01 bis SB‑03)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - Diese drei Knoten bilden die physikalische Bedeutungsachse.
+       - SB‑01 (Thermodynamik) ist die Grundlage aller energetischen
+         Bedeutungen: Temperatur, Energie, Leistung.
+       - SB‑02 (Energiebedarf) ist die abgeleitete Bedeutung, die
+         beschreibt, wie viel Energie ein System benötigt.
+       - SB‑03 (Leistungsbilanz) beschreibt die energetische
+         Bewertung eines Systems (Verluste, Effizienz, Bilanzierung).
+       - Die Kanten bilden eine logische Bedeutungs-Kaskade:
+         Thermodynamik → Energiebedarf → Leistungsbilanz.
      ============================================================ */
 
-  { "source": "SB-01", "type": "enables",  "target": "SB-02" },
-  { "source": "SB-02", "type": "enables",  "target": "SB-03" },
+  { "source": "SB-01", "type": "enables", "target": "SB-02" },
+  { "source": "SB-02", "type": "enables", "target": "SB-03" },
+
+  /* ============================================================
+     SB – REGULATORIK (SB‑10 bis SB‑11)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - SB‑10 (Regulatorische Grenze) beschreibt die Bedeutung von
+         Grenzwerten wie GEG, LBO, VDE.
+       - SB‑11 (Nachweispflicht) beschreibt die Bedeutung der
+         Dokumentations- und Nachweispflichten, die aus SB‑10 folgen.
+       - Die Kante "requires" bedeutet:
+         Jede regulatorische Grenze erzeugt zwingend eine
+         Nachweispflicht (z. B. GEG-Nachweis, VVTB-Nachweis).
+     ============================================================ */
 
   { "source": "SB-10", "type": "requires", "target": "SB-11" },
 
-  { "source": "SB-20", "type": "affects",  "target": "SB-21" },
+  /* ============================================================
+     SB – LEGAL (SB‑20 bis SB‑21)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - SB‑20 (Mietrechtliche Relevanz) beschreibt die Bedeutung
+         mietrechtlicher Anforderungen wie Komfort, Gebrauchstauglichkeit.
+       - SB‑21 (Umlagefähigkeit) beschreibt die Bedeutung der
+         Betriebskostenumlage im juristischen Kontext.
+       - Die Kante "affects" bedeutet:
+         Mietrechtliche Anforderungen beeinflussen die Frage, ob
+         Kosten umlagefähig sind (z. B. Betriebskosten, Modernisierung).
+     ============================================================ */
 
-  { "source": "SB-30", "type": "limits",   "target": "SB-31" },
+  { "source": "SB-20", "type": "affects", "target": "SB-21" },
+
+  /* ============================================================
+     SB – INFRASTRUKTUR (SB‑30 bis SB‑31)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - SB‑30 (Netzrestriktion) beschreibt die Bedeutung von
+         infrastrukturellen Einschränkungen wie Schall, Platzbedarf,
+         Abstände, Netzkapazität.
+       - SB‑31 (Installationsgrenze) beschreibt die Bedeutung
+         technischer Grenzen wie Elektroinstallation, Absicherung,
+         Anschlussleistung.
+       - Die Kante "limits" bedeutet:
+         Netzrestriktionen begrenzen die Installationsmöglichkeiten.
+     ============================================================ */
+
+  { "source": "SB-30", "type": "limits", "target": "SB-31" },
+
+  /* ============================================================
+     SB – PROZESS (SB‑40 bis SB‑41)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - SB‑40 (Genehmigungsprozess) beschreibt die Bedeutung
+         behördlicher Genehmigungen (LBO, VVTB).
+       - SB‑41 (Netzbetreiberprozess) beschreibt die Bedeutung
+         der Prozesse beim Netzbetreiber (z. B. §14a).
+       - Die Kante "requires" bedeutet:
+         Der Genehmigungsprozess erfordert zwingend die Einbindung
+         des Netzbetreibers (z. B. Anmeldung, Zustimmung, Prüfung).
+     ============================================================ */
 
   { "source": "SB-40", "type": "requires", "target": "SB-41" },
 
-
   /* ============================================================
-     SB – Konfliktknoten (K7–K12)
+     SB – KONFLIKTKNOTEN (K7–K12)
+     ------------------------------------------------------------
+     Semantische Bedeutung:
+       - Konfliktknoten sind semantische Meta-Knoten.
+       - Sie beschreiben KEINE technischen Konflikte (TR),
+         KEINE regulatorischen Konflikte (RF),
+         KEINE politischen Blockaden (PB),
+         sondern rein semantische Bedeutungs-Kollisionen.
+       - Jeder Konfliktknoten verweist auf die SB‑Bedeutungen,
+         die im Konflikt stehen.
+       - Die Kante "conflict_with" bedeutet:
+         Der Konfliktknoten beschreibt eine Bedeutungs-Kollision
+         zwischen zwei semantischen Konzepten.
      ============================================================ */
 
-  { "source": "SB-K7",  "type": "conflict_with", "target": "SB-01" },
-  { "source": "SB-K8",  "type": "conflict_with", "target": "SB-31" },
-  { "source": "SB-K9",  "type": "conflict_with", "target": "SB-30" },
+  /* ------------------------------------------------------------
+     SB‑K7 – Hygiene vs. Effizienz
+     ------------------------------------------------------------
+     Bedeutung:
+       - Hygiene fordert hohe Temperaturen (60°C).
+       - Effizienz fordert niedrige Temperaturen (WP).
+       - Der Konflikt beschreibt die Kollision zwischen
+         hygienischen Mindesttemperaturen und energetischer Effizienz.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K7", "type": "conflict_with", "target": "SB-01" },
+  { "source": "SB-K7", "type": "conflict_with", "target": "SB-02" },
+  { "source": "SB-K7", "type": "conflict_with", "target": "SB-03" },
+  { "source": "SB-K7", "type": "conflict_with", "target": "SB-10" },
+  { "source": "SB-K7", "type": "conflict_with", "target": "SB-11" },
+
+  /* ------------------------------------------------------------
+     SB‑K8 – DLE vs. Elektroinstallation
+     ------------------------------------------------------------
+     Bedeutung:
+       - DLE benötigen hohe elektrische Leistung (18–24 kW).
+       - Bestandsinstallationen sind oft unterdimensioniert.
+       - Der Konflikt beschreibt die Kollision zwischen
+         DLE‑Leistungsanforderungen und Installationsgrenzen.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K8", "type": "conflict_with", "target": "SB-30" },
+  { "source": "SB-K8", "type": "conflict_with", "target": "SB-31" },
+  { "source": "SB-K8", "type": "conflict_with", "target": "SB-10" },
+
+  /* ------------------------------------------------------------
+     SB‑K9 – Schall vs. Aufstellfläche
+     ------------------------------------------------------------
+     Bedeutung:
+       - Schallgrenzwerte (TA Lärm) verlangen Mindestabstände.
+       - MFH‑Grundstücke bieten oft nicht genug Platz.
+       - Der Konflikt beschreibt die Kollision zwischen
+         Schallschutz und realen Aufstellflächen.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K9", "type": "conflict_with", "target": "SB-30" },
+  { "source": "SB-K9", "type": "conflict_with", "target": "SB-31" },
+  { "source": "SB-K9", "type": "conflict_with", "target": "SB-10" },
+
+  /* ------------------------------------------------------------
+     SB‑K10 – Komfort vs. WP‑Temperatur
+     ------------------------------------------------------------
+     Bedeutung:
+       - Komfort (21°C, Warmwasserkomfort) verlangt hohe Temperaturen.
+       - WP‑Temperaturniveau ist im Bestand oft zu niedrig.
+       - Der Konflikt beschreibt die Kollision zwischen
+         Komfortanforderungen und WP‑Effizienzgrenzen.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K10", "type": "conflict_with", "target": "SB-20" },
+  { "source": "SB-K10", "type": "conflict_with", "target": "SB-21" },
+  { "source": "SB-K10", "type": "conflict_with", "target": "SB-01" },
+  { "source": "SB-K10", "type": "conflict_with", "target": "SB-02" },
   { "source": "SB-K10", "type": "conflict_with", "target": "SB-03" },
+
+  /* ------------------------------------------------------------
+     SB‑K11 – WP‑Erzeugerzwang vs. Elektro‑Bestand
+     ------------------------------------------------------------
+     Bedeutung:
+       - Regulatorik fordert WP‑Einsatz.
+       - Elektro‑Bestand ist oft unterdimensioniert.
+       - Der Konflikt beschreibt die Kollision zwischen
+         politischem WP‑Zwang und realen Netzgrenzen.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K11", "type": "conflict_with", "target": "SB-10" },
+  { "source": "SB-K11", "type": "conflict_with", "target": "SB-11" },
+  { "source": "SB-K11", "type": "conflict_with", "target": "SB-30" },
   { "source": "SB-K11", "type": "conflict_with", "target": "SB-31" },
-  { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" }
+
+  /* ------------------------------------------------------------
+     SB‑K12 – GEG vs. WP‑JAZ
+     ------------------------------------------------------------
+     Bedeutung:
+       - GEG bewertet Systembilanz (Primärenergie).
+       - JAZ ist real oft niedriger als theoretisch.
+       - Der Konflikt beschreibt die Kollision zwischen
+         GEG‑Bilanzierung und realer WP‑Effizienz.
+     ------------------------------------------------------------ */
+
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-10" },
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-11" },
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-01" },
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-02" },
+  { "source": "SB-K12", "type": "conflict_with", "target": "SB-03" }
 ]
+
