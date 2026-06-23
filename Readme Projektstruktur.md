@@ -3,6 +3,40 @@
 Dieses Repository enthält alle Artefakte, Skripte und Dokumentationen zur Modellierung, Validierung und Visualisierung eines mehrschichtigen, normbasierten Wissensgraphen (RF/TR/EN/Szenarien/SB/PB) inklusive ETL‑Pipeline, Neo4j‑Importskripten und DOT‑Visualisierungen.
 
 ---
+project-root/
+└── artefacts/
+    ├── json/
+    │   ├── nodes/
+    │   │   ├── tr_nodes.json
+    │   │   ├── rf_nodes.json
+    │   │   ├── en_nodes.json
+    │   │   ├── sb_nodes.json
+    │   │   ├── pb_nodes.json
+    │   │   ├── ps_nodes.json          # ← JA, weiterhin vorhanden
+    │   │   ├── scenario_nodes.json
+    │   │   └── meta_nodes.json
+    │   │
+    │   ├── edges/
+    │   │   ├── tr_edges.json
+    │   │   ├── rf_edges.json
+    │   │   ├── en_edges.json
+    │   │   ├── sb_edges.json
+    │   │   ├── pb_edges.json
+    │   │   ├── ps_edges.json          # ← JA, weiterhin vorhanden
+    │   │   ├── scenario_edges.json
+    │   │   ├── crosslayer_edges.json
+    │   │   └── kk_edges.json
+    │   │
+    │   ├── clusters/
+    │   │   ├── tr_cluster.json
+    │   │   ├── rf_cluster.json
+    │   │   ├── en_cluster.json
+    │   │   ├── sb_cluster.json
+    │   │   ├── pb_cluster.json
+    │   │   └── ps_cluster.json        # ← optional, aber sinnvoll
+    │   │
+    │   └── kk/
+    │       └── kk.json
 
 ## 📁 Artefakte (`artefacts/`)
 
@@ -14,10 +48,11 @@ Enthält alle **Knotencluster** des Wissensgraphen:
 
 - tr_nodes.json — Technische Realität (TR)  
 - rf_nodes.json — Regulatorische Anforderungen (RF)  
-- scenario_nodes.json — Szenarien & Varianten  
 - en_nodes.json — Energienetz‑Cluster  
 - sb_nodes.json — Semantic Blocks (NEU)  
-- pb_nodes.json — Physical Blocks (NEU)  
+- pb_nodes.json — Political Stopblocks (NEU)
+- ps_nodes.json
+- - scenario_nodes.json — Szenarien & Varianten   
 
 ### `artefacts/json/edges/`
 Alle **Kantencluster**, inkl. Cross‑Layer‑Beziehungen:
@@ -27,8 +62,10 @@ Alle **Kantencluster**, inkl. Cross‑Layer‑Beziehungen:
 - scenario_edges.json — Szenario‑Beziehungen  
 - en_edges.json — Energienetz‑Beziehungen  
 - sb_edges.json — Semantic‑Block‑Beziehungen (NEU)  
-- pb_edges.json — Physical‑Block‑Beziehungen (NEU)  
-- crosslayer_edges.json — RF↔TR↔EN↔SB↔PB‑Verknüpfungen  
+- pb_edges.json — Political Stop‑Block‑Beziehungen (NEU)
+- ps_edges.json
+- crosslayer_edges.json — RF↔TR↔EN↔SB↔PB‑Verknüpfungen
+- kk_edges.json
 
 ### `artefacts/alerts/`
 Alert‑System für Konfliktketten, Heatmaps und Compliance‑Checks:
