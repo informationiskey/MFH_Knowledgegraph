@@ -69,6 +69,7 @@ Jeder Node folgt diesem Schema:
     "version": "2.2"
   }
 }
+```
 ### 3. **IDs sind stabil**
 
 IDs dürfen niemals geändert werden.
@@ -94,11 +95,13 @@ Labels und Properties dürfen aktualisiert werden.
     Cross‑Layer → crosslayer_edges.json
 
 ### 2. Edge‑Schema
+```json
 {
   "source": "TR-06",
   "type": "requires",
   "target": "RF-78"
 }
+```
 ### 3. Edge‑Typen
 
 Nur definierte Typen verwenden:
@@ -130,12 +133,13 @@ Nur definierte Typen verwenden:
     Reihenfolge ist kausal, nicht alphabetisch
 
     Beispiel:
+    ```json
 {
   "id": "KK1",
   "label": "Hygiene vs. WP vs. GEG",
   "steps": ["SB-K04", "SB-K11", "SB-K05", "SB-K06"]
 }
-
+```
 ## Validierung
 
 Vor jedem Commit:
@@ -175,18 +179,12 @@ FIX: RF-70 fehlende Property ergänzt
 REF: sb_edges.json neu strukturiert
 
 ## Workflow
-
-    Branch erstellen
-
-    Änderungen durchführen
-
-    Validierung ausführen
-
-    Pull Request erstellen
-
-    Review durch Maintainer
-
-    Merge in main
+- Branch erstellen
+- Änderungen durchführen
+- Validierung ausführen
+- Pull Request erstellen
+- Review durch Maintainer
+- Merge in main
 
 # Kontakt
 
