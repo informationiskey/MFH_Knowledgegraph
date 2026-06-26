@@ -1,0 +1,84 @@
+```markdown
+# 4.2 Konfliktknoten SB‑K02  
+## SB‑K02: Technische Leistungsgrenzen der elektrischen Bestandsinstallation (normativ erzeugt)
+
+### Kurzbeschreibung des Konflikts
+
+Der Konflikt SB‑K02 beschreibt die Situation, dass die elektrische Bestandsinstallation in vielen Mehrfamilienhäusern technisch ausreichend dimensioniert ist, jedoch durch **aktuelle normative Anforderungen** und **technische Anschlussbedingungen** so stark eingeschränkt wird, dass Modernisierungen faktisch blockiert werden.
+
+Die elektrische Infrastruktur wurde in vielen Gebäuden ursprünglich für hohe Lasten ausgelegt (z. B. elektrische Nachtspeicheröfen, dezentrale Warmwasserbereitung). Technisch wäre der Betrieb moderner Wärmepumpensysteme oder elektrischer Zusatzsysteme möglich.  
+Doch die heutigen Normen und Vorgaben verlangen:
+
+- neue Zählerplätze,  
+- neue Steuervorrichtungen,  
+- neue Leitungsquerschnitte,  
+- neue Schutzkonzepte,  
+- neue Selektivitätsanforderungen,  
+- und teilweise vollständige Erneuerungen der Unterverteilungen.
+
+Damit entsteht ein **normativ erzeugter Konflikt**, der Modernisierungen verhindert, obwohl die technische Leistungsfähigkeit des Bestands oft ausreichen würde.
+
+---
+
+### Ursachen des Konflikts
+
+- **[Normative Anforderungen an Zählerplätze](ca://s?q=Ursache_Zaehlerplatz_Normen)** — moderne Zählerplätze müssen nach aktuellen Normen aufgebaut werden, was häufig eine vollständige Erneuerung der Anlage erzwingt.
+- **[Selektivitäts- und Schutzanforderungen](ca://s?q=Ursache_Selektivitaet)** — neue Schutzkonzepte verlangen Anpassungen, die im Bestand nur mit großem Aufwand realisierbar sind.
+- **[Technische Anschlussbedingungen der Netzbetreiber](ca://s?q=Ursache_TAB)** — Netzbetreiber verlangen zusätzliche Steuertechnik, Lastmanagement oder bauliche Anpassungen.
+- **[Fehlende Übergangsregelungen für Bestandsanlagen](ca://s?q=Ursache_Uebergangsregelungen)** — Bestandsanlagen gelten nicht als „ausreichend“, obwohl sie technisch funktionieren.
+- **[Generalistische Normen ohne Berücksichtigung von Bestandsrealitäten](ca://s?q=Ursache_Generalistische_Normen)** — Normen sind nicht falsch, aber sie berücksichtigen die Komplexität des Mehrfamilienhaus-Bestands nicht.
+
+---
+
+### Wirkungen des Konflikts
+
+- **[Erzwungene Komplettsanierung der elektrischen Anlage](ca://s?q=Wirkung_Komplettsanierung_Elektrik)** — Modernisierungen lösen umfangreiche Umbauten aus, die wirtschaftlich kaum tragfähig sind.
+- **[Blockade moderner Wärmepumpensysteme](ca://s?q=Wirkung_Blockade_Waermepumpe)** — elektrische Anforderungen verhindern den Einsatz von Wärmepumpen, obwohl die Leistung vorhanden wäre.
+- **[Blockade hybrider Systeme](ca://s?q=Wirkung_Blockade_Hybride)** — Kombinationen aus Wärmepumpe und elektrischer Nacherwärmung werden unattraktiv oder unmöglich.
+- **[Erhöhte Kosten durch normative Anforderungen](ca://s?q=Wirkung_Kostensteigerung)** — Normen erzeugen Kosten, die nicht im Verhältnis zum Nutzen stehen.
+- **[Verzögerungen durch Netzbetreiberprozesse](ca://s?q=Wirkung_Verzoegerungen)** — Genehmigungen, Prüfungen und Abnahmen verzögern Projekte erheblich.
+
+---
+
+### Politische Relevanz
+
+SB‑K02 zeigt, dass die elektrische Problemlage im Mehrfamilienhaus-Bestand **nicht** durch technische Grenzen entsteht, sondern durch **normative und regulatorische Anforderungen**, die für generalistische Fälle entwickelt wurden, im Bestand jedoch zu unverhältnismäßigen Hürden führen.
+
+Politisch relevant ist:
+
+- Die elektrische Bestandsinstallation ist **nicht das Problem**.  
+- Die Normen und technischen Anschlussbedingungen erzeugen **unnötige Blockaden**.  
+- Die Vorgaben berücksichtigen **nicht** die realen Lastprofile und Bestandsrealitäten.  
+- Die Modernisierung wird dadurch **wirtschaftlich unattraktiv** oder **rechtlich riskant**.
+
+---
+
+### Einordnung im Wissensgraph
+
+- SB‑K02 ist ein **Auslöser- und Verstärkerkonflikt** in Konfliktkette 1 und Konfliktkette 2.  
+- Er ist direkt verknüpft mit:
+  - elektrischen TR‑Knoten,  
+  - regulatorischen RF‑Knoten (Normen, TABs, Steuerbarkeit),  
+  - Komfort- und Mietrechtsknoten,  
+  - sowie energetischen Bewertungsknoten.
+
+SB‑K02 wirkt als **zentrale Blockade**, die sowohl technische als auch wirtschaftliche und rechtliche Folgen auslöst.
+
+---
+
+### Politische Ermöglichungsmacher
+
+- **[Übergangsregelungen für Bestandszähleranlagen](ca://s?q=Ermoeglicher_Uebergangsregelung)** — Bestandsschutz oder vereinfachte Nachrüstmodelle.  
+- **[Differenzierte Anwendung der technischen Anschlussbedingungen](ca://s?q=Ermoeglicher_TAB_Differenzierung)** — spezifische Regeln für Mehrfamilienhäuser.  
+- **[Modernisierungsfreundliche Selektivitätsanforderungen](ca://s?q=Ermoeglicher_Selektivitaet)** — realistische Schutzkonzepte für Bestandsgebäude.  
+- **[Alternative Nachweiswege für elektrische Leistungsfähigkeit](ca://s?q=Ermoeglicher_Nachweiswege)** — reale Lastprofile statt pauschaler Annahmen.  
+- **[Förderlogik für elektrische Infrastrukturmodernisierung](ca://s?q=Ermoeglicher_Foerderung_Elektrik)** — wirtschaftliche Entlastung für Vermieterinnen und Vermieter.
+
+---
+
+### Zusammenfassung
+
+SB‑K02 ist ein **normativ erzeugter Konflikt**, der Modernisierungen im Mehrfamilienhaus-Bestand blockiert, obwohl die elektrische Infrastruktur häufig ausreichend dimensioniert ist. Die Kombination aus Normen, technischen Anschlussbedingungen und Schutzanforderungen führt zu unverhältnismäßigen Hürden, die weder technisch notwendig noch politisch beabsichtigt sind.
+
+SB‑K02 ist damit ein zentraler Baustein der Konfliktketten 1 und 2 und ein Schlüsselkonflikt für die politische Diskussion über die Wärmewende im Mehrfamilienhaus-Bestand.
+```
