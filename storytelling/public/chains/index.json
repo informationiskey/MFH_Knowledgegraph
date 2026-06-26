@@ -1,0 +1,14 @@
+{
+  "chains": [
+    {
+      "id": "kk-zaehlerschrank",
+      "title": "Knoten im Zählerschrank",
+      "file": "kk-zaehlerschrank.json"
+    },
+    {
+      "id": "kk-schall",
+      "title": "Schall & TA Lärm (Entwurf)",
+      "file": "kk-schall.json"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "./chain.schema.json",
+  "meta": {
+    "kicker": "Wärmewende & Nachbarschaft",
+    "title": "Wenn die Wärmepumpe zu laut wird",
+    "intro": "Die Wärmepumpe erfüllt das Gesetz — aber ihre Außeneinheit macht Geräusche. Scrollen Sie die Wirkkette entlang und sehen Sie, wie Schallschutz und Grundstücksgrenze das Vorhaben stoppen können. (Entwurf — alle Texte sind Platzhalter.)",
+    "outroTitle": "Der enge Hof",
+    "outro": "TA Lärm, Nachbarschaftsrecht und ein knapper Grundstückszuschnitt sind jeweils nachvollziehbar. Zusammen lassen sie für die Außeneinheit oft keinen zulässigen Aufstellort übrig."
+  },
+  "nodes": [
+    {
+      "id": "ziel",
+      "kind": "goal",
+      "row": 1,
+      "col": "center",
+      "tag": "Politisches Ziel",
+      "title": "Wärmepumpe statt Gaskessel",
+      "ref": "GEG · EE-Pflicht (prüfen)",
+      "modal": {
+        "paragraph": "Die fossile Heizung soll durch eine Wärmepumpe ersetzt werden. (DRAFT — Zielformulierung einsetzen.)",
+        "postit": "Klartext: Der Eigentümer will gesetzeskonform auf eine Wärmepumpe umsteigen.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    },
+    {
+      "id": "aussen",
+      "kind": "tech",
+      "row": 2,
+      "col": "left",
+      "tag": "Technik · Folge",
+      "title": "Außeneinheit erzeugt Schall",
+      "ref": "Luft-Wärmepumpe · Schallleistung",
+      "modal": {
+        "paragraph": "Die Außeneinheit gibt im Betrieb Schall ab, besonders nachts hörbar. (DRAFT — Schallleistungspegel einsetzen.)",
+        "postit": "Klartext: Aus „Heizung tauschen\" wird eine dauerhafte Geräuschquelle im Hof.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    },
+    {
+      "id": "talaerm",
+      "kind": "law",
+      "row": 2,
+      "col": "right",
+      "tag": "Norm · Pfad B",
+      "title": "TA Lärm",
+      "ref": "TA Lärm · Immissionsrichtwerte (prüfen)",
+      "modal": {
+        "paragraph": "Die TA Lärm legt zulässige Immissionsrichtwerte an der Nachbarbebauung fest. (DRAFT — Nachtwert einsetzen.)",
+        "postit": "Klartext: Es gibt eine harte Obergrenze, wie laut es beim Nachbarn ankommen darf.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    },
+    {
+      "id": "schutz",
+      "kind": "tech",
+      "row": 3,
+      "col": "left",
+      "tag": "Technik · Gegenmaßnahme",
+      "title": "Schallschutzhaube & Abstand",
+      "ref": "Schallschutzmaßnahmen · Mindestabstand",
+      "modal": {
+        "paragraph": "Um den Richtwert zu halten, braucht es Abstand zur Grenze oder eine Schallschutzhaube. (DRAFT)",
+        "postit": "Klartext: Entweder mehr Platz oder teure Zusatztechnik — beides ist im Bestand knapp.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    },
+    {
+      "id": "grenze",
+      "kind": "tech",
+      "row": 4,
+      "col": "center",
+      "tag": "Physische Realität",
+      "title": "Enger Grundstückszuschnitt",
+      "ref": "Bestandsgrundstück · Grenzabstände (LBO prüfen)",
+      "modal": {
+        "paragraph": "Auf einem kleinen Bestandsgrundstück bleibt für den nötigen Abstand kein Raum. (DRAFT)",
+        "postit": "Klartext: Der Hof wurde nie für eine geräuschende Außeneinheit geplant.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    },
+    {
+      "id": "blockade",
+      "kind": "blockade",
+      "row": 5,
+      "col": "center",
+      "tag": "Blockade",
+      "title": "Kein zulässiger Aufstellort",
+      "ref": "Vorhaben gestoppt — Schallschutz nicht einhaltbar",
+      "modal": {
+        "paragraph": "Lässt sich der Richtwert am verfügbaren Aufstellort nicht einhalten, ist das Vorhaben blockiert. (DRAFT)",
+        "postit": "Klartext: Jeder Schritt war korrekt — und am Ende passt die Außeneinheit nirgends hin.",
+        "source": "Platzhalter — exakten Paragraphen / die Normstelle bitte fachlich verifizieren."
+      }
+    }
+  ],
+  "edges": [
+    ["ziel", "aussen"],
+    ["ziel", "talaerm"],
+    ["aussen", "schutz"],
+    ["talaerm", "schutz"],
+    ["schutz", "grenze"],
+    ["grenze", "blockade"]
+  ]
+}

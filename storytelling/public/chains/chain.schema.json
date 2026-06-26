@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MFH effect chain",
+  "description": "One hand-authored effect chain (Wirkkette) for the storytelling page. Edit the values; do not rename the keys.",
+  "type": "object",
+  "required": ["meta", "nodes", "edges"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Keep this so the editor offers validation and auto-complete."
+    },
+    "meta": {
+      "type": "object",
+      "description": "Headline texts shown above and below the chain.",
+      "required": ["kicker", "title", "intro", "outroTitle", "outro"],
+      "additionalProperties": false,
+      "properties": {
+        "kicker": { "type": "string", "description": "Small label above the title." },
+        "title": { "type": "string", "description": "Main page headline." },
+        "intro": { "type": "string", "description": "Lead paragraph below the title." },
+        "outroTitle": { "type": "string", "description": "Headline of the closing section." },
+        "outro": { "type": "string", "description": "Closing paragraph." }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "description": "Each entry is one card in the chain.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "row", "col", "tag", "title", "ref", "modal"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "description": "Unique id used by edges. No spaces." },
+          "kind": {
+            "type": "string",
+            "description": "Visual category: goal (green), law (amber), tech (blue), blockade (red).",
+            "enum": ["goal", "law", "tech", "blockade"]
+          },
+          "row": { "type": "integer", "minimum": 1, "description": "Vertical order, top to bottom (1 = first)." },
+          "col": {
+            "type": "string",
+            "description": "left = path A, right = path B, center = shared step. On phones this also decides chat-bubble alignment.",
+            "enum": ["left", "center", "right"]
+          },
+          "tag": { "type": "string", "description": "Small label on top of the card." },
+          "title": { "type": "string", "description": "Bold card headline." },
+          "ref": { "type": "string", "description": "Law / norm reference under the title." },
+          "modal": {
+            "type": "object",
+            "description": "Content of the overlay opened when the card is clicked.",
+            "required": ["paragraph", "postit", "source"],
+            "additionalProperties": false,
+            "properties": {
+              "paragraph": { "type": "string", "description": "The (draft) legal / norm excerpt." },
+              "postit": { "type": "string", "description": "Plain-language 'what this means' note." },
+              "source": { "type": "string", "description": "Reminder that the exact paragraph must be verified." }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "description": "Threads drawn between cards. Each edge is [fromId, toId] using node ids.",
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": { "type": "string" }
+      }
+    }
+  }
+}

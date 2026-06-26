@@ -21,7 +21,7 @@ export default function StoryModal({ node, onClose }) {
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.92, y: 20, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-            className="relative z-10 w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl"
+            className="relative z-10 max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl"
           >
             <button
               onClick={onClose}
